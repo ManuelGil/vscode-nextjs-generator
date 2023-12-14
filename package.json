@@ -1,0 +1,211 @@
+{
+  "name": "vscode-nextjs-generator",
+  "displayName": "React / NextJS / T3 Stack File Generator",
+  "description": "VSCode extension to generate files for T3 Stack project. NextJS, NextAuth, Prisma, tRPC, and more.",
+  "version": "0.1.0",
+  "preview": true,
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#52137b",
+    "theme": "dark"
+  },
+  "license": "MIT",
+  "publisher": "imgildev",
+  "author": {
+    "name": "Manuel Gil",
+    "url": "https://github.com/ManuelGil"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/manuelgil"
+  },
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "boilerplate",
+    "extension",
+    "file",
+    "generator",
+    "i18next",
+    "next 13",
+    "next 14",
+    "next",
+    "nextauth",
+    "nextjs 13",
+    "nextjs 14",
+    "nextjs-13",
+    "nextjs-14",
+    "nextjs-file-generator",
+    "nextjs-file",
+    "nextjs-generator",
+    "nextjs",
+    "nextjs13",
+    "nextjs14",
+    "node",
+    "nodejs",
+    "prisma-orm",
+    "prisma",
+    "react",
+    "reactjs",
+    "snippet",
+    "snippets",
+    "t3-stack",
+    "t3",
+    "t3stack",
+    "tailwind",
+    "tailwindcss",
+    "template",
+    "terminal",
+    "trpc",
+    "trpc",
+    "ts",
+    "typescript",
+    "vscode-extension",
+    "vscode"
+  ],
+  "homepage": "https://github.com/ManuelGil/vscode-nextjs-generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ManuelGil/vscode-nextjs-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/ManuelGil/vscode-nextjs-generator/issues"
+  },
+  "activationEvents": [
+    "onCommand:nextjs.file.class",
+    "onCommand:nextjs.file.component",
+    "onCommand:nextjs.file.layout",
+    "onCommand:nextjs.file.loading",
+    "onCommand:nextjs.file.page",
+    "onCommand:nextjs.terminal.start"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Angular File Generator",
+      "properties": {
+        "nextjs.files.extension": {
+          "type": "string",
+          "default": "tsx",
+          "enum": [
+            "js",
+            "jsx",
+            "ts",
+            "tsx"
+          ],
+          "scope": "resource",
+          "description": "Sets the default extension for the generated files"
+        },
+        "nextjs.server.turbo": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Star server in turbo mode (only for NextJS 14+)"
+        }
+      }
+    },
+    "snippets": [
+      {
+        "path": "./snippets/custom.code-snippets"
+      }
+    ],
+    "commands": [
+      {
+        "command": "nextjs.file.class",
+        "title": "Next: Generate Class or Interface"
+      },
+      {
+        "command": "nextjs.file.component",
+        "title": "Next: Generate Component"
+      },
+      {
+        "command": "nextjs.file.layout",
+        "title": "Next: Generate Layout"
+      },
+      {
+        "command": "nextjs.file.loading",
+        "title": "Next: Generate Loading"
+      },
+      {
+        "command": "nextjs.file.page",
+        "title": "Next: Generate Page"
+      },
+      {
+        "command": "nextjs.terminal.start",
+        "title": "Next: Start Server"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "nextjs.submenu",
+        "label": "Next File Generator"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "submenu": "nextjs.submenu",
+          "group": "1_modification",
+          "when": "explorerViewletFocus && explorerResourceIsFolder"
+        }
+      ],
+      "nextjs.submenu": [
+        {
+          "command": "nextjs.file.class"
+        },
+        {
+          "command": "nextjs.file.component"
+        },
+        {
+          "command": "nextjs.file.layout"
+        },
+        {
+          "command": "nextjs.file.loading"
+        },
+        {
+          "command": "nextjs.file.page"
+        }
+      ]
+    },
+    "jsonValidation": [
+      {
+        "fileMatch": ".vscode/settings.json",
+        "url": "./schemas/config.schema.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.46.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "glob": "^7.1.6",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "mocha": "^10.2.0",
+    "prettier": "3.0.3",
+    "typescript": "^4.9.5",
+    "vscode-test": "^1.5.0"
+  }
+}

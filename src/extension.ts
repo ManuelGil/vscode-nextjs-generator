@@ -8,6 +8,7 @@ import {
   newLayout,
   newLoading,
   newPage,
+  newProject,
   start,
 } from './commands';
 
@@ -42,6 +43,12 @@ export function activate(context: vscode.ExtensionContext) {
       newPage(vscode, fs, path, args);
     },
   );
+  const nextjsTerminalNewProject = vscode.commands.registerCommand(
+    'nextjs.terminal.project',
+    () => {
+      newProject(vscode);
+    },
+  );
   const nextjsTerminalStart = vscode.commands.registerCommand(
     'nextjs.terminal.start',
     () => {
@@ -54,6 +61,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(nextjsFileLayout);
   context.subscriptions.push(nextjsFileLoading);
   context.subscriptions.push(nextjsFilePage);
+  context.subscriptions.push(nextjsTerminalNewProject);
   context.subscriptions.push(nextjsTerminalStart);
 }
 

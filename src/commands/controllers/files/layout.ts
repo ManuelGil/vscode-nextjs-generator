@@ -25,15 +25,6 @@ export default function {{functionName}}({
 `;
 
 const newLayout = async (vscode: any, fs: any, path: any, args: any = null) => {
-  let resource;
-
-  if (vscode.workspace.workspaceFolders) {
-    resource = vscode.workspace.workspaceFolders[0].uri;
-  }
-
-  const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
-  const extension = nextConfig.get('.files.extension');
-
   let relativePath = '';
 
   if (args) {

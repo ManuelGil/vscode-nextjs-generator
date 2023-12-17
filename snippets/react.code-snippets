@@ -1,0 +1,97 @@
+{
+  "import React": {
+    "prefix": ["react_import_react", "import React"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "import React from 'react';"
+  },
+  "import ReactDOM": {
+    "prefix": ["react_import_react_dom", "import ReactDOM"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "import ReactDOM from 'react-dom';"
+  },
+  "import Provider": {
+    "prefix": ["react_import_provider", "import Provider"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "import { Provider } from 'react-redux';"
+  },
+  "import styled": {
+    "prefix": ["react_import_styled", "import styled"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "import styled from 'styled-components';"
+  },
+  "useState": {
+    "prefix": ["react_use_state", "useState"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const [$1, set$1] = useState($2);"
+  },
+  "useEffect": {
+    "prefix": ["react_use_effect", "useEffect"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": ["useEffect(() => {", "\t$1", "}, [$2]);"]
+  },
+  "useContext": {
+    "prefix": ["react_use_context", "useContext"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useContext($2);"
+  },
+  "useReducer": {
+    "prefix": ["react_use_reducer", "useReducer"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const [$1, set$1] = useReducer($2);"
+  },
+  "useCallback": {
+    "prefix": ["react_use_callback", "useCallback"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useCallback($2, [$3]);"
+  },
+  "useMemo": {
+    "prefix": ["react_use_memo", "useMemo"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useMemo($2, [$3]);"
+  },
+  "useRef": {
+    "prefix": ["react_use_ref", "useRef"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useRef($2);"
+  },
+  "useImperativeHandle": {
+    "prefix": ["react_use_imperativeHandle", "useImperativeHandle"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useImperativeHandle($2, [$3]);"
+  },
+  "useLayoutEffect": {
+    "prefix": ["react_use_layoutEffect", "useLayoutEffect"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useLayoutEffect($2, [$3]);"
+  },
+  "useDebugValue": {
+    "prefix": ["react_use_debugValue", "useDebugValue"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useDebugValue($2);"
+  },
+  "useDeferredValue": {
+    "prefix": ["react_use_deferredValue", "useDeferredValue"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useDeferredValue($2);"
+  },
+  "useTransition": {
+    "prefix": ["react_use_transition", "useTransition"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useTransition($2);"
+  },
+  "useId": {
+    "prefix": ["react_use_id", "useId"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useId($2);"
+  },
+  "useSyncExternalStore": {
+    "prefix": ["react_use_syncExternalStore", "useSyncExternalStore"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useSyncExternalStore($2);"
+  },
+  "useInsertionEffect": {
+    "prefix": ["react_use_insertionEffect", "useInsertionEffect"],
+    "scope": "plaintext,javascript,javascriptreact",
+    "body": "const $1 = useInsertionEffect($2);"
+  }
+}

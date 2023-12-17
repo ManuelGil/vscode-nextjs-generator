@@ -2,7 +2,7 @@
   "name": "vscode-nextjs-generator",
   "displayName": "React / NextJS / T3 Stack File Generator",
   "description": "VSCode extension to generate files for T3 Stack project. NextJS, NextAuth, Prisma, tRPC, and more. Create pages, components, layouts, classes, interfaces, and more.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "preview": true,
   "icon": "icon.png",
   "galleryBanner": {
@@ -156,7 +156,10 @@
     },
     "snippets": [
       {
-        "path": "./snippets/custom.code-snippets"
+        "path": "./snippets/html.code-snippets"
+      },
+      {
+        "path": "./snippets/react.code-snippets"
       }
     ],
     "commands": [

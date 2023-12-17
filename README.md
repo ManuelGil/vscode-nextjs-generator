@@ -19,6 +19,8 @@ Elevate your productivity with this VSCode extension, empowering you to efficien
   - [Features](#features)
     - [Files](#files)
     - [Commands](#commands)
+    - [Snippets](#snippets)
+  - [Connect with me](#connect-with-me)
   - [Other Extensions](#other-extensions)
   - [Changelog](#changelog)
   - [Authors](#authors)
@@ -81,6 +83,138 @@ Your project is now set up to automatically format code upon saving.
 | -------------------- | -------------------------------------------------------------- |
 | Next: Create Project | Creates a new project using the Vite / NextJS / T3 Stack CLI   |
 | Next: Start Server   | Builds and serves your application, rebuilding on file changes |
+
+### Snippets
+
+| Title                | Purpose                                                        |
+| -------------------- | -------------------------------------------------------------- |
+| html_address | address |
+| html_article | article |
+| html_aside | aside |
+| html_audio | audio |
+| html_base | base |
+| html_blockquote | blockquote |
+| html_button_reset | button-reset |
+| html_button_submit | button-submit |
+| html_button | button |
+| html_div | div |
+| html_dl_dt_dd | dl-dt-dd |
+| html_embed | embed |
+| html_figure | figure |
+| html_footer | footer |
+| html_form | form |
+| html_h1 | h1 |
+| html_h2 | h2 |
+| html_h3 | h3 |
+| html_h4 | h4 |
+| html_h5 | h5 |
+| html_h6 | h6 |
+| html_header | header |
+| html_hr | hr |
+| html_iframe | iframe |
+| html_img | img |
+| html_input_button | input-button |
+| html_input_checkbox | input-checkbox |
+| html_input_color | input-color |
+| html_input_date | input-date |
+| html_input_datetime_local | input-datetime-local |
+| html_input_datetime | input-datetime |
+| html_input_email | input-email |
+| html_input_file | input-file |
+| html_input_hidden | input-hidden |
+| html_input_image | input-image |
+| html_input_month | input-month |
+| html_input_number | input-number |
+| html_input_password | input-password |
+| html_input_radio | input-radio |
+| html_input_range | input-range |
+| html_input_reset | input-reset |
+| html_input_search | input-search |
+| html_input_submit | input-submit |
+| html_input_tel | input-tel |
+| html_input_text | input-text |
+| html_input_time | input-time |
+| html_input_url | input-url |
+| html_input_week | input-week |
+| html_input | input |
+| html_label | label |
+| html_legend | legend |
+| html_main | main |
+| html_nav | nav |
+| html_ol_li | ol-li |
+| html_optgroup | optgroup |
+| html_option | option |
+| html_output | output |
+| html_picture | picture |
+| html_section | section |
+| html_select | select |
+| html_source | source |
+| html_style | style |
+| html_summary | summary |
+| html_svg | svg |
+| html_table | table |
+| html_tbody | tbody |
+| html_td | td |
+| html_textarea | textarea |
+| html_tfoot | tfoot |
+| html_th | th |
+| html_thead | thead |
+| html_title | title |
+| html_tr_td | tr-td |
+| html_ul_li | ul-li |
+| html_video | video |
+| html_dd | dd |
+| html_dt | dt |
+| html_figcaption | figcaption |
+| html_li | li |
+| html_p | p |
+| html_pre | pre |
+| html_abbr | abbr |
+| html_cite | cite |
+| html_code | code |
+| html_mark | mark |
+| html_small | small |
+| html_span | span |
+| html_strong | strong |
+| html_time | time |
+| html_track | track |
+| html_del | del |
+| html_ins | ins |
+| html_caption | caption |
+| html_table_colgroup | table-colgroup |
+| html_datalist | datalist |
+| html_fieldset | fieldset |
+| html_legend | legend |
+| html_progress | progress |
+| html_select_optgroup | select-optgroup |
+| html_details | details |
+| html_summary | summary |
+| react_import_react | import React |
+| react_import_react_dom | import ReactDOM |
+| react_import_provider | import Provider |
+| react_import_styled | import styled |
+| react_use_state | useState |
+| react_use_effect | useEffect |
+| react_use_context | useContext |
+| react_use_reducer | useReducer |
+| react_use_callback | useCallback |
+| react_use_memo | useMemo |
+| react_use_ref | useRef |
+| react_use_imperativeHandle | useImperativeHandle |
+| react_use_layoutEffect | useLayoutEffect |
+| react_use_debugValue | useDebugValue |
+| react_use_deferredValue | useDeferredValue |
+| react_use_transition | useTransition |
+| react_use_id | useId |
+| react_use_syncExternalStore | useSyncExternalStore |
+| react_use_insertionEffect | useInsertionEffect |
+
+## Connect with me
+
+<a href="https://github.com/ManuelGil" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="imgildev" height="30" width="40" /></a>
+<a href="https://twitter.com/imgildev" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="imgildev" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/imgildev" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="imgildev" height="30" width="40" /></a>
+<a href="https://www.youtube.com/c/imgildev" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="imgildev" height="30" width="40" /></a>
 
 ## Other Extensions
 

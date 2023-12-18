@@ -1,6 +1,8 @@
 import { getClass, getFolder, parsePath, save } from '../../utils/functions';
 
-const content = `interface Props {
+const content = `'use client'
+
+interface Props {
   params: {
     id: string;
   };

@@ -2,7 +2,7 @@
   "name": "vscode-nextjs-generator",
   "displayName": "React / NextJS / T3 Stack File Generator",
   "description": "VSCode extension to generate files for T3 Stack project. NextJS, NextAuth, Prisma, tRPC, and more. Create pages, components, layouts, classes, interfaces, and more.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "preview": true,
   "icon": "icon.png",
   "galleryBanner": {
@@ -127,6 +127,19 @@
     "onCommand:nextjs.file.loading",
     "onCommand:nextjs.file.page",
     "onCommand:nextjs.terminal.project",
+    "onCommand:nextjs.terminal.prisma.db.execute",
+    "onCommand:nextjs.terminal.prisma.db.pull",
+    "onCommand:nextjs.terminal.prisma.db.push",
+    "onCommand:nextjs.terminal.prisma.db.seed",
+    "onCommand:nextjs.terminal.prisma.format",
+    "onCommand:nextjs.terminal.prisma.generate",
+    "onCommand:nextjs.terminal.prisma.init",
+    "onCommand:nextjs.terminal.prisma.migrate.deploy",
+    "onCommand:nextjs.terminal.prisma.migrate.dev",
+    "onCommand:nextjs.terminal.prisma.migrate.reset",
+    "onCommand:nextjs.terminal.prisma.migrate.status",
+    "onCommand:nextjs.terminal.prisma.studio",
+    "onCommand:nextjs.terminal.prisma.validate",
     "onCommand:nextjs.terminal.start"
   ],
   "main": "./out/extension.js",
@@ -160,6 +173,9 @@
       },
       {
         "path": "./snippets/react.code-snippets"
+      },
+      {
+        "path": "./snippets/prisma.code-snippets"
       }
     ],
     "commands": [
@@ -186,6 +202,58 @@
       {
         "command": "nextjs.terminal.project",
         "title": "Next: Create Project"
+      },
+      {
+        "command": "nextjs.terminal.prisma.db.execute",
+        "title": "Next: Prisma DB Execute"
+      },
+      {
+        "command": "nextjs.terminal.prisma.db.pull",
+        "title": "Next: Prisma DB Pull"
+      },
+      {
+        "command": "nextjs.terminal.prisma.db.push",
+        "title": "Next: Prisma DB Push"
+      },
+      {
+        "command": "nextjs.terminal.prisma.db.seed",
+        "title": "Next: Prisma DB Seed"
+      },
+      {
+        "command": "nextjs.terminal.prisma.format",
+        "title": "Next: Prisma Format"
+      },
+      {
+        "command": "nextjs.terminal.prisma.generate",
+        "title": "Next: Prisma Generate"
+      },
+      {
+        "command": "nextjs.terminal.prisma.init",
+        "title": "Next: Prisma Init"
+      },
+      {
+        "command": "nextjs.terminal.prisma.migrate.deploy",
+        "title": "Next: Prisma Migrate Deploy"
+      },
+      {
+        "command": "nextjs.terminal.prisma.migrate.dev",
+        "title": "Next: Prisma Migrate Dev"
+      },
+      {
+        "command": "nextjs.terminal.prisma.migrate.reset",
+        "title": "Next: Prisma Migrate Reset"
+      },
+      {
+        "command": "nextjs.terminal.prisma.migrate.status",
+        "title": "Next: Prisma Migrate Status"
+      },
+      {
+        "command": "nextjs.terminal.prisma.studio",
+        "title": "Next: Prisma Studio"
+      },
+      {
+        "command": "nextjs.terminal.prisma.validate",
+        "title": "Next: Prisma Validate"
       },
       {
         "command": "nextjs.terminal.start",

@@ -1,67 +1,67 @@
 {
   "address": {
     "prefix": ["html_address", "address"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<address>$0</address>"
   },
   "article": {
     "prefix": ["html_article", "article"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<article>$0</article>"
   },
   "aside": {
     "prefix": ["html_aside", "aside"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<aside>$0</aside>"
   },
   "audio": {
     "prefix": ["html_audio", "audio"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<audio src=\"$1\" controls>$0</audio>"
   },
   "base": {
     "prefix": ["html_base", "base"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<base href=\"$1\">"
   },
   "blockquote": {
     "prefix": ["html_blockquote", "blockquote"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<blockquote>$0</blockquote>"
   },
   "button-reset": {
     "prefix": ["html_button_reset", "button-reset"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<button type=\"reset\">$0</button>"
   },
   "button-submit": {
     "prefix": ["html_button_submit", "button-submit"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<button type=\"submit\">$0</button>"
   },
   "button": {
     "prefix": ["html_button", "button"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<button type=\"$1\">$0</button>"
   },
   "div": {
     "prefix": ["html_div", "div"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<div>$0</div>"
   },
   "dl-dt-dd": {
     "prefix": ["html_dl_dt_dd", "dl-dt-dd"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": ["<dl>", "\t<dt>$0</dt>", "\t<dd></dd>", "</dl>"]
   },
   "embed": {
     "prefix": ["html_embed", "embed"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<embed src=\"$1\" type=\"$2\">"
   },
   "figure": {
     "prefix": ["html_figure", "figure"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "<figure class=\"$1\">",
       "\t<img src=\"$2\" alt=\"$3\">",
@@ -71,227 +71,227 @@
   },
   "footer": {
     "prefix": ["html_footer", "footer"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<footer>$0</footer>"
   },
   "form": {
     "prefix": ["html_form", "form"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<form action=\"$1\" method=\"$2\">$0</form>"
   },
   "h1": {
     "prefix": ["html_h1", "h1"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<h1>$0</h1>"
   },
   "h2": {
     "prefix": ["html_h2", "h2"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<h2>$0</h2>"
   },
   "h3": {
     "prefix": ["html_h3", "h3"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<h3>$0</h3>"
   },
   "h4": {
     "prefix": ["html_h4", "h4"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<h4>$0</h4>"
   },
   "h5": {
     "prefix": ["html_h5", "h5"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<h5>$0</h5>"
   },
   "h6": {
     "prefix": ["html_h6", "h6"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<h6>$0</h6>"
   },
   "header": {
     "prefix": ["html_header", "header"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<header>$0</header>"
   },
   "hr": {
     "prefix": ["html_hr", "hr"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<hr>$0</hr>"
   },
   "iframe": {
     "prefix": ["html_iframe", "iframe"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<iframe src=\"$1\" frameborder=\"0\" allowfullscreen>$0</iframe>"
   },
   "img": {
     "prefix": ["html_img", "img"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<img src=\"$1\" alt=\"$2\">"
   },
   "input-button": {
     "prefix": ["html_input_button", "input-button"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"button\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-checkbox": {
     "prefix": ["html_input_checkbox", "input-checkbox"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"checkbox\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-color": {
     "prefix": ["html_input_color", "input-color"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"color\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-date": {
     "prefix": ["html_input_date", "input-date"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"date\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-datetime-local": {
     "prefix": ["html_input_datetime_local", "input-datetime-local"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"datetime-local\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-datetime": {
     "prefix": ["html_input_datetime", "input-datetime"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"datetime\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-email": {
     "prefix": ["html_input_email", "input-email"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"email\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-file": {
     "prefix": ["html_input_file", "input-file"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"file\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-hidden": {
     "prefix": ["html_input_hidden", "input-hidden"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"hidden\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-image": {
     "prefix": ["html_input_image", "input-image"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"image\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-month": {
     "prefix": ["html_input_month", "input-month"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"month\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-number": {
     "prefix": ["html_input_number", "input-number"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"number\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-password": {
     "prefix": ["html_input_password", "input-password"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"password\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-radio": {
     "prefix": ["html_input_radio", "input-radio"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"radio\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-range": {
     "prefix": ["html_input_range", "input-range"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"range\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-reset": {
     "prefix": ["html_input_reset", "input-reset"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"reset\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-search": {
     "prefix": ["html_input_search", "input-search"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"search\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-submit": {
     "prefix": ["html_input_submit", "input-submit"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"submit\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-tel": {
     "prefix": ["html_input_tel", "input-tel"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"tel\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-text": {
     "prefix": ["html_input_text", "input-text"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"text\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-time": {
     "prefix": ["html_input_time", "input-time"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"time\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-url": {
     "prefix": ["html_input_url", "input-url"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"url\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-week": {
     "prefix": ["html_input_week", "input-week"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"week\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input": {
     "prefix": ["html_input", "input"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<input type=\"$1\" name=\"$2\" id=\"$3\" value=\"$4\">"
   },
   "label": {
     "prefix": ["html_label", "label"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<label for=\"$1\">$0</label>"
   },
   "legend": {
     "prefix": ["html_legend", "legend"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<legend>$0</legend>"
   },
   "main": {
     "prefix": ["html_main", "main"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<main>$0</main>"
   },
   "nav": {
     "prefix": ["html_nav", "nav"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<nav>$0</nav>"
   },
   "ol-li": {
     "prefix": ["html_ol_li", "ol-li"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": ["<ol>", "\t<li>$0</li>", "</ol>"]
   },
   "optgroup": {
     "prefix": ["html_optgroup", "optgroup"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<optgroup label=\"$1\">$0</optgroup>"
   },
   "option": {
     "prefix": ["html_option", "option"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<option value=\"$1\">$0</option>"
   },
   "output": {
     "prefix": ["html_output", "output"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<output for=\"$1\">$0</output>"
   },
   "picture": {
     "prefix": ["html_picture", "picture"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "<picture>",
       "\t<source srcset=\"$1\" media=\"$2\">",
@@ -301,182 +301,182 @@
   },
   "section": {
     "prefix": ["html_section", "section"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<section>$0</section>"
   },
   "select": {
     "prefix": ["html_select", "select"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<select name=\"$1\">$0</select>"
   },
   "source": {
     "prefix": ["html_source", "source"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<source srcset=\"$1\" media=\"$2\">"
   },
   "style": {
     "prefix": ["html_style", "style"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<style>$0</style>"
   },
   "summary": {
     "prefix": ["html_summary", "summary"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<summary>$0</summary>"
   },
   "svg": {
     "prefix": ["html_svg", "svg"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<svg width=\"$1\" height=\"$2\" viewBox=\"$3\" xmlns=\"http://www.w3.org/2000/svg\">$0</svg>"
   },
   "table": {
     "prefix": ["html_table", "table"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<table>$0</table>"
   },
   "tbody": {
     "prefix": ["html_tbody", "tbody"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<tbody>$0</tbody>"
   },
   "td": {
     "prefix": ["html_td", "td"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<td>$0</td>"
   },
   "textarea": {
     "prefix": ["html_textarea", "textarea"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<textarea name=\"$1\" cols=\"$2\" rows=\"$3\">$0</textarea>"
   },
   "tfoot": {
     "prefix": ["html_tfoot", "tfoot"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<tfoot>$0</tfoot>"
   },
   "th": {
     "prefix": ["html_th", "th"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<th>$0</th>"
   },
   "thead": {
     "prefix": ["html_thead", "thead"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<thead>$0</thead>"
   },
   "title": {
     "prefix": ["html_title", "title"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<title>$1</title>"
   },
   "tr-td": {
     "prefix": ["html_tr_td", "tr-td"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": ["<tr>", "\t<td>$0</td>", "</tr>"]
   },
   "ul-li": {
     "prefix": ["html_ul_li", "ul-li"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": ["<ul>", "\t<li>$0</li>", "</ul>"]
   },
   "video": {
     "prefix": ["html_video", "video"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<video src=\"$1\" controls>$0</video>"
   },
   "dd": {
     "prefix": ["html_dd", "dd"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<dd>$0</dd>"
   },
   "dt": {
     "prefix": ["html_dt", "dt"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<dt>$0</dt>"
   },
   "figcaption": {
     "prefix": ["html_figcaption", "figcaption"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<figcaption>$0</figcaption>"
   },
   "li": {
     "prefix": ["html_li", "li"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<li>$0</li>"
   },
   "p": {
     "prefix": ["html_p", "p"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<p>$0</p>"
   },
   "pre": {
     "prefix": ["html_pre", "pre"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<pre>$0</pre>"
   },
   "abbr": {
     "prefix": ["html_abbr", "abbr"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<abbr title=\"$1\">$0</abbr>"
   },
   "cite": {
     "prefix": ["html_cite", "cite"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<cite>$0</cite>"
   },
   "code": {
     "prefix": ["html_code", "code"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<code>$0</code>"
   },
   "mark": {
     "prefix": ["html_mark", "mark"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<mark>$0</mark>"
   },
   "small": {
     "prefix": ["html_small", "small"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<small>$0</small>"
   },
   "span": {
     "prefix": ["html_span", "span"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<span>$0</span>"
   },
   "strong": {
     "prefix": ["html_strong", "strong"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<strong>$0</strong>"
   },
   "time": {
     "prefix": ["html_time", "time"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<time datetime=\"$1\">$0</time>"
   },
   "track": {
     "prefix": ["html_track", "track"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<track src=\"$1\" kind=\"$2\" srclang=\"$3\" label=\"$4\">"
   },
   "del": {
     "prefix": ["html_del", "del"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<del>$0</del>"
   },
   "ins": {
     "prefix": ["html_ins", "ins"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<ins>$0</ins>"
   },
   "caption": {
     "prefix": ["html_caption", "caption"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<caption>$0</caption>"
   },
   "table-colgroup": {
     "prefix": ["html_table_colgroup", "table-colgroup"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "<table>",
       "\t<colgroup>",
@@ -487,27 +487,27 @@
   },
   "datalist": {
     "prefix": ["html_datalist", "datalist"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<datalist id=\"$1\">$0</datalist>"
   },
   "fieldset": {
     "prefix": ["html_fieldset", "fieldset"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<fieldset>$0</fieldset>"
   },
   "legend": {
     "prefix": ["html_legend", "legend"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<legend>$0</legend>"
   },
   "progress": {
     "prefix": ["html_progress", "progress"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<progress value=\"$1\" max=\"$2\">$0</progress>"
   },
   "select-optgroup": {
     "prefix": ["html_select_optgroup", "select-optgroup"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "<select>",
       "\t<optgroup label=\"$1\">",
@@ -518,12 +518,12 @@
   },
   "details": {
     "prefix": ["html_details", "details"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<details>$0</details>"
   },
   "summary": {
     "prefix": ["html_summary", "summary"],
-    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<summary>$0</summary>"
   }
 }

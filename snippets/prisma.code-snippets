@@ -1,0 +1,202 @@
+{
+  "export default Prisma": {
+    "prefix": ["prisma_export_default_prisma", "export default Prisma"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { PrismaClient } from '@prisma/client'",
+      "",
+      "export default const prisma = new PrismaClient()",
+      ""
+    ]
+  },
+  "id Int": {
+    "prefix": ["prisma_id", "id Int"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "id Int @id @default(autoincrement())"
+  },
+  "updatedAt": {
+    "prefix": ["prisma_updatedAt", "updatedAt"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "updatedAt DateTime @updatedAt"
+  },
+  "default now": {
+    "prefix": ["prisma_default_now", "default now"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "createdAt DateTime @default(now())"
+  },
+  "default dbgenerated": {
+    "prefix": ["prisma_default_dbgenerated", "default dbgenerated"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "createdAt DateTime @default(dbgenerated())"
+  },
+  "default cuid": {
+    "prefix": ["prisma_default_cuid", "default cuid"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "id String @id @default(cuid())"
+  },
+  "default uuid": {
+    "prefix": ["prisma_default_uuid", "default uuid"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "id String @id @default(uuid())"
+  },
+  "default sequential": {
+    "prefix": ["prisma_default_sequential", "default sequential"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "id Int @id @default(sequential())"
+  },
+  "default random": {
+    "prefix": ["prisma_default_random", "default random"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "id Int @id @default(random())"
+  },
+  "default anonymous": {
+    "prefix": ["prisma_default_anonymous", "default anonymous"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "id Int @id @default(anonymous())"
+  },
+  "relation": {
+    "prefix": ["prisma_relation", "relation"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "@relation(fields: [$1Id], references: [id])"
+  },
+  "unique": {
+    "prefix": ["prisma_unique", "unique"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "@@unique([$1])"
+  },
+  "map": {
+    "prefix": ["prisma_map", "map"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "@@map($1)"
+  },
+  "schema": {
+    "prefix": ["prisma_schema", "schema"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "@@schema($1)"
+  },
+  "create": {
+    "prefix": ["prisma_create", "create"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.create({", "\tdata: {", "\t\t$2", "\t}", "})", ""]
+  },
+  "findMany": {
+    "prefix": ["prisma_findMany", "findMany"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.findMany({", "\t$2", "})", ""]
+  },
+  "findUnique": {
+    "prefix": ["prisma_findUnique", "findUnique"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.findUnique({", "\t$2", "})", ""]
+  },
+  "update": {
+    "prefix": ["prisma_update", "update"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.update({", "\t$2", "})", ""]
+  },
+  "delete": {
+    "prefix": ["prisma_delete", "delete"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.delete({", "\t$2", "})", ""]
+  },
+  "deleteMany": {
+    "prefix": ["prisma_deleteMany", "deleteMany"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.deleteMany({", "\t$2", "})", ""]
+  },
+  "upsert": {
+    "prefix": ["prisma_upsert", "upsert"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.upsert({", "\t$2", "})", ""]
+  },
+  "aggregate": {
+    "prefix": ["prisma_aggregate", "aggregate"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.aggregate({", "\t$2", "})", ""]
+  },
+  "count": {
+    "prefix": ["prisma_count", "count"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.count({", "\t$2", "})", ""]
+  },
+  "groupBy": {
+    "prefix": ["prisma_groupBy", "groupBy"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.groupBy({", "\t$2", "})", ""]
+  },
+  "findFirst": {
+    "prefix": ["prisma_findFirst", "findFirst"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await prisma.$1.findFirst({", "\t$2", "})", ""]
+  },
+  "orderBy": {
+    "prefix": ["prisma_orderBy", "orderBy"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["orderBy: {", "\t$1: $2", "}", ""]
+  },
+  "where": {
+    "prefix": ["prisma_where", "where"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["where: {", "\t$1: $2", "}", ""]
+  },
+  "skip take": {
+    "prefix": ["prisma_skip_take", "skip take"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "skip: $1, take: $2"
+  },
+  "include": {
+    "prefix": ["prisma_include", "include"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["include: {", "\t$1: $2", "}", ""]
+  },
+  "select": {
+    "prefix": ["prisma_select", "select"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["select: {", "\t$1: $2", "}", ""]
+  },
+  "transaction": {
+    "prefix": ["prisma_transaction", "transaction"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["prisma.\\$transaction([", "\t$1", "])", ""]
+  },
+  "queryRaw": {
+    "prefix": ["prisma_queryRaw", "queryRaw"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "prisma.\\$queryRaw($1)"
+  },
+  "executeRaw": {
+    "prefix": ["prisma_executeRaw", "executeRaw"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "prisma.\\$executeRaw($1)"
+  },
+  "use": {
+    "prefix": ["prisma_use", "use"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "prisma.\\$use($1)"
+  },
+  "on": {
+    "prefix": ["prisma_on", "on"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "prisma.\\$on($1)"
+  },
+  "disconnect": {
+    "prefix": ["prisma_disconnect", "disconnect"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "prisma.\\$disconnect()"
+  },
+  "connect": {
+    "prefix": ["prisma_connect", "connect"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "prisma.\\$connect()"
+  },
+  "queryRawUnsafe": {
+    "prefix": ["prisma_queryRawUnsafe", "queryRawUnsafe"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "prisma.\\$queryRawUnsafe($1)"
+  },
+  "executeRawUnsafe": {
+    "prefix": ["prisma_executeRawUnsafe", "executeRawUnsafe"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "prisma.\\$executeRawUnsafe($1)"
+  }
+}

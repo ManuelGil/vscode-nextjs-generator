@@ -1,0 +1,21 @@
+{
+  "Image Component": {
+    "prefix": ["next_image", "<Image"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<Image src=\"$1\" alt=\"$2\" width={$3} height={$4} />",
+  },
+  "Link Component": {
+    "prefix": ["next_link", "<Link"],
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<Link href=\"$1\">$2</Link>",
+  },
+  "Page": {
+    "prefix": "next_page",
+    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "export default function Page() {",
+      "\treturn <h1>Hello, $1 Page!</h1>",
+      "}"
+    ],
+  }
+}

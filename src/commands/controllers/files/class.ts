@@ -50,7 +50,8 @@ const newClass = async (vscode: any, fs: any, path: any, args: any = null) => {
     .replace('{{type}}', type)
     .replace('{{className}}', className + toCapitalize(type));
 
-  const filename = '/' + folder + toKebabCase(className) + '.' + extension;
+  const filename =
+    '/' + folder + toKebabCase(className) + '.' + (extension || 'ts');
 
   save(vscode, fs, path, filename, body);
 };

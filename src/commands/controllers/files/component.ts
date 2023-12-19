@@ -56,7 +56,8 @@ const newComponent = async (
 
   const body = content.replace(/\{\{functionName\}\}/g, functionName);
 
-  const filename = '/' + folder + toKebabCase(functionName) + '.' + extension;
+  const filename =
+    '/' + folder + toKebabCase(functionName) + '.' + (extension || 'ts');
 
   save(vscode, fs, path, filename, body);
 };

@@ -32,22 +32,22 @@
   "button-reset": {
     "prefix": ["html_button_reset", "button-reset"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<button type=\"reset\">$0</button>"
+    "body": "<button type=\"reset\" className=\"$1\">$0</button>"
   },
   "button-submit": {
     "prefix": ["html_button_submit", "button-submit"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<button type=\"submit\">$0</button>"
+    "body": "<button type=\"submit\" className=\"$1\">$0</button>"
   },
   "button": {
     "prefix": ["html_button", "button"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<button type=\"$1\">$0</button>"
+    "body": "<button type=\"$1\" className=\"$1\">$0</button>"
   },
   "div": {
     "prefix": ["html_div", "div"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<div>$0</div>"
+    "body": "<div className=\"$1\">$0</div>"
   },
   "dl-dt-dd": {
     "prefix": ["html_dl_dt_dd", "dl-dt-dd"],
@@ -63,7 +63,7 @@
     "prefix": ["html_figure", "figure"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": [
-      "<figure class=\"$1\">",
+      "<figure className=\"$1\">",
       "\t<img src=\"$2\" alt=\"$3\">",
       "\t<figcaption>$4</figcaption>",
       "</figure>"
@@ -72,42 +72,42 @@
   "footer": {
     "prefix": ["html_footer", "footer"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<footer>$0</footer>"
+    "body": "<footer className=\"$1\">$0</footer>"
   },
   "form": {
     "prefix": ["html_form", "form"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<form action=\"$1\" method=\"$2\">$0</form>"
+    "body": "<form className=\"$1\" action=\"$2\" method=\"$3\">$0</form>"
   },
   "h1": {
     "prefix": ["html_h1", "h1"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<h1>$0</h1>"
+    "body": "<h1 className=\"$1\">$0</h1>"
   },
   "h2": {
     "prefix": ["html_h2", "h2"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<h2>$0</h2>"
+    "body": "<h2 className=\"$1\">$0</h2>"
   },
   "h3": {
     "prefix": ["html_h3", "h3"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<h3>$0</h3>"
+    "body": "<h3 className=\"$1\">$0</h3>"
   },
   "h4": {
     "prefix": ["html_h4", "h4"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<h4>$0</h4>"
+    "body": "<h4 className=\"$1\">$0</h4>"
   },
   "h5": {
     "prefix": ["html_h5", "h5"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<h5>$0</h5>"
+    "body": "<h5 className=\"$1\">$0</h5>"
   },
   "h6": {
     "prefix": ["html_h6", "h6"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<h6>$0</h6>"
+    "body": "<h6 className=\"$1\">$0</h6>"
   },
   "header": {
     "prefix": ["html_header", "header"],
@@ -132,122 +132,122 @@
   "input-button": {
     "prefix": ["html_input_button", "input-button"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"button\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"button\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-checkbox": {
     "prefix": ["html_input_checkbox", "input-checkbox"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"checkbox\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"checkbox\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-color": {
     "prefix": ["html_input_color", "input-color"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"color\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"color\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-date": {
     "prefix": ["html_input_date", "input-date"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"date\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"date\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-datetime-local": {
     "prefix": ["html_input_datetime_local", "input-datetime-local"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"datetime-local\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"datetime-l className=\"$1\"ocal\" name=\"$1\" id=\"$2\" value=\"$3\">"
   },
   "input-datetime": {
     "prefix": ["html_input_datetime", "input-datetime"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"datetime\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"datetime\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-email": {
     "prefix": ["html_input_email", "input-email"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"email\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"email\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-file": {
     "prefix": ["html_input_file", "input-file"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"file\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"file\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-hidden": {
     "prefix": ["html_input_hidden", "input-hidden"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"hidden\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"hidden\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-image": {
     "prefix": ["html_input_image", "input-image"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"image\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"image\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-month": {
     "prefix": ["html_input_month", "input-month"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"month\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"month\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-number": {
     "prefix": ["html_input_number", "input-number"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"number\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"number\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-password": {
     "prefix": ["html_input_password", "input-password"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"password\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"password\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-radio": {
     "prefix": ["html_input_radio", "input-radio"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"radio\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"radio\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-range": {
     "prefix": ["html_input_range", "input-range"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"range\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"range\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-reset": {
     "prefix": ["html_input_reset", "input-reset"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"reset\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"reset\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-search": {
     "prefix": ["html_input_search", "input-search"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"search\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"search\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-submit": {
     "prefix": ["html_input_submit", "input-submit"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"submit\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"submit\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-tel": {
     "prefix": ["html_input_tel", "input-tel"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"tel\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"tel\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-text": {
     "prefix": ["html_input_text", "input-text"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"text\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"text\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-time": {
     "prefix": ["html_input_time", "input-time"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"time\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"time\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-url": {
     "prefix": ["html_input_url", "input-url"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"url\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"url\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input-week": {
     "prefix": ["html_input_week", "input-week"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"week\" name=\"$1\" id=\"$2\" value=\"$3\">"
+    "body": "<input type=\"week\" name=\"$1\" id=\"$2\" value=\"$3\" className=\"$4\">"
   },
   "input": {
     "prefix": ["html_input", "input"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<input type=\"$1\" name=\"$2\" id=\"$3\" value=\"$4\">"
+    "body": "<input type=\"$1\" name=\"$2\" id=\"$3\" value=\"$4\" className=\"$5\">"
   },
   "label": {
     "prefix": ["html_label", "label"],
@@ -262,17 +262,17 @@
   "main": {
     "prefix": ["html_main", "main"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<main>$0</main>"
+    "body": "<main className=\"$1\">$0</main>"
   },
   "nav": {
     "prefix": ["html_nav", "nav"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<nav>$0</nav>"
+    "body": "<nav className=\"$1\">$0</nav>"
   },
   "ol-li": {
     "prefix": ["html_ol_li", "ol-li"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": ["<ol>", "\t<li>$0</li>", "</ol>"]
+    "body": ["<ol className=\"$1\">", "\t<li className=\"$2\">$0</li>", "</ol>"]
   },
   "optgroup": {
     "prefix": ["html_optgroup", "optgroup"],
@@ -302,12 +302,12 @@
   "section": {
     "prefix": ["html_section", "section"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<section>$0</section>"
+    "body": "<section className=\"$1\">$0</section>"
   },
   "select": {
     "prefix": ["html_select", "select"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<select name=\"$1\">$0</select>"
+    "body": "<select className=\"$1\" name=\"$2\">$0</select>"
   },
   "source": {
     "prefix": ["html_source", "source"],
@@ -327,7 +327,7 @@
   "svg": {
     "prefix": ["html_svg", "svg"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<svg width=\"$1\" height=\"$2\" viewBox=\"$3\" xmlns=\"http://www.w3.org/2000/svg\">$0</svg>"
+    "body": "<svg className=\"$1\" width=\"$2\" height=\"$3\" viewBox=\"$4\" xmlns=\"http://www.w3.org/2000/svg\">$0</svg>"
   },
   "table": {
     "prefix": ["html_table", "table"],
@@ -337,32 +337,32 @@
   "tbody": {
     "prefix": ["html_tbody", "tbody"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<tbody>$0</tbody>"
+    "body": "<tbody className=\"$1\">$0</tbody>"
   },
   "td": {
     "prefix": ["html_td", "td"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<td>$0</td>"
+    "body": "<td className=\"$1\">$0</td>"
   },
   "textarea": {
     "prefix": ["html_textarea", "textarea"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<textarea name=\"$1\" cols=\"$2\" rows=\"$3\">$0</textarea>"
+    "body": "<textarea className=\"$1\" name=\"$1\" cols=\"$2\" rows=\"$3\">$0</textarea>"
   },
   "tfoot": {
     "prefix": ["html_tfoot", "tfoot"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<tfoot>$0</tfoot>"
+    "body": "<tfoot className=\"$1\">$0</tfoot>"
   },
   "th": {
     "prefix": ["html_th", "th"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<th>$0</th>"
+    "body": "<th className=\"$1\">$0</th>"
   },
   "thead": {
     "prefix": ["html_thead", "thead"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<thead>$0</thead>"
+    "body": "<thead className=\"$1\">$0</thead>"
   },
   "title": {
     "prefix": ["html_title", "title"],
@@ -372,12 +372,12 @@
   "tr-td": {
     "prefix": ["html_tr_td", "tr-td"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": ["<tr>", "\t<td>$0</td>", "</tr>"]
+    "body": ["<tr className=\"$1\">", "\t<td>$0</td>", "</tr>"]
   },
   "ul-li": {
     "prefix": ["html_ul_li", "ul-li"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": ["<ul>", "\t<li>$0</li>", "</ul>"]
+    "body": ["<ul className=\"$1\">", "\t<li className=\"$2\">$0</li>", "</ul>"]
   },
   "video": {
     "prefix": ["html_video", "video"],
@@ -402,17 +402,22 @@
   "li": {
     "prefix": ["html_li", "li"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<li>$0</li>"
+    "body": "<li className=\"$1\">$0</li>"
   },
   "p": {
     "prefix": ["html_p", "p"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<p>$0</p>"
+    "body": "<p className=\"$1\">$0</p>"
+  },
+  "a": {
+    "prefix": ["html_a", "a"],
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<a href=\"$1\" className=\"$2\">$0</a>"
   },
   "pre": {
     "prefix": ["html_pre", "pre"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<pre>$0</pre>"
+    "body": "<pre className=\"$1\">$0</pre>"
   },
   "abbr": {
     "prefix": ["html_abbr", "abbr"],
@@ -442,7 +447,7 @@
   "span": {
     "prefix": ["html_span", "span"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<span>$0</span>"
+    "body": "<span className=\"$1\">$0</span>"
   },
   "strong": {
     "prefix": ["html_strong", "strong"],
@@ -472,7 +477,12 @@
   "caption": {
     "prefix": ["html_caption", "caption"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<caption>$0</caption>"
+    "body": "<caption className=\"$1\">$0</caption>"
+  },
+  "canvas": {
+    "prefix": ["html_canvas", "canvas"],
+    "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<canvas className=\"$1\">$0</canvas>"
   },
   "table-colgroup": {
     "prefix": ["html_table_colgroup", "table-colgroup"],
@@ -509,9 +519,9 @@
     "prefix": ["html_select_optgroup", "select-optgroup"],
     "scope": "plaintext,html,javascript,javascriptreact,typescript,typescriptreact",
     "body": [
-      "<select>",
-      "\t<optgroup label=\"$1\">",
-      "\t\t<option value=\"$2\">$3</option>",
+      "<select className=\"$1\">",
+      "\t<optgroup label=\"$2\">",
+      "\t\t<option value=\"$3\">$4</option>",
       "\t</optgroup>",
       "</select>"
     ]

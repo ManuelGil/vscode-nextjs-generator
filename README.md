@@ -23,7 +23,9 @@ Elevate your productivity with this VSCode extension, empowering you to efficien
     - [Terminal Commands](#terminal-commands)
     - [Snippets](#snippets)
       - [HTML](#html)
+      - [JavaScript](#javascript)
       - [React](#react)
+      - [Next](#next)
       - [Prisma](#prisma)
   - [Connect with me](#connect-with-me)
   - [Other Extensions](#other-extensions)
@@ -221,13 +223,112 @@ Your project is now set up to automatically format code upon saving.
 | html_details              | \<details>...\</details>                                         |
 | html_summary              | \<summary>...\</summary>                                         |
 
+#### JavaScript
+
+| Title                                 | Purpose                         |
+| ------------------------------------- | ------------------------------- |
+| js_set_timeout                        | setTimeout                      |
+| js_set_interval                       | setInterval                     |
+| js_set_immediate                      | setImmediate                    |
+| js_promise_all                        | Promise.all                     |
+| js_env                                | process.env                     |
+| js_resolve                            | Promise.resolve                 |
+| js_reject                             | Promise.reject                  |
+| js_promise                            | Promise                         |
+| js_then                               | Promise.then                    |
+| js_catch                              | Promise.catch                   |
+| js_it                                 | it                              |
+| js_it_todo                            | it.todo                         |
+| js_before                             | before                          |
+| js_before_all                         | beforeAll                       |
+| js_before_each                        | beforeEach                      |
+| js_after                              | after                           |
+| js_after_each                         | afterEach                       |
+| js_member                             | exports.member                  |
+| js_exports                            | module.exports                  |
+| js_handler                            | handler                         |
+| js_add_event_listener                 | addEventListener                |
+| js_remove_event_listener              | removeEventListener             |
+| js_get_element_by_id                  | getElementById                  |
+| js_get_elements_by_class_name         | getElementsByClassName          |
+| js_get_elements_by_tag_name           | getElementsByTagName            |
+| js_query_selector                     | querySelector                   |
+| js_query_selector_all                 | querySelectorAll                |
+| js_create_dDocument_fragment          | createDocumentFragment          |
+| js_create_element                     | createElement                   |
+| js_add                                | classList.add                   |
+| js_remove                             | classList.remove                |
+| js_toggle                             | classList.toggle                |
+| js_get_attribute                      | getAttribute                    |
+| js_remove_attribute                   | removeAttribute                 |
+| js_set_attribute                      | setAttribute                    |
+| js_append_child                       | appendChild                     |
+| js_remove_child                       | removeChild                     |
+| js_loop                               | loop                            |
+| js_map                                | map                             |
+| js_reduce                             | reduce                          |
+| js_filter                             | filter                          |
+| js_find                               | find                            |
+| js_every                              | every                           |
+| js_some                               | some                            |
+| js_class                              | class                           |
+| js_extends                            | extends                         |
+| js_typeof                             | typeof                          |
+| js_instanceof                         | instanceof                      |
+| js_is_array                           | Array.isArray                   |
+| js_array_from                         | Array.from                      |
+| js_try                                | try                             |
+| js_console_log                        | console.log                     |
+| js_console_table                      | console.table                   |
+| js_console_trace                      | console.trace                   |
+| js_console_time                       | console.time                    |
+| js_console_time_end                   | console.timeEnd                 |
+| js_console_group                      | console.group                   |
+| js_console_group_end                  | console.groupEnd                |
+| js_console_group_collapsed            | console.groupCollapsed          |
+| js_console_count                      | console.count                   |
+| js_console_assert                     | console.assert                  |
+| js_console_clear                      | console.clear                   |
+| js_console_info                       | console.info                    |
+| js_console_error                      | console.error                   |
+| js_console_warn                       | console.warn                    |
+| js_console_dir                        | console.dir                     |
+| js_json_stringify                     | JSON.stringify                  |
+| js_json_parse", "JSON.parse           |
+| js_prototype                          | prototype                       |
+| js_object_assign                      | Object.assign                   |
+| js_object_create                      | Object.create                   |
+| js_object_get_own_property_descriptor | Object.getOwnPropertyDescriptor |
+| js_ternary                            | ternary                         |
+| js_object_define_property             | Object.defineProperty           |
+| js_object_keys                        | Object.keys                     |
+| js_object_values                      | Object.values                   |
+| js_object_entries                     | Object.entries                  |
+| js_object_freeze                      | Object.freeze                   |
+| js_object_seal                        | Object.seal                     |
+| js_object_is_frozen                   | Object.isFrozen                 |
+| js_object_is_sealed                   | Object.isSealed                 |
+| js_object_is_extensible               | Object.isExtensible             |
+| js_object_prevent_extensions          | Object.preventExtensions        |
+| js_object_get_prototype_of            | Object.getPrototypeOf           |
+| js_object_set_prototype_of            | Object.setPrototypeOf           |
+| js_object_is                          | Object.is                       |
+| js_object_assign                      | Object.assign                   |
+| js_object_get_own_property_names      | Object.getOwnPropertyNames      |
+| js_object_get_own_property_symbols    | Object.getOwnPropertySymbols    |
+| js_object_get_own_properties          | Object.getOwnProperties         |
+| js_object_get_own_descriptors         | Object.getOwnDescriptors        |
+| js_object_get_own_property_descriptor | Object.getOwnPropertyDescriptor |
+| js_object_define_property             | Object.defineProperty           |
+| js_object_define_properties           | Object.defineProperties         |
+| js_object_define                      | Object.define                   |
+
 #### React
 
 | Title                                        | Purpose                                                                  |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
 | react_arrow_function                         | (...) => { ... };                                                        |
 | react_bind                                   | this.... = this.....bind(this);                                          |
-| react_comment_block                          | /** ... */                                                               |
 | react_component_did_mount                    | componentDidMount = () => { ... };                                       |
 | react_component_did_update                   | componentDidUpdate = (prevProps, prevState) => { ... };                  |
 | react_component_will_unmount                 | componentWillUnmount = () => { ... };                                    |
@@ -327,6 +428,14 @@ Your project is now set up to automatically format code upon saving.
 | react_describe                               | describe('...', () => { ... });                                          |
 | react_test                                   | test('should ...', () => { ... });                                       |
 | react_it                                     | it('should ...', () => { ... });                                         |
+
+#### Next
+
+| Title      | Purpose                                        |
+| ---------- | ---------------------------------------------- |
+| next_image | \<Image src="..." alt="" width={} height={} /> |
+| next_link  | \<Link href="...">\</Link>                     |
+| next_page  | export default function Page() {}              |
 
 #### Prisma
 

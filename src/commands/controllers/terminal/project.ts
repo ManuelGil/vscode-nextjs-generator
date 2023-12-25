@@ -9,16 +9,16 @@ const newProject = async (vscode: any) => {
   const type = await vscode.window.showQuickPick(
     [
       {
-        label: 'create-vite-app',
-        description: 'Create a new project with React and Vite',
+        label: 'create-t3-app',
+        description: 'Create a new project with Create T3 App',
       },
       {
         label: 'create-next-app',
         description: 'Create a new project with Create Next App',
       },
       {
-        label: 'create-t3-app',
-        description: 'Create a new project with Create T3 App',
+        label: 'create-vite-app',
+        description: 'Create a new project with React and Vite',
       },
     ],
     {
@@ -43,21 +43,62 @@ const newProject = async (vscode: any) => {
 
   switch (type.label) {
     case 'create-vite-app':
+      const viteType = await vscode.window.showQuickPick(
+        [
+          {
+            label: 'react',
+            description: 'Create a new project with React and Vite',
+          },
+          {
+            label: 'react-ts',
+            description: 'Create a new project with React, TypeScript and Vite',
+          },
+          {
+            label: 'react-swc',
+            description: 'Create a new project with React, SWC and Vite',
+          },
+          {
+            label: 'react-swc-ts',
+            description:
+              'Create a new project with React, TypeScript, SWC and Vite',
+          },
+        ],
+        {
+          placeHolder: 'What kind of project do you want to create?',
+        },
+      );
+
       switch (manager) {
         case 'npm':
-          execute(vscode, type.label, 'npm create vite@latest .');
+          execute(
+            vscode,
+            type.label,
+            'npm create vite@latest . -- --template ' + viteType.label,
+          );
           break;
 
         case 'yarn':
-          execute(vscode, type.label, 'yarn create vite .');
+          execute(
+            vscode,
+            type.label,
+            'yarn create vite . --template ' + viteType.label,
+          );
           break;
 
         case 'pnpm':
-          execute(vscode, type.label, 'pnpm create vite .');
+          execute(
+            vscode,
+            type.label,
+            'pnpm create vite . --template ' + viteType.label,
+          );
           break;
 
         case 'bun':
-          execute(vscode, type.label, 'bunx create-vite .');
+          execute(
+            vscode,
+            type.label,
+            'bunx create-vite . --template ' + viteType.label,
+          );
           break;
       }
 

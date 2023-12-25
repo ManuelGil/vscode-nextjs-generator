@@ -1,9 +1,8 @@
 {
   "name": "vscode-nextjs-generator",
-  "displayName": "React / NextJS / T3 Stack File Generator",
-  "description": "VSCode extension to generate files for T3 Stack project. NextJS, NextAuth, Prisma, tRPC, and more. Create pages, components, layouts, classes, interfaces, and more.",
-  "version": "0.5.0",
-  "preview": true,
+  "displayName": "T3 Stack / NextJS / ReactJS File Generator",
+  "description": "VSCode extension to generate files for T3 Stack project. It includes NextJS, ReactJS, Prisma, TailwindCSS, i18next, and more.",
+  "version": "1.0.0",
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#52137b",
@@ -22,13 +21,20 @@
     "vscode": "^1.46.0"
   },
   "categories": [
+    "Snippets",
+    "Programming Languages",
     "Other"
   ],
   "keywords": [
+    "api",
+    "auth",
     "boilerplate",
     "bun",
+    "bundler",
     "cli",
+    "code generator",
     "code",
+    "command",
     "component",
     "create-next-app",
     "create-next",
@@ -42,13 +48,26 @@
     "css",
     "custom",
     "customizable",
+    "db",
+    "deploy",
+    "dev",
+    "development",
     "extension",
     "file-generator",
     "file",
+    "files",
+    "folder",
+    "framework",
+    "fullstack",
     "generator",
+    "git",
+    "github",
     "html",
     "i18n",
     "i18next",
+    "init",
+    "interface",
+    "interfaces",
     "javascript",
     "js",
     "json",
@@ -56,9 +75,15 @@
     "language",
     "layout",
     "loading",
+    "migrate",
+    "migration",
+    "module",
+    "modules",
     "next 13",
     "next 14",
     "next",
+    "next auth",
+    "next-auth",
     "nextauth",
     "nextjs 13",
     "nextjs 14",
@@ -74,26 +99,51 @@
     "nextjsfile",
     "nextjsfilegenerator",
     "nextjsgenerator",
+    "nextjsproject",
     "node",
     "nodejs",
     "npm",
+    "orm",
     "page",
     "pages",
     "pnpm",
+    "prisma cli",
+    "prisma db",
+    "prisma migrate",
+    "prisma studio",
     "prisma-orm",
     "prisma",
+    "prisma",
+    "prismacli",
+    "prismadb",
+    "prismamigrate",
+    "prismastudio",
+    "project",
+    "react 16",
     "react 17",
     "react",
     "reactjs",
+    "reactjs16",
+    "reactjs17",
+    "reactjsfile",
+    "reactjsfilegenerator",
+    "reactjsgenerator",
+    "reactjsproject",
+    "schema.prisma",
     "schema",
     "schemas",
     "schematics",
+    "seed",
+    "server",
     "snippet",
     "snippets",
     "stack",
+    "start",
+    "starter kit",
     "starter-kit",
     "starter",
     "starterkit",
+    "t3 stack",
     "t3-stack",
     "t3",
     "t3stack",
@@ -103,14 +153,23 @@
     "tailwindcss",
     "template",
     "terminal",
+    "test",
+    "testing",
+    "tool",
+    "tools",
     "trpc",
     "ts",
     "tsx",
+    "turbo-mode",
+    "turbo",
     "typescript",
     "vercel",
+    "vscode extension",
     "vscode-extension",
+    "vscode",
+    "vscode",
     "yarn",
-    "vscode"
+    "zod"
   ],
   "homepage": "https://github.com/ManuelGil/vscode-nextjs-generator",
   "repository": {
@@ -126,6 +185,9 @@
     "onCommand:nextjs.file.layout",
     "onCommand:nextjs.file.loading",
     "onCommand:nextjs.file.page",
+    "onCommand:nextjs.file.nextauth",
+    "onCommand:nextjs.file.trpc.router",
+    "onCommand:nextjs.file.trpc.controller",
     "onCommand:nextjs.terminal.project",
     "onCommand:nextjs.terminal.prisma.db.execute",
     "onCommand:nextjs.terminal.prisma.db.pull",
@@ -145,7 +207,7 @@
   "main": "./out/extension.js",
   "contributes": {
     "configuration": {
-      "title": "Angular File Generator",
+      "title": "T3 Stack / NextJS / ReactJS File Generator",
       "properties": {
         "nextjs.files.extension": {
           "type": "string",
@@ -159,9 +221,15 @@
           "scope": "resource",
           "description": "Sets the default extension for the generated files"
         },
-        "nextjs.server.turbo": {
+        "nextjs.files.showType": {
           "type": "boolean",
           "default": true,
+          "scope": "resource",
+          "description": "Show the type in the name of the generated files"
+        },
+        "nextjs.server.turbo": {
+          "type": "boolean",
+          "default": false,
           "scope": "resource",
           "description": "Star server in turbo mode (only for NextJS 14+)"
         }
@@ -172,7 +240,13 @@
         "path": "./snippets/html.code-snippets"
       },
       {
+        "path": "./snippets/i18next.code-snippets"
+      },
+      {
         "path": "./snippets/javascript.code-snippets"
+      },
+      {
+        "path": "./snippets/nextauth.code-snippets"
       },
       {
         "path": "./snippets/nextjs.code-snippets"
@@ -182,119 +256,322 @@
       },
       {
         "path": "./snippets/reactjs.code-snippets"
+      },
+      {
+        "path": "./snippets/tailwindcss.code-snippets"
+      },
+      {
+        "path": "./snippets/trpc.code-snippets"
+      },
+      {
+        "path": "./snippets/zod.code-snippets"
       }
     ],
     "commands": [
       {
         "command": "nextjs.file.class",
-        "title": "Next: Generate Class or Interface"
+        "title": "Generate Class or Interface",
+        "category": "T3"
       },
       {
         "command": "nextjs.file.component",
-        "title": "Next: Generate Component"
+        "title": "Generate Component",
+        "category": "T3"
       },
       {
         "command": "nextjs.file.layout",
-        "title": "Next: Generate Layout"
+        "title": "Generate Layout",
+        "category": "T3"
       },
       {
         "command": "nextjs.file.loading",
-        "title": "Next: Generate Loading"
+        "title": "Generate Loading",
+        "category": "T3"
       },
       {
         "command": "nextjs.file.page",
-        "title": "Next: Generate Page"
+        "title": "Generate Page",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.file.nextauth",
+        "title": "Add NextAuth file",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.file.trpc.router",
+        "title": "Generate tRPC Router",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.file.trpc.controller",
+        "title": "Generate tRPC Controller",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.project",
-        "title": "Next: Create Project"
+        "title": "Create Project",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.db.execute",
-        "title": "Next: Prisma DB Execute"
+        "title": "Prisma DB Execute",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.db.pull",
-        "title": "Next: Prisma DB Pull"
+        "title": "Prisma DB Pull",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.db.push",
-        "title": "Next: Prisma DB Push"
+        "title": "Prisma DB Push",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.db.seed",
-        "title": "Next: Prisma DB Seed"
+        "title": "Prisma DB Seed",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.format",
-        "title": "Next: Prisma Format"
+        "title": "Prisma Format",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.generate",
-        "title": "Next: Prisma Generate"
+        "title": "Prisma Generate",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.init",
-        "title": "Next: Prisma Init"
+        "title": "Prisma Init",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.migrate.deploy",
-        "title": "Next: Prisma Migrate Deploy"
+        "title": "Prisma Migrate Deploy",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.migrate.dev",
-        "title": "Next: Prisma Migrate Dev"
+        "title": "Prisma Migrate Dev",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.migrate.reset",
-        "title": "Next: Prisma Migrate Reset"
+        "title": "Prisma Migrate Reset",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.migrate.status",
-        "title": "Next: Prisma Migrate Status"
+        "title": "Prisma Migrate Status",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.studio",
-        "title": "Next: Prisma Studio"
+        "title": "Prisma Studio",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.prisma.validate",
-        "title": "Next: Prisma Validate"
+        "title": "Prisma Validate",
+        "category": "T3"
       },
       {
         "command": "nextjs.terminal.start",
-        "title": "Next: Start Server"
+        "title": "Start Server",
+        "category": "T3"
       }
     ],
     "submenus": [
       {
-        "id": "nextjs.submenu",
-        "label": "Next File Generator"
+        "id": "root.submenu",
+        "label": "T3 Stack File Generator"
+      },
+      {
+        "id": "folder.submenu",
+        "label": "T3 Stack File Generator"
+      },
+      {
+        "id": "prisma.submenu",
+        "label": "T3 Stack File Generator"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "submenu": "nextjs.submenu",
-          "group": "1_modification",
-          "when": "explorerViewletFocus && explorerResourceIsFolder"
+          "submenu": "root.submenu",
+          "group": "2_workspace",
+          "when": "explorerViewletFocus && explorerResourceIsRoot && explorerResourceIsFolder"
+        },
+        {
+          "submenu": "folder.submenu",
+          "group": "2_workspace",
+          "when": "explorerViewletFocus && explorerResourceIsFolder && !explorerResourceIsRoot"
+        },
+        {
+          "submenu": "prisma.submenu",
+          "group": "2_workspace",
+          "when": "explorerViewletFocus && !explorerResourceIsFolder && resourceFilename =~ /schema.prisma$/"
         }
       ],
-      "nextjs.submenu": [
+      "root.submenu": [
         {
-          "command": "nextjs.file.class"
+          "command": "nextjs.terminal.project",
+          "group": "1_nextjs"
         },
         {
-          "command": "nextjs.file.component"
+          "command": "nextjs.terminal.start",
+          "group": "1_nextjs"
         },
         {
-          "command": "nextjs.file.layout"
+          "command": "nextjs.terminal.prisma.init",
+          "group": "2_prisma"
+        }
+      ],
+      "folder.submenu": [
+        {
+          "command": "nextjs.file.class",
+          "group": "1_nextjs"
         },
         {
-          "command": "nextjs.file.loading"
+          "command": "nextjs.file.component",
+          "group": "1_nextjs"
         },
         {
-          "command": "nextjs.file.page"
+          "command": "nextjs.file.layout",
+          "group": "1_nextjs"
+        },
+        {
+          "command": "nextjs.file.loading",
+          "group": "1_nextjs"
+        },
+        {
+          "command": "nextjs.file.page",
+          "group": "1_nextjs"
+        },
+        {
+          "command": "nextjs.file.nextauth",
+          "group": "2_nextauth"
+        },
+        {
+          "command": "nextjs.file.trpc.router",
+          "group": "3_trpc"
+        },
+        {
+          "command": "nextjs.file.trpc.controller",
+          "group": "3_trpc"
+        },
+        {
+          "command": "nextjs.terminal.prisma.db.execute",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.db.pull",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.db.push",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.db.seed",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.format",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.generate",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.migrate.deploy",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.migrate.dev",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.migrate.reset",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.migrate.status",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.studio",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        },
+        {
+          "command": "nextjs.terminal.prisma.validate",
+          "group": "4_prisma",
+          "when": "resourcePath =~ /prisma$/"
+        }
+      ],
+      "prisma.submenu": [
+        {
+          "command": "nextjs.terminal.prisma.db.execute",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.db.pull",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.db.push",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.db.seed",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.format",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.generate",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.migrate.deploy",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.migrate.dev",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.migrate.reset",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.migrate.status",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.studio",
+          "group": "1_prisma"
+        },
+        {
+          "command": "nextjs.terminal.prisma.validate",
+          "group": "1_prisma"
         }
       ]
     },

@@ -1,102 +1,102 @@
 {
   "setTimeout": {
     "prefix": ["js_set_timeout", "setTimeout"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["setTimeout(() => {", "\t${0}", "}, ${1:delay})"]
   },
   "setInterval": {
     "prefix": ["js_set_interval", "setInterval"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["setInterval(() => {", "\t${0}", "}, ${1:delay})"]
   },
   "setImmediate": {
     "prefix": ["js_set_immediate", "setImmediate"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["setImmediate(() => {", "\t${0}", "})"]
   },
   "await Promise.all": {
     "prefix": ["js_promise_all", "Promise.all"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const [${0}] = await Promise.all(${1:value})"
   },
   "process.env": {
     "prefix": ["js_env", "process.env"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "process.env"
   },
   "Promise.resolve": {
     "prefix": ["js_resolve", "Promise.resolve"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Promise.resolve(${1:value})"
   },
   "Promise.reject": {
     "prefix": ["js_reject", "Promise.reject"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Promise.reject(${1:value})"
   },
   "new Promise": {
     "prefix": ["js_promise", "Promise"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["new Promise((resolve, reject) => {", "\t${0}", "})"]
   },
   "Promise.then": {
     "prefix": ["js_then", "Promise.then"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["${1:Promise}.then((${2:value}) => {", "\t${0}", "})"]
   },
   "Promise.catch": {
     "prefix": ["js_catch", "Promise.catch"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["${1:Promise}.catch(error => {", "\t${0}", "})"]
   },
   "it": {
     "prefix": ["js_it", "it"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["it('${1:description}', async () => {", "\t${0}", "})"]
   },
   "it.todo": {
     "prefix": ["js_it_todo", "it.todo"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "it.todo('${1:description}')"
   },
   "before": {
     "prefix": ["js_before", "before"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["before(async () => {", "\t${0}", "})"]
   },
   "beforeAll": {
     "prefix": ["js_before_all", "beforeAll"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["beforeAll(async () => {", "\t${0}", "})"]
   },
   "beforeEach": {
     "prefix": ["js_before_each", "beforeEach"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["beforeEach(async () => {", "\t${0}", "})"]
   },
   "after": {
     "prefix": ["js_after", "after"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["after(() => {", "\t${0}", "})"]
   },
   "afterEach": {
     "prefix": ["js_after_each", "afterEach"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["afterEach(() => {", "\t${0}", "})"]
   },
   "exports.member": {
     "prefix": ["js_member", "exports.member"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "exports.${1:member} = ${2:value}"
   },
   "module.exports": {
     "prefix": ["js_exports", "module.exports"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "module.exports = ${1:name}"
   },
   "event handler": {
     "prefix": ["js_handler", "handler"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "${1:emitter}.on('${2:event}', (${3:arguments}) => {",
       "\t${0}",
@@ -105,7 +105,7 @@
   },
   "addEventListener": {
     "prefix": ["js_add_event_listener", "addEventListener"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "${1:document}.addEventListener('${2:event}', ${3:ev} => {",
       "\t${0}",
@@ -114,97 +114,97 @@
   },
   "removeEventListener": {
     "prefix": ["js_remove_event_listener", "removeEventListener"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:document}.removeEventListener('${2:event}', ${3:listener})"
   },
   "getElementById": {
     "prefix": ["js_get_element_by_id", "getElementById"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:document}.getElementById('${2:id}')"
   },
   "getElementsByClassName": {
     "prefix": ["js_get_elements_by_class_name", "getElementsByClassName"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:document}.getElementsByClassName('${2:class}')"
   },
   "getElementsByTagName": {
     "prefix": ["js_get_elements_by_tag_name", "getElementsByTagName"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:document}.getElementsByTagName('${2:tag}')"
   },
   "querySelector": {
     "prefix": ["js_query_selector", "querySelector"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:document}.querySelector('${2:selector}')"
   },
   "querySelectorAll": {
     "prefix": ["js_query_selector_all", "querySelectorAll"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:document}.querySelectorAll('${2:selector}')"
   },
   "createDocumentFragment": {
     "prefix": ["js_create_dDocument_fragment", "createDocumentFragment"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:document}.createDocumentFragment(${2:elem})"
   },
   "createElement": {
     "prefix": ["js_create_element", "createElement"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:document}.createElement(${2:elem})"
   },
   "classList.add": {
     "prefix": ["js_add", "classList.add"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:el}.classList.add('${2:class}')"
   },
   "classList.remove": {
     "prefix": ["js_remove", "classList.remove"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:el}.classList.remove('${2:class}')"
   },
   "classList.toggle": {
     "prefix": ["js_toggle", "classList.toggle"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:el}.classList.toggle('${2:class}')"
   },
   "getAttribute": {
     "prefix": ["js_get_attribute", "getAttribute"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:el}.getAttribute('${2:attr}')"
   },
   "removeAttribute": {
     "prefix": ["js_remove_attribute", "removeAttribute"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:el}.removeAttribute('${2:attr}')"
   },
   "setAttribute": {
     "prefix": ["js_set_attribute", "setAttribute"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:el}.setAttribute('${2:attr}', ${3:value})"
   },
   "appendChild": {
     "prefix": ["js_append_child", "appendChild"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:el}.appendChild(${2:elem})"
   },
   "removeChild": {
     "prefix": ["js_remove_child", "removeChild"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:el}.removeChild(${2:elem})"
   },
   "forEach loop": {
     "prefix": ["js_loop", "loop"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["${1:iterable}.forEach((${2:item}) => {", "\t${0}", "})"]
   },
   "map": {
     "prefix": ["js_map", "map"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["${1:iterable}.map((${2:item}) => {", "\t${0}", "})"]
   },
   "reduce": {
     "prefix": ["js_reduce", "reduce"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "${1:iterable}.reduce((${2:previous}, ${3:current}) => {",
       "\t${0}",
@@ -213,27 +213,27 @@
   },
   "filter": {
     "prefix": ["js_filter", "filter"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["${1:iterable}.filter((${2:item}) => {", "\t${0}", "})"]
   },
   "find": {
     "prefix": ["js_find", "find"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["${1:iterable}.find((${2:item}) => {", "\t${0}", "})"]
   },
   "every": {
     "prefix": ["js_every", "every"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["${1:iterable}.every((${2:item}) => {", "\t${0}", "})"]
   },
   "some": {
     "prefix": ["js_some", "some"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["${1:iterable}.some((${2:item}) => {", "\t${0}", "})"]
   },
   "class": {
     "prefix": ["js_class", "class"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "class ${1:name} {",
       "\tconstructor (${2:arguments}) {",
@@ -244,7 +244,7 @@
   },
   "class extends": {
     "prefix": ["js_extends", "extends"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "class ${1:name} extends ${2:base} {",
       "\tconstructor (${3:arguments}) {",
@@ -256,27 +256,27 @@
   },
   "typeof": {
     "prefix": ["js_typeof", "typeof"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "typeof ${1:source} === '${2:undefined}'"
   },
   "instanceof": {
     "prefix": ["js_instanceof", "instanceof"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:source} instanceof ${2:Object}"
   },
   "Array.isArray": {
     "prefix": ["js_is_array", "Array.isArray"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Array.isArray(${1:source})"
   },
   "Array.from": {
     "prefix": ["js_array_from", "Array.from"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Array.from(${1:source})"
   },
   "try": {
     "prefix": ["js_try", "try"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "try {",
       "\t${0}",
@@ -289,92 +289,92 @@
   },
   "console.log": {
     "prefix": ["js_console_log", "console.log"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.log('${0}:', ${0})"
   },
   "console.table": {
     "prefix": ["js_console_table", "console.table"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.table(${0})"
   },
   "console.trace": {
     "prefix": ["js_console_trace", "console.trace"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.trace(${0})"
   },
   "console.time": {
     "prefix": ["js_console_time", "console.time"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.time(${0})"
   },
   "console.timeEnd": {
     "prefix": ["js_console_time_end", "console.timeEnd"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.timeEnd(${0})"
   },
   "console.group": {
     "prefix": ["js_console_group", "console.group"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.group(${0})"
   },
   "console.groupEnd": {
     "prefix": ["js_console_group_end", "console.groupEnd"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.groupEnd(${0})"
   },
   "console.groupCollapsed": {
     "prefix": ["js_console_group_collapsed", "console.groupCollapsed"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.groupCollapsed(${0})"
   },
   "console.count": {
     "prefix": ["js_console_count", "console.count"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.count(${0})"
   },
   "console.assert": {
     "prefix": ["js_console_assert", "console.assert"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.assert(${1:condition}, ${2:message})"
   },
   "console.clear": {
     "prefix": ["js_console_clear", "console.clear"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.clear()"
   },
   "console.info": {
     "prefix": ["js_console_info", "console.info"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.info(${0})"
   },
   "console.error": {
     "prefix": ["js_console_error", "console.error"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.error(${0})"
   },
   "console.warn": {
     "prefix": ["js_console_warn", "console.warn"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.warn(${0})"
   },
   "console.dir": {
     "prefix": ["js_console_dir", "console.dir"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "console.dir('${0}:', ${0})"
   },
   "JSON.stringify": {
     "prefix": ["js_json_stringify", "JSON.stringify"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "JSON.stringify($0)"
   },
   "JSON.parse": {
-    "prefix": ["js_json_parse",  "JSON.parse"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": ["js_json_parse", "JSON.parse"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "JSON.parse($0)"
   },
   "prototype method": {
     "prefix": ["js_prototype", "prototype"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "${1:Class}.prototype.${2:method} = function (${3:arguments}) {",
       "\t${0}",
@@ -383,132 +383,126 @@
   },
   "Object.assign": {
     "prefix": ["js_object_assign", "Object.assign"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.assign(${1:dest}, ${2:source})"
   },
   "Object.create": {
     "prefix": ["js_object_create", "Object.create"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.create(${1:obj})"
   },
   "Object.getOwnPropertyDescriptor": {
-    "prefix": ["js_object_get_own_property_descriptor", "Object.getOwnPropertyDescriptor"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": [
+      "js_object_get_own_property_descriptor",
+      "Object.getOwnPropertyDescriptor"
+    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.getOwnPropertyDescriptor(${1:obj}, '${2:prop}')"
   },
   "ternary": {
     "prefix": ["js_ternary", "ternary"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "${1:cond} ? ${2:true} : ${3:false}"
   },
   "Object.defineProperty": {
     "prefix": ["js_object_define_property", "Object.defineProperty"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["Object.defineProperty(${1:dest}, '${2:prop}', {", "\t${0}", "})"]
   },
   "Object.keys": {
     "prefix": ["js_object_keys", "Object.keys"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.keys(${1:obj})"
   },
   "Object.values": {
     "prefix": ["js_object_values", "Object.values"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.values(${1:obj})"
   },
   "Object.entries": {
     "prefix": ["js_object_entries", "Object.entries"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.entries(${1:obj})"
   },
   "Object.freeze": {
     "prefix": ["js_object_freeze", "Object.freeze"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.freeze(${1:obj})"
   },
   "Object.seal": {
     "prefix": ["js_object_seal", "Object.seal"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.seal(${1:obj})"
   },
   "Object.isFrozen": {
     "prefix": ["js_object_is_frozen", "Object.isFrozen"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.isFrozen(${1:obj})"
   },
   "Object.isSealed": {
     "prefix": ["js_object_is_sealed", "Object.isSealed"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.isSealed(${1:obj})"
   },
   "Object.isExtensible": {
     "prefix": ["js_object_is_extensible", "Object.isExtensible"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.isExtensible(${1:obj})"
   },
   "Object.preventExtensions": {
     "prefix": ["js_object_prevent_extensions", "Object.preventExtensions"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.preventExtensions(${1:obj})"
   },
   "Object.getPrototypeOf": {
     "prefix": ["js_object_get_prototype_of", "Object.getPrototypeOf"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.getPrototypeOf(${1:obj})"
   },
   "Object.setPrototypeOf": {
     "prefix": ["js_object_set_prototype_of", "Object.setPrototypeOf"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.setPrototypeOf(${1:obj}, ${2:proto})"
   },
   "Object.is": {
     "prefix": ["js_object_is", "Object.is"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.is(${1:obj}, ${2:other})"
   },
-  "Object.assign": {
-    "prefix": ["js_object_assign", "Object.assign"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "Object.assign(${1:dest}, ${2:source})"
-  },
   "Object.getOwnPropertyNames": {
-    "prefix": ["js_object_get_own_property_names", "Object.getOwnPropertyNames"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": [
+      "js_object_get_own_property_names",
+      "Object.getOwnPropertyNames"
+    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.getOwnPropertyNames(${1:obj})"
   },
   "Object.getOwnPropertySymbols": {
-    "prefix": ["js_object_get_own_property_symbols", "Object.getOwnPropertySymbols"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": [
+      "js_object_get_own_property_symbols",
+      "Object.getOwnPropertySymbols"
+    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.getOwnPropertySymbols(${1:obj})"
   },
   "Object.getOwnProperties": {
     "prefix": ["js_object_get_own_properties", "Object.getOwnProperties"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.getOwnProperties(${1:obj})"
   },
   "Object.getOwnDescriptors": {
     "prefix": ["js_object_get_own_descriptors", "Object.getOwnDescriptors"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.getOwnDescriptors(${1:obj})"
-  },
-  "Object.getOwnPropertyDescriptor": {
-    "prefix": ["js_object_get_own_property_descriptor", "Object.getOwnPropertyDescriptor"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "Object.getOwnPropertyDescriptor(${1:obj}, '${2:prop}')"
-  },
-  "Object.defineProperty": {
-    "prefix": ["js_object_define_property", "Object.defineProperty"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
-    "body": ["Object.defineProperty(${1:dest}, '${2:prop}', {", "\t${0}", "})"]
   },
   "Object.defineProperties": {
     "prefix": ["js_object_define_properties", "Object.defineProperties"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.defineProperties(${1:dest}, ${2:props})"
   },
   "Object.define": {
     "prefix": ["js_object_define", "Object.define"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "Object.define(${1:dest}, ${2:props})"
   }
 }

@@ -1,0 +1,754 @@
+{
+  "authOptions": {
+    "prefix": ["nextauth_auth_options", "authOptions"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "export const authOptions = {",
+      "\tproviders: [",
+      "\t\t$0",
+      "\t],",
+      "};"
+    ]
+  },
+  "useSession": {
+    "prefix": ["nextauth_use_session", "useSession"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "const { data: sessionData } = useSession();"
+  },
+  "SessionProvider Component": {
+    "prefix": ["nextauth_session_provider", "SessionProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "<SessionProvider session={session as Session}}>",
+      "\t<Component {...pageProps} />",
+      "</SessionProvider>"
+    ]
+  },
+  "FortyTwoProvider": {
+    "prefix": ["nextauth_forty_two_provider", "FortyTwoProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "FortyTwoProvider({",
+      "\tclientId: process.env.FORTY_TWO_CLIENT_ID,",
+      "\tclientSecret: process.env.FORTY_TWO_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "AppleProvider": {
+    "prefix": ["nextauth_apple_provider", "AppleProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "AppleProvider({",
+      "\tclientId: process.env.APPLE_ID,",
+      "\tclientSecret: process.env.APPLE_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "AtlassianProvider": {
+    "prefix": ["nextauth_atlassian_provider", "AtlassianProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "AtlassianProvider({",
+      "\tclientId: process.env.ATLASSIAN_CLIENT_ID,",
+      "\tclientSecret: process.env.ATLASSIAN_CLIENT_SECRET,",
+      "\tauthorization: {",
+      "\t\tparams: {",
+      "\t\t\tscope: \"write:jira-work read:jira-work read:jira-user offline_access read:me\"",
+      "\t\t}",
+      "\t}",
+      "}),",
+      ""
+    ]
+  },
+  "Auth0Provider": {
+    "prefix": ["nextauth_auth0_provider", "Auth0Provider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "Auth0Provider({",
+      "\tclientId: process.env.AUTH0_CLIENT_ID,",
+      "\tclientSecret: process.env.AUTH0_CLIENT_SECRET,",
+      "\tissuer: process.env.AUTH0_ISSUER",
+      "}),",
+      ""
+    ]
+  },
+  "AuthentikProvider": {
+    "prefix": ["nextauth_authentik_provider", "AuthentikProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "AuthentikProvider({",
+      "\tclientId: process.env.AUTHENTIK_ID,",
+      "\tclientSecret: process.env.AUTHENTIK_SECRET,",
+      "\tissuer: process.env.AUTHENTIK_ISSUER,",
+      "}),",
+      ""
+    ]
+  },
+  "AzureADB2CProvider": {
+    "prefix": ["nextauth_azure_ad_b2c_provider", "AzureADB2CProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "AzureADB2CProvider({",
+      "\ttenantId: process.env.AZURE_AD_B2C_TENANT_NAME,",
+      "\tclientId: process.env.AZURE_AD_B2C_CLIENT_ID,",
+      "\tclientSecret: process.env.AZURE_AD_B2C_CLIENT_SECRET,",
+      "\tprimaryUserFlow: process.env.AZURE_AD_B2C_PRIMARY_USER_FLOW,",
+      "\tauthorization: { params: { scope: `https://${process.env.AZURE_AD_B2C_TENANT_NAME}.onmicrosoft.com/api/demo.read https://${process.env.AZURE_AD_B2C_TENANT_NAME}.onmicrosoft.com/api/demo.write offline_access openid` } },",
+      "}),",
+      ""
+    ]
+  },
+  "AzureADProvider": {
+    "prefix": ["nextauth_azure_ad_provider", "AzureADProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "AzureADProvider({",
+      "\tclientId: process.env.AZURE_AD_CLIENT_ID,",
+      "\tclientSecret: process.env.AZURE_AD_CLIENT_SECRET,",
+      "\ttenantId: process.env.AZURE_AD_TENANT_ID,",
+      "}),",
+      ""
+    ]
+  },
+  "BattleNetProvider": {
+    "prefix": ["nextauth_battle_net_provider", "BattleNetProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "BattleNetProvider({",
+      "\tclientId: process.env.BATTLENET_CLIENT_ID,",
+      "\tclientSecret: process.env.BATTLENET_CLIENT_SECRET,",
+      "\tissuer: process.env.BATTLENET_ISSUER",
+      "}),",
+      ""
+    ]
+  },
+  "BoxProvider": {
+    "prefix": ["nextauth_box_provider", "BoxProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "BoxProvider({",
+      "\tclientId: process.env.BOX_CLIENT_ID,",
+      "\tclientSecret: process.env.BOX_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "BoxyHQSAMLProvider": {
+    "prefix": ["nextauth_boxy_hq_saml_provider", "BoxyHQSAMLProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "BoxyHQSAMLProvider({",
+      "\tissuer: \"http://localhost:5225\",",
+      "\tclientId: \"dummy\",",
+      "\tclientSecret: \"dummy\",",
+      "}),",
+      ""
+    ]
+  },
+  "BungieProvider": {
+    "prefix": ["nextauth_bungie_provider", "BungieProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "BungieProvider({",
+      "\tclientId: process.env.BUNGIE_CLIENT_ID,",
+      "\tclientSecret: process.env.BUNGIE_SECRET,",
+      "\theaders: {",
+      "\t\t\"X-API-Key\": process.env.BUNGIE_API_KEY",
+      "\t}",
+      "}),",
+      ""
+    ]
+  },
+  "CognitoProvider": {
+    "prefix": ["nextauth_cognito_provider", "CognitoProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "CognitoProvider({",
+      "\tclientId: process.env.COGNITO_CLIENT_ID,",
+      "\tclientSecret: process.env.COGNITO_CLIENT_SECRET,",
+      "\tissuer: process.env.COGNITO_ISSUER,",
+      "}),",
+      ""
+    ]
+  },
+  "CoinbaseProvider": {
+    "prefix": ["nextauth_coinbase_provider", "CoinbaseProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "CoinbaseProvider({",
+      "\tclientId: process.env.COINBASE_CLIENT_ID,",
+      "\tclientSecret: process.env.COINBASE_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "DiscordProvider": {
+    "prefix": ["nextauth_discord_provider", "DiscordProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "DiscordProvider({",
+      "\tclientId: process.env.DISCORD_CLIENT_ID,",
+      "\tclientSecret: process.env.DISCORD_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "DropboxProvider": {
+    "prefix": ["nextauth_dropbox_provider", "DropboxProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "DropboxProvider({",
+      "\tclientId: process.env.DROPBOX_CLIENT_ID,",
+      "\tclientSecret: process.env.DROPBOX_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "DuendeIDS6Provider": {
+    "prefix": ["nextauth_duende_ids6_provider", "DuendeIDS6Provider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "DuendeIDS6Provider({",
+      "\tclientId: process.env.DUENDE_IDS6_ID,",
+      "\tclientSecret: process.env.DUENDE_IDS6_SECRET,",
+      "\tissuer: process.env.DUENDE_IDS6_ISSUER,",
+      "}),",
+      ""
+    ]
+  },
+  "EVEOnlineProvider": {
+    "prefix": ["nextauth_eve_online_provider", "EVEOnlineProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "EVEOnlineProvider({",
+      "\tclientId: process.env.EVE_CLIENT_ID,",
+      "\tclientSecret: process.env.EVE_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "FacebookProvider": {
+    "prefix": ["nextauth_facebook_provider", "FacebookProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "FacebookProvider({",
+      "\tclientId: process.env.FACEBOOK_CLIENT_ID,",
+      "\tclientSecret: process.env.FACEBOOK_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "FaceItProvider": {
+    "prefix": ["nextauth_face_it_provider", "FaceItProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "FaceItProvider({",
+      "\tclientId: process.env.FACEIT_CLIENT_ID,",
+      "\tclientSecret: process.env.FACEIT_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "FourSquareProvider": {
+    "prefix": ["nextauth_four_square_provider", "FourSquareProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "FourSquareProvider({",
+      "\tclientId: process.env.FOURSQUARE_CLIENT_ID,",
+      "\tclientSecret: process.env.FOURSQUARE_CLIENT_SECRET,",
+      "\tapiVersion: \"YYYYMMDD\"",
+      "}),",
+      ""
+    ]
+  },
+  "FreshbooksProvider": {
+    "prefix": ["nextauth_freshbooks_provider", "FreshbooksProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "FreshbooksProvider({",
+      "\tclientId: process.env.FRESHBOOKS_CLIENT_ID,",
+      "\tclientSecret: process.env.FRESHBOOKS_CLIENT_SECRET,",
+      "}),",
+      ""
+    ]
+  },
+  "FusionAuthProvider": {
+    "prefix": ["nextauth_fusion_auth_provider", "FusionAuthProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "FusionAuthProvider({",
+      "\tid: \"fusionauth\",",
+      "\tname: \"FusionAuth\",",
+      "\tissuer:\tprocess.env.FUSIONAUTH_ISSUER,",
+      "\tclientId: process.env.FUSIONAUTH_CLIENT_ID,",
+      "\tclientSecret: process.env.FUSIONAUTH_SECRET,",
+      "\ttenantId: process.env.FUSIONAUTH_TENANT_ID",
+      "}),",
+      ""
+    ]
+  },
+  "GitHubProvider": {
+    "prefix": ["nextauth_git_hub_provider", "GitHubProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "GitHubProvider({",
+      "\tclientId: process.env.GITHUB_ID,",
+      "\tclientSecret: process.env.GITHUB_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "GitlabProvider": {
+    "prefix": ["nextauth_gitlab_provider", "GitlabProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "GitlabProvider({",
+      "\tclientId: process.env.GITLAB_CLIENT_ID,",
+      "\tclientSecret: process.env.GITLAB_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "GoogleProvider": {
+    "prefix": ["nextauth_google_provider", "GoogleProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "GoogleProvider({",
+      "\tclientId: process.env.GOOGLE_ID,",
+      "\tclientSecret: process.env.GOOGLE_SECRET,",
+      "\tauthorization: {",
+      "\t\tparams: {",
+      "\t\t\tprompt: \"consent\",",
+      "\t\t\taccess_type: \"offline\",",
+      "\t\t\tresponse_type: \"code\"",
+      "\t\t}",
+      "\t}",
+      "}),",
+      ""
+    ]
+  },
+  "HubspotProvider": {
+    "prefix": ["nextauth_hubspot_provider", "HubspotProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "HubspotProvider({",
+      "\tclientId: process.env.HUBSPOT_CLIENT_ID,",
+      "\tclientSecret: process.env.HUBSPOT_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "IdentityServer4Provider": {
+    "prefix": ["nextauth_identity_server4_provider", "IdentityServer4Provider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "IdentityServer4Provider({",
+      "\tid: \"identity-server4\",",
+      "\tname: \"IdentityServer4\",",
+      "\tissuer:\tprocess.env.IdentityServer4_Issuer,",
+      "\tclientId: process.env.IdentityServer4_CLIENT_ID,",
+      "\tclientSecret: process.env.IdentityServer4_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "InstagramProvider": {
+    "prefix": ["nextauth_instagram_provider", "InstagramProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "InstagramProvider({",
+      "\tclientId: process.env.INSTAGRAM_CLIENT_ID,",
+      "\tclientSecret: process.env.INSTAGRAM_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "KakaoProvider": {
+    "prefix": ["nextauth_kakao_provider", "KakaoProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "KakaoProvider({",
+      "\tclientId: process.env.KAKAO_CLIENT_ID,",
+      "\tclientSecret: process.env.KAKAO_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "KeycloakProvider": {
+    "prefix": ["nextauth_keycloak_provider", "KeycloakProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "KeycloakProvider({",
+      "\tclientId: process.env.KEYCLOAK_ID,",
+      "\tclientSecret: process.env.KEYCLOAK_SECRET,",
+      "\tissuer: process.env.KEYCLOAK_ISSUER,",
+      "}),",
+      ""
+    ]
+  },
+  "LineProvider": {
+    "prefix": ["nextauth_line_provider", "LineProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "LineProvider({",
+      "\tclientId: process.env.LINE_CLIENT_ID,",
+      "\tclientSecret: process.env.LINE_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "LinkedInProvider": {
+    "prefix": ["nextauth_linked_in_provider", "LinkedInProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "LinkedInProvider({",
+      "\tclientId: process.env.LINKEDIN_CLIENT_ID,",
+      "\tclientSecret: process.env.LINKEDIN_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "MailchimpProvider": {
+    "prefix": ["nextauth_mailchimp_provider", "MailchimpProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "MailchimpProvider({",
+      "\tclientId: process.env.MAILCHIMP_CLIENT_ID,",
+      "\tclientSecret: process.env.MAILCHIMP_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "MailRuProvider": {
+    "prefix": ["nextauth_mail_ru_provider", "MailRuProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "MailRuProvider({",
+      "\tclientId: process.env.MAILRU_CLIENT_ID,",
+      "\tclientSecret: process.env.MAILRU_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "MediumProvider": {
+    "prefix": ["nextauth_medium_provider", "MediumProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "MediumProvider({",
+      "\tclientId: process.env.MEDIUM_CLIENT_ID,",
+      "\tclientSecret: process.env.MEDIUM_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "NaverProvider": {
+    "prefix": ["nextauth_naver_provider", "NaverProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "NaverProvider({",
+      "\tclientId: process.env.NAVER_CLIENT_ID,",
+      "\tclientSecret: process.env.NAVER_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "NetlifyProvider": {
+    "prefix": ["nextauth_netlify_provider", "NetlifyProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "NetlifyProvider({",
+      "\tclientId: process.env.NETLIFY_CLIENT_ID,",
+      "\tclientSecret: process.env.NETLIFY_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "OktaProvider": {
+    "prefix": ["nextauth_okta_provider", "OktaProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "OktaProvider({",
+      "\tclientId: process.env.OKTA_CLIENT_ID,",
+      "\tclientSecret: process.env.OKTA_CLIENT_SECRET,",
+      "\tissuer: process.env.OKTA_ISSUER",
+      "}),",
+      ""
+    ]
+  },
+  "OneLoginProvider": {
+    "prefix": ["nextauth_one_login_provider", "OneLoginProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "OneLoginProvider({",
+      "\tclientId: process.env.ONELOGIN_CLIENT_ID,",
+      "\tclientSecret: process.env.ONELOGIN_CLIENT_SECRET,",
+      "\tissuer: process.env.ONELOGIN_ISSUER",
+      "}),",
+      ""
+    ]
+  },
+  "OssoProvider": {
+    "prefix": ["nextauth_osso_provider", "OssoProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "OssoProvider({",
+      "\tclientId: process.env.OSSO_CLIENT_ID,",
+      "\tclientSecret: process.env.OSSO_CLIENT_SECRET,",
+      "\tissuer: process.env.OSSO_ISSUER",
+      "}),",
+      ""
+    ]
+  },
+  "OsuProvider": {
+    "prefix": ["nextauth_osu_provider", "OsuProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "OsuProvider({",
+      "\tclientId: process.env.OSU_CLIENT_ID,",
+      "\tclientSecret: process.env.OSU_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "PatreonProvider": {
+    "prefix": ["nextauth_patreon_provider", "PatreonProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "PatreonProvider({",
+      "\tclientId: process.env.PATREON_ID,",
+      "\tclientSecret: process.env.PATREON_SECRET,",
+      "}),",
+      ""
+    ]
+  },
+  "PinterestProvider": {
+    "prefix": ["nextauth_pinterest_provider", "PinterestProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "PinterestProvider({",
+      "\tclientId: process.env.PINTEREST_ID,",
+      "\tclientSecret: process.env.PINTEREST_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "PipedriveProvider": {
+    "prefix": ["nextauth_pipedrive_provider", "PipedriveProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "PipedriveProvider({",
+      "\tclientId: process.env.PIPEDRIVE_CLIENT_ID,",
+      "\tclientSecret: process.env.PIPEDRIVE_CLIENT_SECRET,",
+      "}),",
+      ""
+    ]
+  },
+  "RedditProvider": {
+    "prefix": ["nextauth_reddit_provider", "RedditProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "RedditProvider({",
+      "\tclientId: process.env.REDDIT_CLIENT_ID,",
+      "\tclientSecret: process.env.REDDIT_CLIENT_SECRET,",
+      "\tauthorization: {",
+      "\t\tparams: {",
+      "\t\t\tduration: \"permanent\",",
+      "\t\t},",
+      "\t},",
+      "}),",
+      ""
+    ]
+  },
+  "SalesforceProvider": {
+    "prefix": ["nextauth_salesforce_provider", "SalesforceProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "SalesforceProvider({",
+      "\tclientId: process.env.SALESFORCE_CLIENT_ID,",
+      "\tclientSecret: process.env.SALESFORCE_CLIENT_SECRET,",
+      "}),",
+      ""
+    ]
+  },
+  "SlackProvider": {
+    "prefix": ["nextauth_slack_provider", "SlackProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "SlackProvider({",
+      "\tclientId: process.env.SLACK_CLIENT_ID,",
+      "\tclientSecret: process.env.SLACK_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "SpotifyProvider": {
+    "prefix": ["nextauth_spotify_provider", "SpotifyProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "SpotifyProvider({",
+      "\tclientId: process.env.SPOTIFY_CLIENT_ID,",
+      "\tclientSecret: process.env.SPOTIFY_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "StravaProvider": {
+    "prefix": ["nextauth_strava_provider", "StravaProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "StravaProvider({",
+      "\tclientId: process.env.STRAVA_CLIENT_ID,",
+      "\tclientSecret: process.env.STRAVA_CLIENT_SECRET,",
+      "}),",
+      ""
+    ]
+  },
+  "TodoistProvider": {
+    "prefix": ["nextauth_todoist_provider", "TodoistProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "TodoistProvider({",
+      "\tclientId: process.env.TODOIST_ID,",
+      "\tclientSecret: process.env.TODOIST_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "TraktProvider": {
+    "prefix": ["nextauth_trakt_provider", "TraktProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "TraktProvider({",
+      "\tclientId: process.env.TRAKT_ID,",
+      "\tclientSecret: process.env.TRAKT_SECRET,",
+      "}),",
+      ""
+    ]
+  },
+  "TwitchProvider": {
+    "prefix": ["nextauth_twitch_provider", "TwitchProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "TwitchProvider({",
+      "\tclientId: process.env.TWITCH_CLIENT_ID,",
+      "\tclientSecret: process.env.TWITCH_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "TwitterProvider": {
+    "prefix": ["nextauth_twitter_provider", "TwitterProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "TwitterProvider({",
+      "\tclientId: process.env.TWITTER_ID,",
+      "\tclientSecret: process.env.TWITTER_SECRET,",
+      "\tversion: \"2.0\",",
+      "})",
+      ""
+    ]
+  },
+  "UnitedEffectsProvider": {
+    "prefix": ["nextauth_united_effects_provider", "UnitedEffectsProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "UnitedEffectsProvider({",
+      "\tclientId: process.env.UNITED_EFFECTS_CLIENT_ID,",
+      "\tclientSecret: process.env.UNITED_EFFECTS_CLIENT_SECRET,",
+      "\tissuer: process.env.UNITED_EFFECTS_ISSUER",
+      "}),",
+      ""
+    ]
+  },
+  "VkProvider": {
+    "prefix": ["nextauth_vk_provider", "VkProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "VkProvider({",
+      "\tclientId: process.env.VK_CLIENT_ID,",
+      "\tclientSecret: process.env.VK_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "WikimediaProvider": {
+    "prefix": ["nextauth_wikimedia_provider", "WikimediaProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "WikimediaProvider({",
+      "\tclientId: process.env.WIKIMEDIA_CLIENT_ID,",
+      "\tclientSecret: process.env.WIKIMEDIA_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "WordpressProvider": {
+    "prefix": ["nextauth_wordpress_provider", "WordpressProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "WordpressProvider({",
+      "\tclientId: process.env.WORDPRESS_CLIENT_ID,",
+      "\tclientSecret: process.env.WORDPRESS_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "WorkOSProvider": {
+    "prefix": ["nextauth_work_os_provider", "WorkOSProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "WorkOSProvider({",
+      "\tclientId: process.env.WORKOS_CLIENT_ID,",
+      "\tclientSecret: process.env.WORKOS_API_KEY,",
+      "}),",
+      ""
+    ]
+  },
+  "YandexProvider": {
+    "prefix": ["nextauth_yandex_provider", "YandexProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "YandexProvider({",
+      "\tclientId: process.env.YANDEX_CLIENT_ID,",
+      "\tclientSecret: process.env.YANDEX_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "ZitadelProvider": {
+    "prefix": ["nextauth_zitadel_provider", "ZitadelProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "ZitadelProvider({",
+      "\tissuer: process.env.ZITADEL_ISSUER,",
+      "\tclientId: process.env.ZITADEL_CLIENT_ID,",
+      "\tclientSecret: process.env.ZITADEL_CLIENT_SECRET,",
+      "}),",
+      ""
+    ]
+  },
+  "ZohoProvider": {
+    "prefix": ["nextauth_zoho_provider", "ZohoProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "ZohoProvider({",
+      "\tclientId: process.env.ZOHO_CLIENT_ID,",
+      "\tclientSecret: process.env.ZOHO_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  },
+  "ZoomProvider": {
+    "prefix": ["nextauth_zoom_provider", "ZoomProvider"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "ZoomProvider({",
+      "\tclientId: process.env.ZOOM_CLIENT_ID,",
+      "\tclientSecret: process.env.ZOOM_CLIENT_SECRET",
+      "}),",
+      ""
+    ]
+  }
+}

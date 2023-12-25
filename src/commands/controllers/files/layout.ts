@@ -1,4 +1,4 @@
-import { getClass, getFolder, parsePath, save } from '../../utils/functions';
+import { getFolder, parsePath, save } from '../../utils/functions';
 
 const content = `import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -7,20 +7,20 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Create Next App',
-  description: 'Create Next App with TypeScript, Tailwind CSS, NextAuth, Prisma, tRPC, and more.',
+\ttitle: 'Create Next App',
+\tdescription: 'Create Next App with TypeScript, Tailwind CSS, NextAuth, Prisma, tRPC, and more.',
 }
 
-export default function {{functionName}}({
-  children,
+export default function Layout({
+\tchildren,
 }: {
-  children: React.ReactNode
+\tchildren: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+\treturn (
+\t\t<html lang="en">
+\t\t\t<body className={inter.className}>{children}</body>
+\t\t</html>
+\t)
 }
 `;
 
@@ -38,17 +38,9 @@ const newLayout = async (vscode: any, fs: any, path: any, args: any = null) => {
     relativePath,
   );
 
-  const functionName = await getClass(
-    vscode,
-    'Layout Name',
-    'E.g. RootLayout, AppLayout, Layout...',
-  );
-
-  const body = content.replace(/\{\{functionName\}\}/g, functionName);
-
   const filename = '/' + folder + 'layout.tsx';
 
-  save(vscode, fs, path, filename, body);
+  save(vscode, fs, path, filename, content);
 };
 
 export { newLayout };

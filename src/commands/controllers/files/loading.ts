@@ -1,7 +1,7 @@
 import { getFolder, parsePath, save } from '../../utils/functions';
 
 const content = `export default function Loading() {
-  return <p>Loading...</p>
+\treturn <p>Loading...</p>
 }
 `;
 

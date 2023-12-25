@@ -1,0 +1,57 @@
+{
+  "Server Standalone": {
+    "prefix": ["trpc_server_standalone", "Server Standalone"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { createHTTPServer } from '@trpc/server/adapters/standalone';",
+      "",
+      "const appRouter = router({",
+      "\t$0",
+      "});",
+      "",
+      "const server = createHTTPServer({",
+      "\trouter: appRouter,",
+      "});",
+      "",
+      "server.listen(3000);"
+    ]
+  },
+  "initTRPC": {
+    "prefix": ["trpc_init", "initTRPC"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { initTRPC } from '@trpc/server';",
+      "",
+      "const t = initTRPC.create();",
+      "",
+      "export const router = t.router;",
+      "export const middleware = t.middleware;",
+      "export const publicProcedure = t.procedure;"
+    ]
+  },
+  "createTRPCRouter": {
+    "prefix": ["trpc_create_trpc_router", "createTRPCRouter"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["export const ${1:name}Router = createTRPCRouter({", "\t$0", "});"]
+  },
+  "publicProcedure query": {
+    "prefix": ["trpc_public_query", "publicProcedure query"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:prefix}: publicProcedure.input(${2:object}).query(async ({ ${3:args} }) => ${4:functionHandler}({ ${3:args} }))"
+  },
+  "publicProcedure mutation": {
+    "prefix": ["trpc_public_mutation", "publicProcedure mutation"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:prefix}: publicProcedure.input(${2:object}).mutation(async ({ ${3:args} }) => ${4:functionHandler}({ ${3:args} }))"
+  },
+  "protectedProcedure query": {
+    "prefix": ["trpc_protected_query", "protectedProcedure query"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:prefix}: protectedProcedure.input(${2:object}).query(async ({ ${3:args} }) => ${4:functionHandler}({ ${3:args} }))"
+  },
+  "protectedProcedure mutation": {
+    "prefix": ["trpc_protected_mutation", "protectedProcedure mutation"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:prefix}: protectedProcedure.input(${2:object}).mutation(async ({ ${3:args} }) => ${4:functionHandler}({ ${3:args} }))"
+  },
+}

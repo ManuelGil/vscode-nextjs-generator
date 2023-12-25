@@ -7,16 +7,16 @@ import {
 } from '../../utils/functions';
 
 const content = `interface {{functionName}}Props {
-  children: React.ReactNode;
+\tchildren: React.ReactNode;
 }
 
 export function {{functionName}}({ children }: {{functionName}}Props) {
-  return (
-    <>
-      <h1>{{functionName}}</h1>
-      {children}
-    </>
-  );
+\treturn (
+\t\t<>
+\t\t\t<h1>{{functionName}}</h1>
+\t\t\t{children}
+\t\t</>
+\t);
 }
 `;
 
@@ -33,7 +33,8 @@ const newComponent = async (
   }
 
   const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
-  const extension = nextConfig.get('.files.extension');
+  const extension = nextConfig.get('files.extension');
+  const showType = nextConfig.get('files.showType');
 
   let relativePath = '';
 
@@ -57,7 +58,12 @@ const newComponent = async (
   const body = content.replace(/\{\{functionName\}\}/g, functionName);
 
   const filename =
-    '/' + folder + toKebabCase(functionName) + '.' + (extension || 'ts');
+    '/' +
+    folder +
+    toKebabCase(functionName) +
+    '.' +
+    (showType ? 'component.' : '') +
+    (extension || 'ts');
 
   save(vscode, fs, path, filename, body);
 };

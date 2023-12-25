@@ -18,8 +18,11 @@ import {
   newComponent,
   newLayout,
   newLoading,
+  newNextAuth,
   newPage,
   newProject,
+  newTRPCController,
+  newTRPCRouter,
   start,
   studio,
   validate,
@@ -54,6 +57,24 @@ export function activate(context: vscode.ExtensionContext) {
     'nextjs.file.page',
     (args) => {
       newPage(vscode, fs, path, args);
+    },
+  );
+  const nextjsFileNextAuth = vscode.commands.registerCommand(
+    'nextjs.file.nextauth',
+    (args) => {
+      newNextAuth(vscode, fs, path, args);
+    },
+  );
+  const nextjsFileTRPCRouter = vscode.commands.registerCommand(
+    'nextjs.file.trpc.router',
+    (args) => {
+      newTRPCRouter(vscode, fs, path, args);
+    },
+  );
+  const nextjsFileTRPCController = vscode.commands.registerCommand(
+    'nextjs.file.trpc.controller',
+    (args) => {
+      newTRPCController(vscode, fs, path, args);
     },
   );
   const nextjsTerminalNewProject = vscode.commands.registerCommand(
@@ -152,6 +173,9 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(nextjsFileLayout);
   context.subscriptions.push(nextjsFileLoading);
   context.subscriptions.push(nextjsFilePage);
+  context.subscriptions.push(nextjsFileNextAuth);
+  context.subscriptions.push(nextjsFileTRPCRouter);
+  context.subscriptions.push(nextjsFileTRPCController);
   context.subscriptions.push(nextjsTerminalNewProject);
   context.subscriptions.push(nextTerminalPrismaDbExecute);
   context.subscriptions.push(nextTerminalPrismaDbPull);

@@ -1,42 +1,42 @@
 {
   "arrow function": {
     "prefix": ["react_arrow_function", "arrow function"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "($1) => { $2 };"
   },
   "bind": {
     "prefix": ["react_bind", "bind"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "this.$1 = this.$1.bind(this);"
   },
   "comment block": {
     "prefix": ["react_comment_block", "comment block"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["/**", "\t* $1", "*/"]
   },
   "componentDidMount": {
     "prefix": ["react_component_did_mount", "componentDidMount"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "componentDidMount = () => { $1 };"
   },
   "componentDidUpdate": {
     "prefix": ["react_component_did_update", "componentDidUpdate"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "componentDidUpdate = (prevProps, prevState) => { $1 };"
   },
   "componentWillUnmount": {
     "prefix": ["react_component_will_unmount", "componentWillUnmount"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "componentWillUnmount = () => { $1 };"
   },
   "const function": {
     "prefix": ["react_const_function", "const function"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = ($2) => { $3 };"
   },
   "constructor": {
     "prefix": ["react_constructor", "constructor"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "constructor(props) {",
       "\tsuper(props);",
@@ -46,42 +46,42 @@
   },
   "context": {
     "prefix": ["react_context", "context"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = React.createContext();"
   },
   "destructuring array": {
     "prefix": ["react_destructuring_array", "destructuring array"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const [ $1 ] = $2;"
   },
   "destructuring props": {
     "prefix": ["react_destructuring_props", "destructuring props"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const { $1 } = this.props;"
   },
   "destructuring state": {
     "prefix": ["react_destructuring_state", "destructuring state"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const { $1 } = this.state;"
   },
   "destructuring": {
     "prefix": ["react_destructuring", "destructuring"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const { $1 } = $2;"
   },
   "export alias name": {
     "prefix": ["react_export_alias_name", "export alias name"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "export { $1 as $2 } from '$1';"
   },
   "export const function": {
     "prefix": ["react_export_const_function", "export const function"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "export const $1 = ($2) => { $3 };"
   },
   "export default function": {
     "prefix": ["react_export_default_function", "export default function"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "export default ($1) => { $2 };"
   },
   "export default module name": {
@@ -89,7 +89,7 @@
       "react_export_default_module_name",
       "export default module name"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "export default $1;"
   },
   "export destructured module": {
@@ -97,57 +97,60 @@
       "react_export_destructured_module",
       "export destructured module"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "export { $1 } from '$1';"
   },
   "for in": {
     "prefix": ["react_for_in", "for(let itemName in objectName { }"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "for(let $1 in $2 { $3 });"
   },
   "for of": {
     "prefix": ["react_for_of", "for of"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "for(let $1 of $2 { $3 });"
   },
   "forEach": {
     "prefix": ["react_array_for_each", "forEach"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "$1.forEach($2 => { $3 });"
   },
   "getSnapshotBeforeUpdate": {
     "prefix": ["react_get_snapshot_before_update", "getSnapshotBeforeUpdate"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "getSnapshotBeforeUpdate = (prevProps, prevState) => { $1 };"
   },
   "import 'module'": {
     "prefix": ["react_import_module", "import 'module'"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "import '$1';"
   },
   "import BrowserRouter, Route, Link": {
-    "prefix": ["react_import_browser_router", "import BrowserRouter, Route, Link"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": [
+      "react_import_browser_router",
+      "import BrowserRouter, Route, Link"
+    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "import { BrowserRouter as Router, Route, Link } from 'react-router-dom';"
   },
   "import connect": {
     "prefix": ["react_import_connect", "import connect"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "import { connect } from 'react-redux';"
   },
   "import module name": {
     "prefix": ["react_import_module_name", "import module name"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "import $1 from '$1';"
   },
   "import PropTypes": {
     "prefix": ["react_import_prop_types", "import PropTypes from 'prop-types'"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["import PropTypes from 'prop-types';"]
   },
   "import Provider": {
     "prefix": ["react_import_provider", "import Provider"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "import { Provider } from 'react-redux';"
   },
   "import React, Component, PropTypes": {
@@ -155,7 +158,7 @@
       "react_import_react_component_prop_types",
       "import React, Component, PropTypes"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "import React, { Component } from 'react';",
       "import PropTypes from 'prop-types';"
@@ -163,7 +166,7 @@
   },
   "import React, Component": {
     "prefix": ["react_import_react_component", "import React, Component"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["import React, { Component } from 'react';"]
   },
   "import React, memo, PropTypes": {
@@ -171,7 +174,7 @@
       "react_import_react_memo_prop_types",
       "import React, memo, PropTypes"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "import React, { memo } from 'react';",
       "import PropTypes from 'prop-types';"
@@ -179,7 +182,7 @@
   },
   "import React, memo": {
     "prefix": ["react_import_react_memo", "import React, memo"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["import React, { memo } from 'react';"]
   },
   "import React, PureComponent, PropTypes": {
@@ -187,7 +190,7 @@
       "react_import_react_pure_component_prop_types",
       "import React, PureComponent, PropTypes"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "import React, { PureComponent } from 'react';",
       "import PropTypes from 'prop-types';"
@@ -198,42 +201,42 @@
       "react_import_react_pure_component",
       "import React, PureComponent"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["import React, { PureComponent } from 'react';"]
   },
   "import React, ReactDOM": {
     "prefix": ["react_import_react_react_dom", "import React, ReactDOM"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["import React from 'react';", "import ReactDOM from 'react-dom';"]
   },
   "import React": {
     "prefix": ["react_import_react", "import React"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "import React from 'react';"
   },
   "import ReactDOM": {
     "prefix": ["react_import_react_dom", "import ReactDOM"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "import ReactDOM from 'react-dom';"
   },
   "import styled": {
     "prefix": ["react_import_styled", "import styled"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "import styled from 'styled-components';"
   },
   "method name": {
     "prefix": ["react_method_name", "method"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "$1 = ($2) => { $3 };"
   },
   "promise": {
     "prefix": ["react_promise", "promise"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "return new Promise((resolve, reject) => { $1 });"
   },
   "PropTypes.any": {
     "prefix": ["react_prop_types_any", "PropTypes.any"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.any"
   },
   "PropTypes.array.isRequired": {
@@ -241,12 +244,12 @@
       "react_prop_types_array_is_required",
       "PropTypes.array.isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.array.isRequired"
   },
   "PropTypes.array": {
     "prefix": ["react_prop_types_array", "PropTypes.array"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.array"
   },
   "PropTypes.arrayOf(name).isRequired": {
@@ -254,12 +257,12 @@
       "react_prop_types_array_of_is_required",
       "PropTypes.arrayOf(name).isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.arrayOf($1).isRequired"
   },
   "PropTypes.arrayOf(name)": {
     "prefix": ["react_prop_types_array_of", "PropTypes.arrayOf(name)"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.arrayOf($1)"
   },
   "PropTypes.bool.isRequired": {
@@ -267,12 +270,12 @@
       "react_prop_types_bool_is_required",
       "PropTypes.bool.isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.bool.isRequired"
   },
   "PropTypes.bool": {
     "prefix": ["react_prop_types_bool", "PropTypes.bool"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.bool"
   },
   "PropTypes.element.isRequired": {
@@ -280,12 +283,12 @@
       "react_prop_types_element_is_required",
       "PropTypes.element.isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.element.isRequired"
   },
   "PropTypes.element": {
     "prefix": ["react_prop_types_element", "PropTypes.element"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.element"
   },
   "PropTypes.func.isRequired": {
@@ -293,12 +296,12 @@
       "react_prop_types_func_is_required",
       "PropTypes.func.isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.func.isRequired"
   },
   "PropTypes.func": {
     "prefix": ["react_prop_types_func", "PropTypes.func"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.func"
   },
   "PropTypes.instanceOf(name).isRequired": {
@@ -306,12 +309,12 @@
       "react_prop_types_instance_of_is_required",
       "PropTypes.instanceOf(name).isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.instanceOf($1).isRequired"
   },
   "PropTypes.instanceOf(name)": {
     "prefix": ["react_prop_types_instance_of", "PropTypes.instanceOf(name)"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.instanceOf($1)"
   },
   "PropTypes.node.isRequired": {
@@ -319,12 +322,12 @@
       "react_prop_types_node_is_required",
       "PropTypes.node.isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.node.isRequired"
   },
   "PropTypes.node": {
     "prefix": ["react_prop_types_node", "PropTypes.node"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.node"
   },
   "PropTypes.number.isRequired": {
@@ -332,12 +335,12 @@
       "react_prop_types_number_is_required",
       "PropTypes.number.isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.number.isRequired"
   },
   "PropTypes.number": {
     "prefix": ["react_prop_types_number", "PropTypes.number"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.number"
   },
   "PropTypes.object.isRequired": {
@@ -345,12 +348,12 @@
       "react_prop_types_object_is_required",
       "PropTypes.object.isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.object.isRequired"
   },
   "PropTypes.object": {
     "prefix": ["react_prop_types_object", "PropTypes.object"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.object"
   },
   "PropTypes.objectOf(name).isRequired": {
@@ -358,12 +361,12 @@
       "react_prop_types_object_of_is_required",
       "PropTypes.objectOf(name).isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.objectOf($1).isRequired"
   },
   "PropTypes.objectOf(name)": {
     "prefix": ["react_prop_types_object_of", "PropTypes.objectOf(name)"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.objectOf($1)"
   },
   "PropTypes.oneOf([name]).isRequired": {
@@ -371,12 +374,12 @@
       "react_prop_types_one_of_is_required",
       "PropTypes.oneOf([name]).isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.oneOf([$1]).isRequired"
   },
   "PropTypes.oneOf([name])": {
     "prefix": ["react_prop_types_one_of", "PropTypes.oneOf([name])"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.oneOf([$1])"
   },
   "PropTypes.oneOfType([name]).isRequired": {
@@ -384,12 +387,12 @@
       "react_prop_types_one_of_type_is_required",
       "PropTypes.oneOfType([name]).isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.oneOfType([$1]).isRequired"
   },
   "PropTypes.oneOfType([name])": {
     "prefix": ["react_prop_types_one_of_type", "PropTypes.oneOfType([name])"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.oneOfType([$1])"
   },
   "PropTypes.shape({ }).isRequired": {
@@ -397,12 +400,12 @@
       "react_prop_types_shape_is_required",
       "PropTypes.shape({ }).isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.shape({ $1 }).isRequired"
   },
   "PropTypes.shape({ })": {
     "prefix": ["react_prop_types_shape", "PropTypes.shape({ })"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.shape({ $1 })"
   },
   "PropTypes.string.isRequired": {
@@ -410,17 +413,17 @@
       "react_prop_types_string_is_required",
       "PropTypes.string.isRequired"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.string.isRequired"
   },
   "PropTypes.string": {
     "prefix": ["react_prop_types_string", "PropTypes.string"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "PropTypes.string"
   },
   "redux action template": {
     "prefix": ["react_redux_action_template", "redux action template"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "export const $1 = '$1'",
       "",
@@ -434,7 +437,7 @@
   },
   "redux reducer template": {
     "prefix": ["react_redux_reducer_template", "redux reducer template"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "export const $1 = '$1'",
       "",
@@ -454,32 +457,32 @@
   },
   "redux selector template": {
     "prefix": ["react_redux_selector_template", "redux selector template"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["export const $1 = state => state.$1.$2"]
   },
   "ref": {
     "prefix": ["react_ref", "ref"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = React.createRef();"
   },
   "render": {
     "prefix": ["react_render", "render"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "render() { return( $1 ) }"
   },
   "setInterval": {
     "prefix": ["react_set_interval", "setInterval"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "setInterval(() => { $1 }, $2);"
   },
   "setTimeout": {
     "prefix": ["react_set_timeout", "setTimeout"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "setTimeout(() => { $1 }, $2);"
   },
   "shouldComponentUpdate": {
     "prefix": ["react_should_component_update", "shouldComponentUpdate"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "shouldComponentUpdate = (nextProps, nextState) => { $1 };"
   },
   "static getDerivedStateFromProps": {
@@ -487,132 +490,132 @@
       "react_static_get_derived_state_from_props",
       "static getDerivedStateFromProps"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "static getDerivedStateFromProps(nextProps, prevState) { $1 }"
   },
   "static propTypes": {
     "prefix": ["react_static_prop_types", "static propTypes"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "static propTypes = { $1 }"
   },
   "this.props.propName": {
     "prefix": ["react_this_props_prop_name", "this.props.propName"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "this.props.$1"
   },
   "this.props": {
     "prefix": ["react_this_props", "this.props"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "this.props.$1"
   },
   "this.setState": {
     "prefix": ["react_this_set_state", "this.setState"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "this.setState({ $1 });"
   },
   "this.state.stateName": {
     "prefix": ["react_this_state_state_name", "this.state.stateName"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "this.state.$1"
   },
   "this.state": {
     "prefix": ["react_this_state", "this.state"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "this.state = { $1 };"
   },
   "useCallback": {
     "prefix": ["react_use_callback", "useCallback"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useCallback($2, [$3]);"
   },
   "useContext": {
     "prefix": ["react_use_context", "useContext"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useContext($2);"
   },
   "useDebugValue": {
     "prefix": ["react_use_debugValue", "useDebugValue"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useDebugValue($2);"
   },
   "useDeferredValue": {
     "prefix": ["react_use_deferredValue", "useDeferredValue"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useDeferredValue($2);"
   },
   "useEffect": {
     "prefix": ["react_use_effect", "useEffect"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["useEffect(() => {", "\t$1", "}, [$2]);"]
   },
   "useId": {
     "prefix": ["react_use_id", "useId"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useId($2);"
   },
   "useImperativeHandle": {
     "prefix": ["react_use_imperativeHandle", "useImperativeHandle"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useImperativeHandle($2, [$3]);"
   },
   "useInsertionEffect": {
     "prefix": ["react_use_insertionEffect", "useInsertionEffect"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useInsertionEffect($2);"
   },
   "useLayoutEffect": {
     "prefix": ["react_use_layoutEffect", "useLayoutEffect"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useLayoutEffect($2, [$3]);"
   },
   "useMemo": {
     "prefix": ["react_use_memo", "useMemo"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useMemo($2, [$3]);"
   },
   "useReducer": {
     "prefix": ["react_use_reducer", "useReducer"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const [$1, set$1] = useReducer($2);"
   },
   "useRef": {
     "prefix": ["react_use_ref", "useRef"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useRef($2);"
   },
   "useState": {
     "prefix": ["react_use_state", "useState"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const [$1, set$1] = useState($2);"
   },
   "useSyncExternalStore": {
     "prefix": ["react_use_syncExternalStore", "useSyncExternalStore"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useSyncExternalStore($2);"
   },
   "useTransition": {
     "prefix": ["react_use_transition", "useTransition"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": "const $1 = useTransition($2);"
   },
   "describe": {
     "prefix": ["react_describe", "describe"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["describe('$1', () => {", "\t$2", "});"]
   },
   "test": {
     "prefix": ["react_test", "test"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["test('should $1', () => {", "\t$2", "});"]
   },
   "it": {
     "prefix": ["react_it", "it"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": ["it('should $1', () => {", "\t$2", "});"]
   },
   "react test renderer": {
     "prefix": ["react_test_renderer", "react test renderer"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "import React from 'react'",
       "import renderer from 'react-test-renderer'",
@@ -634,7 +637,7 @@
       "react_test_renderer_with_store",
       "react test renderer with store"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "import React from 'react'",
       "import renderer from 'react-test-renderer'",
@@ -658,11 +661,8 @@
     ]
   },
   "react native test renderer": {
-    "prefix": [
-      "react_native_test_renderer",
-      "react native test renderer"
-    ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": ["react_native_test_renderer", "react native test renderer"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "import 'react-native'",
       "import React from 'react'",
@@ -688,7 +688,7 @@
       "react_native_test_renderer_with_store",
       "react native test renderer with store"
     ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "import 'react-native'",
       "import React from 'react'",
@@ -714,7 +714,7 @@
   },
   "react redux hoc": {
     "prefix": ["react_redux_hoc", "react redux hoc"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "import React from 'react'",
       "import PropTypes from 'prop-types'",
@@ -741,11 +741,8 @@
     ]
   },
   "react redux hoc function": {
-    "prefix": [
-      "react_redux_hoc_function",
-      "react redux hoc function"
-    ],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": ["react_redux_hoc_function", "react redux hoc function"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "import React from 'react'",
       "import PropTypes from 'prop-types'",

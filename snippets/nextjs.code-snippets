@@ -1,21 +1,389 @@
 {
   "Image Component": {
     "prefix": ["next_image", "<Image"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<Image src=\"$1\" alt=\"$2\" width={$3} height={$4} />",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<Image src=\"${1:src}\" alt=\"${2:alt}\" width={$3} height={$4} />"
   },
   "Link Component": {
     "prefix": ["next_link", "<Link"],
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
-    "body": "<Link href=\"$1\">$2</Link>",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<Link href=\"${1:href}\">$2</Link>"
   },
-  "Page": {
-    "prefix": "next_page",
-    "scope": "plaintext,javascript,javascriptreact,typescript,typescriptreact",
-    "body": [
-      "export default function Page() {",
-      "\treturn <h1>Hello, $1 Page!</h1>",
-      "}"
+  "Page Component with Props and Params": {
+    "prefix": [
+      "next_page_props_params",
+      "Page Component with Props and Params"
     ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "type ${1:name}Props = {",
+      "\tparams: {",
+      "\t\t${2:paramName}: string;",
+      "\t}",
+      "};",
+      "",
+      "export default function ${1:name}Page({",
+      "\tparams",
+      "} : ${1:name}Props) {",
+      "\tconst { ${2:paramName} } = params;",
+      "\treturn (",
+      "\t\t${3:<div>",
+      "\t\t\t<h1>$0</h1>",
+      "\t\t</div>}",
+      "\t);",
+      "}",
+      ""
+    ]
+  },
+  "Page Component with Props": {
+    "prefix": ["next_page_props", "Page Component with Props"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "type ${1:name}PageProps = {",
+      "\t$2",
+      "};",
+      "",
+      "export default function ${1:name}Page({",
+      "\t$3",
+      "}: ${1:name}PageProps) {",
+      "\t$4",
+      "\treturn (",
+      "\t\t${5:<div>",
+      "\t\t\t<h1>$0</h1>",
+      "\t\t</div>}",
+      "\t);",
+      "}",
+      ""
+    ]
+  },
+  "Page Component": {
+    "prefix": ["next_page", "Page Component"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "",
+      "export default function ${1:name}Page() {",
+      "\treturn (",
+      "\t\t${2:<div>",
+      "\t\t\t<h1>$0</h1>",
+      "\t\t</div>}",
+      "\t);",
+      "}",
+      ""
+    ]
+  },
+  "Async Server Action Function": {
+    "prefix": ["next_server_action_function", "Async Server Action Function"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["async function $1() {", "\t'use server';", "\t$2", "}", ""]
+  },
+  "Client Component": {
+    "prefix": ["next_client_component", "Client Component"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "'use client';",
+      "",
+      "export default function ${1:name}() {",
+      "\treturn (",
+      "\t\t${2:<div>",
+      "\t\t\t<h1>$0</h1>",
+      "\t\t</div>}",
+      "\t);",
+      "}"
+    ]
+  },
+  "Error Component": {
+    "prefix": ["next_error_component", "Error Component"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "'use client';",
+      "",
+      "import { useEffect } from 'react';",
+      "",
+      "type ErrorProps = {",
+      "\terror: Error & { digest?: string };",
+      "\treset: () => void;",
+      "};",
+      "",
+      "export default function Error({ error, reset }: ErrorProps) {",
+      "\tuseEffect(() => {",
+      "\t\tconsole.error(error);",
+      "\t}, [error]);",
+      "",
+      "\t$1",
+      "",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h2>{error.message}</h2>",
+      "\t\t\t<button onClick={reset}>Try again</button>",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      ""
+    ]
+  },
+  "function generateMetaData": {
+    "prefix": ["next_generate_metadata", "generateMetaData"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import type { Metadata } from 'next'",
+      "",
+      "export async function generateMetadata({ params }: { params: { [${2:slug}] }}): Promise<Metadata> {",
+      "\tconst product = await ${1:getData}([${2:slug}]);",
+      "\t return { title: product.title }",
+      "}"
+    ]
+  },
+  "function generateStaticParams for Dynamic Page Static": {
+    "prefix": [
+      "next_generate_static_params_dynamic",
+      "generateStaticParams for Dynamic Page Static"
+    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "",
+      "export async function generateStaticParams() {",
+      "\tconst posts = await fetch('${1:fetchData}').then((res) => res.json());",
+      "",
+      "\treturn posts.map((post) => ({",
+      "\t\t slug: post.slug,",
+      "\t}));",
+      "}"
+    ]
+  },
+  "function Loading": {
+    "prefix": ["next_loading_function", "Loading Function"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "",
+      "export default function Loading() {",
+      "\t",
+      "\treturn (<div>Loading...</div>)",
+      "\t}"
+    ]
+  },
+  "function Route Handler API DELETE": {
+    "prefix": ["next_route_handler_api_delete", "Route Handler API DELETE"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { NextResponse, NextRequest } from 'next/server'",
+      "",
+      "export async function DELETE(req: Request) {",
+      "\tconst { ${1:id} } = req.params;",
+      "}"
+    ]
+  },
+  "function Route Handler API GET and Search": {
+    "prefix": [
+      "next_route_handler_api_get_search",
+      "Route Handler API GET and Search"
+    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { NextResponse, NextRequest } from 'next/server'",
+      "",
+      "export async function GET(request: Request) { ",
+      "",
+      "const { searchParams } = new URL(request.url);",
+      "const name = searchParams.get('name');",
+      "",
+      "\treturn NextResponse.json({ message: '$0' })",
+      "}"
+    ]
+  },
+  "function Route Handler API GET with Dynamic": {
+    "prefix": [
+      "next_route_handler_api_get_dynamic",
+      "Route Handler API GET with Dynamic"
+    ],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { NextResponse, NextRequest } from 'next/server'",
+      "",
+      "export async function GET(request: Request, context: { params: { ${1:slug}: string } }) { ",
+      "",
+      "\tconst { ${1:slug} } = context.params",
+      "}"
+    ]
+  },
+  "function Route Handler API GET": {
+    "prefix": ["next_route_handler_api_get", "Route Handler API GET"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { NextResponse, NextRequest } from 'next/server'",
+      "",
+      "export async function GET() { ",
+      "\treturn NextResponse.json({ message: '$0' })",
+      "}"
+    ]
+  },
+  "function Route Handler API POST": {
+    "prefix": ["next_route_handler_api_post", "Route Handler API POST"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { NextResponse, NextRequest } from 'next/server'",
+      "",
+      "export async function POST(req: Request) {",
+      "\tconst { ${1:title} } = await req.json();",
+      "",
+      "\treturn NextResponse.json({ message: '$0' })",
+      "\t}"
+    ]
+  },
+  "function Route Handler API UPDATE": {
+    "prefix": ["next_route_handler_api_update", "Route Handler API UPDATE"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { NextResponse, NextRequest } from 'next/server'",
+      "",
+      "export async function PUT(req: Request) {",
+      "\tconst { ${1:title} } = await req.json();",
+      "",
+      "\treturn NextResponse.json({ ${1:title} }, { status: 201 });",
+      "\t}"
+    ]
+  },
+  "Generated Metadata": {
+    "prefix": ["next_generated_metadata", "Generated Metadata"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import type { Metadata } from 'next';",
+      "",
+      "type GenerateMetadataProps = {",
+      "\tparams: {",
+      "\t\t$1: string",
+      "\t}",
+      "};",
+      "",
+      "export function generateMetadata(",
+      "\t{ params }: GenerateMetadataProps",
+      "): Metadata {",
+      "\tconst $1 = params.$1;",
+      "",
+      "\treturn {",
+      "\t\ttitle: $1,",
+      "\t$2",
+      "\t};",
+      "}"
+    ]
+  },
+  "Global Error Component": {
+    "prefix": ["next_global_error_component", "Global Error Component"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "'use client';",
+      "",
+      "import { useEffect } from 'react';",
+      "",
+      "type GlobalErrorProps = {",
+      "\terror: Error & { digest?: string };",
+      "\treset: () => void;",
+      "};",
+      "",
+      "export default function GlobalError({ error, reset }: GlobalErrorProps) {",
+      "\tuseEffect(() => {",
+      "\t\tconsole.error(error);",
+      "\t}, [error]);",
+      "",
+      "\t$1",
+      "",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h2>{error.message}</h2>",
+      "\t\t\t<button onClick={reset}>Try again</button>",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      ""
+    ]
+  },
+  "Layout Component": {
+    "prefix": ["next_layout_component", "Layout Component"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import type { ReactNode } from 'react';",
+      "",
+      "type LayoutProps = {",
+      "\tchildren: ReactNode;",
+      "};",
+      "",
+      "export default function Layout({ children }: LayoutProps) {",
+      "\t$1",
+      "\treturn (",
+      "\t\t<section>",
+      "\t\t\t{children}",
+      "\t\t</section>",
+      "\t);",
+      "}",
+      ""
+    ]
+  },
+  "Layout Root Component": {
+    "prefix": ["next_layout_root", "Layout Root"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "",
+      "export default function ${1:name}Layout({",
+      "\tchildren",
+      "}: {",
+      "\tchildren: React.ReactNode;",
+      "}) {",
+      "\treturn (",
+      "\t\t${2:<div>",
+      "\t\t\t<h1>$0</h1>",
+      "\t\t</div>}",
+      "\t);",
+      "}"
+    ]
+  },
+  "Loading Component": {
+    "prefix": ["next_loading_component", "Loading Component"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "export default function Loading() {",
+      "\t$1",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$2",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      ""
+    ]
+  },
+  "Middleware": {
+    "prefix": ["next_middleware", "Middleware"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import { NextResponse } from 'next/server';",
+      "import type { NextRequest } from 'next/server';",
+      "",
+      "export function middleware(request: NextRequest) {",
+      "\treturn NextResponse.redirect(new URL('/', request.url));",
+      "}",
+      "",
+      "export const config = {",
+      "\tmatcher: '$1',",
+      "};"
+    ]
+  },
+  "Not Found Component": {
+    "prefix": ["next_not_found_component", "Not Found Component"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import Link from 'next/link';",
+      "",
+      "export default function NotFound() {",
+      "\t$1",
+      "",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h2>Not Found</h2>",
+      "\t\t\t<p>Could not find requested resource</p>",
+      "\t\t\t<Link href=\"/\">Return Home</Link>",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      ""
+    ]
   }
 }

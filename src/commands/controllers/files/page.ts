@@ -1,22 +1,22 @@
-import { getClass, getFolder, parsePath, save } from '../../utils/functions';
+import { getFolder, parsePath, save } from '../../utils/functions';
 
 const content = `'use client'
 
 interface Props {
-  params: {
-    id: string;
-  };
+\tparams: {
+\t\tid: string;
+\t};
 }
 
-export default function {{functionName}}({ params }: Props) {
-  const { id } = params;
+export default function Page({ params }: Props) {
+\tconst { id } = params;
 
-  return (
-    <>
-      <h1>Page { id }</h1>
-      <p>Page content</p>
-    </>
-  );
+\treturn (
+\t\t<>
+\t\t\t<h1>Page { id }</h1>
+\t\t\t<p>Page content</p>
+\t\t</>
+\t);
 }
 `;
 
@@ -34,17 +34,9 @@ const newPage = async (vscode: any, fs: any, path: any, args: any = null) => {
     relativePath,
   );
 
-  const functionName = await getClass(
-    vscode,
-    'Page Name',
-    'E.g. HomePage, IndexPage, Page...',
-  );
-
-  const body = content.replace(/\{\{functionName\}\}/g, functionName);
-
   const filename = '/' + folder + 'page.tsx';
 
-  save(vscode, fs, path, filename, body);
+  save(vscode, fs, path, filename, content);
 };
 
 export { newPage };

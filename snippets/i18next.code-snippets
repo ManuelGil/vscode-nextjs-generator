@@ -1,0 +1,46 @@
+{
+  "Trans": {
+    "prefix": ["i18next_trans", "<Trans"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["<Trans i18nKey=\"$1\" values={{$2}}>", "\t$0", "</Trans>"]
+  },
+  "useTranslation": {
+    "prefix": ["i18next_use_translation", "useTranslation"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["const { t } = useTranslation();"]
+  },
+  "LanguageDetector": {
+    "prefix": ["i18next_language_detector", "LanguageDetector"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import i18next from 'i18next';",
+      "import LanguageDetector from 'i18next-browser-languagedetector';",
+      "",
+      "i18next.use(LanguageDetector).init({",
+      "\t// detection: options,",
+      "});"
+    ]
+  },
+  "i18nextMiddleware": {
+    "prefix": ["i18next_middleware", "i18nextMiddleware"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "import i18next from 'i18next'",
+      "import Backend from 'i18next-fs-backend'",
+      "import i18nextMiddleware from 'i18next-http-middleware'",
+      "",
+      "i18next",
+      "\t.use(i18nextMiddleware.LanguageDetector)",
+      "\t.use(Backend)",
+      "\t.init({",
+      "\t\tinitImmediate: false,",
+      "\t\tfallbackLng: 'en',",
+      "\t\tpreload: ['en'],",
+      "\t\tbackend: {",
+      "\t\t\tloadPath: __dirname + '/resources/locales/{{lng}}/{{ns}}.json'",
+      "\t\t}",
+      "\t})",
+      ""
+    ]
+  }
+}

@@ -8,7 +8,9 @@ import {
   toKebabCase,
 } from '../../utils/functions';
 
-const content = `export default {{type}} {{className}} {}
+const content = `export default {{type}} {{className}} {
+\t// ... your code goes here
+}
 `;
 
 const newClass = async (vscode: any, fs: any, path: any, args: any = null) => {
@@ -19,7 +21,8 @@ const newClass = async (vscode: any, fs: any, path: any, args: any = null) => {
   }
 
   const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
-  const extension = nextConfig.get('.files.extension');
+  const extension = nextConfig.get('files.extension');
+  const showType = nextConfig.get('files.showType');
 
   let relativePath = '';
 
@@ -51,7 +54,12 @@ const newClass = async (vscode: any, fs: any, path: any, args: any = null) => {
     .replace('{{className}}', className + toCapitalize(type));
 
   const filename =
-    '/' + folder + toKebabCase(className) + '.' + (extension || 'ts');
+    '/' +
+    folder +
+    toKebabCase(className) +
+    '.' +
+    (showType ? `${type}.` : '') +
+    (extension || 'ts');
 
   save(vscode, fs, path, filename, body);
 };

@@ -1,19 +1,21 @@
-# React / NextJS / T3 Stack File Generator
+# T3 Stack / NextJS / ReactJS File Generator
 
-[![Latest Release](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-nextjs-generator?style=for-the-badge&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
-[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/imgildev.vscode-nextjs-generator?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-nextjs-generator?style=for-the-badge&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/imgildev.vscode-nextjs-generator?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
 [![GitHub Repo stars](https://img.shields.io/github/stars/ManuelGil/vscode-nextjs-generator?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nextjs-generator)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-nextjs-generator?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nextjs-generator/blob/main/LICENSE)
 
-This versatile extension enhances your NextJS development experience by offering a comprehensive set of commands tailored for file generation within your project. Seamlessly create various project elements, including pages, components, layouts, classes, interfaces, and more, all designed to align with the T3 Stack paradigm—leveraging NextJS, NextAuth, Prisma, tRPC, and other essential technologies.
+Elevate your development workflow with our cutting-edge extension tailored for NextJS 14 (compatibility for version 13). Designed as the quintessential development companion, this toolset redefines file generation, optimizing every phase of your project's lifecycle. Seamlessly create pages, components, layouts, and more—all meticulously crafted to align with the esteemed T3 Stack paradigm. Leverage the capabilities of advanced technologies like NextJS, ReactJS, Prisma, TailwindCSS, i18next, and numerous other essential frameworks.
 
 ![demo](https://raw.githubusercontent.com/ManuelGil/vscode-nextjs-generator/main/docs/images/demo.gif)
 
-Elevate your productivity with this VSCode extension, empowering you to efficiently generate files for your T3 Stack project. Whether you're shaping individual components or initiating an entirely new project, the extension simplifies the process with intuitive commands. The extension also includes a command to start your NextJS server, allowing you to quickly preview your application.
+Ready to transcend your development experience?
+
+Boost your efficiency with this VSCode extension, designed to streamline file generation for your T3 Stack project. Whether crafting individual components or kickstarting a new venture, the extension simplifies tasks through intuitive commands. Additionally, initiate your NextJS server effortlessly, enabling swift previews of your application.
 
 ## Index
 
-- [React / NextJS / T3 Stack File Generator](#react--nextjs--t3-stack-file-generator)
+- [T3 Stack / NextJS / ReactJS File Generator](#t3-stack--nextjs--reactjs-file-generator)
   - [Index](#index)
   - [Requirements](#requirements)
   - [Create a New Project](#create-a-new-project)
@@ -24,9 +26,14 @@ Elevate your productivity with this VSCode extension, empowering you to efficien
     - [Snippets](#snippets)
       - [HTML](#html)
       - [JavaScript](#javascript)
-      - [React](#react)
-      - [Next](#next)
+      - [ReactJS](#reactjs)
+      - [NextJS](#nextjs)
+      - [NextAuth](#nextauth)
       - [Prisma](#prisma)
+      - [Tailwind](#tailwind)
+      - [tRPC](#trpc)
+      - [i18next](#i18next)
+      - [zod](#zod)
   - [Connect with me](#connect-with-me)
   - [Other Extensions](#other-extensions)
   - [Changelog](#changelog)
@@ -39,12 +46,12 @@ Elevate your productivity with this VSCode extension, empowering you to efficien
 
 ## Create a New Project
 
-You can create a new project using the Vite / NextJS / T3 Stack CLI. To do so, open the command palette in VSCode:
+You can create a new project using the T3 Stack / NextJS / Vite CLI. To do so, open the command palette in VSCode:
 
 - `CTRL + SHIFT + P` (Windows)
 - `CMD + SHIFT + P` (Mac OS)
 
-Type `Next: Create Project` and press `ENTER`.
+Type `T3: Create Project` and press `ENTER`.
 
 ![create-project](https://raw.githubusercontent.com/ManuelGil/vscode-nextjs-generator/main/docs/images/create-project.gif)
 
@@ -79,13 +86,16 @@ Your project is now set up to automatically format code upon saving.
 
 ### Commands to Create Files
 
-| Title                             | Purpose                                              |
-| --------------------------------- | ---------------------------------------------------- |
-| Next: Generate Class or Interface | Creates a new, generic class or interface definition |
-| Next: Generate Component          | Creates a new, generic component                     |
-| Next: Generate Layout             | Creates a new, generic layout                        |
-| Next: Generate Loading            | Creates a new, generic loading component             |
-| Next: Generate Page               | Creates a new, generic page                          |
+| Title                           | Purpose                                              |
+| ------------------------------- | ---------------------------------------------------- |
+| T3: Generate Class or Interface | Creates a new, generic class or interface definition |
+| T3: Generate Component          | Creates a new, generic component                     |
+| T3: Generate Layout             | Creates a new, generic layout                        |
+| T3: Generate Loading            | Creates a new, generic loading component             |
+| T3: Generate Page               | Creates a new, generic page                          |
+| T3: Add NextAuth file           | Adds a new file called [...nextauth].js              |
+| T3: Generate tRPC Router        | Creates a new, generic tRPC router                   |
+| T3: Generate tRPC Controller    | Creates a new, generic tRPC controller               |
 
 </details>
 
@@ -94,23 +104,23 @@ Your project is now set up to automatically format code upon saving.
 
 ### Terminal Commands
 
-| Title                       | Purpose                                                                      |
-| --------------------------- | ---------------------------------------------------------------------------- |
-| Next: Create Project        | Creates a new project using the Vite / NextJS / T3 Stack CLI                 |
-| Next: Prisma DB Execute     | Execute native commands to your database                                     |
-| Next: Prisma DB Pull        | Pull the state from the database to the Prisma schema using introspection    |
-| Next: Prisma DB Push        | Push the state from your Prisma schema to your database                      |
-| Next: Prisma DB Seed        | Seed your database                                                           |
-| Next: Prisma Format         | Format a Prisma schema                                                       |
-| Next: Prisma Generate       | Generate artifacts                                                           |
-| Next: Prisma Init           | Set up a new Prisma project                                                  |
-| Next: Prisma Migrate Deploy | Apply pending migrations to update the database schema in production/staging |
-| Next: Prisma Migrate Dev    | Create a migration from changes in Prisma schema                             |
-| Next: Prisma Migrate Reset  | Reset your database and apply all migrations, all data will be lost          |
-| Next: Prisma Migrate Status | Check the status of your database migrations                                 |
-| Next: Prisma Studio         | Browse your data with Prisma Studio                                          |
-| Next: Prisma Validate       | Validate a Prisma schema                                                     |
-| Next: Start Server          | Builds and serves your application, rebuilding on file changes               |
+| Title                     | Purpose                                                                      |
+| ------------------------- | ---------------------------------------------------------------------------- |
+| T3: Create Project        | Creates a new project using the T3 Stack / NextJS / Vite CLI                 |
+| T3: Prisma DB Execute     | Execute native commands to your database                                     |
+| T3: Prisma DB Pull        | Pull the state from the database to the Prisma schema using introspection    |
+| T3: Prisma DB Push        | Push the state from your Prisma schema to your database                      |
+| T3: Prisma DB Seed        | Seed your database                                                           |
+| T3: Prisma Format         | Format a Prisma schema                                                       |
+| T3: Prisma Generate       | Generate artifacts                                                           |
+| T3: Prisma Init           | Set up a new Prisma project                                                  |
+| T3: Prisma Migrate Deploy | Apply pending migrations to update the database schema in production/staging |
+| T3: Prisma Migrate Dev    | Create a migration from changes in Prisma schema                             |
+| T3: Prisma Migrate Reset  | Reset your database and apply all migrations, all data will be lost          |
+| T3: Prisma Migrate Status | Check the status of your database migrations                                 |
+| T3: Prisma Studio         | Browse your data with Prisma Studio                                          |
+| T3: Prisma Validate       | Validate a Prisma schema                                                     |
+| T3: Start Server          | Builds and serves your application, rebuilding on file changes               |
 
 </details>
 
@@ -294,7 +304,7 @@ Your project is now set up to automatically format code upon saving.
 | js_console_warn                       | console.warn                    |
 | js_console_dir                        | console.dir                     |
 | js_json_stringify                     | JSON.stringify                  |
-| js_json_parse", "JSON.parse           |
+| js_json_parse                         | JSON.parse                      |
 | js_prototype                          | prototype                       |
 | js_object_assign                      | Object.assign                   |
 | js_object_create                      | Object.create                   |
@@ -323,7 +333,7 @@ Your project is now set up to automatically format code upon saving.
 | js_object_define_properties           | Object.defineProperties         |
 | js_object_define                      | Object.define                   |
 
-#### React
+#### ReactJS
 
 | Title                                        | Purpose                                                                  |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
@@ -429,13 +439,104 @@ Your project is now set up to automatically format code upon saving.
 | react_test                                   | test('should ...', () => { ... });                                       |
 | react_it                                     | it('should ...', () => { ... });                                         |
 
-#### Next
+#### NextJS
 
-| Title      | Purpose                                        |
-| ---------- | ---------------------------------------------- |
-| next_image | \<Image src="..." alt="" width={} height={} /> |
-| next_link  | \<Link href="...">\</Link>                     |
-| next_page  | export default function Page() {}              |
+| Title                               | Purpose                                                                               |
+| ----------------------------------- | ------------------------------------------------------------------------------------- |
+| next_image                          | \<Image src="..." alt="..." width={...} height={...} />                               |
+| next_link                           | \<Link href="...">...\</Link>                                                         |
+| next_page_props_params              | export default function Page({ params} : Props) { ... }                               |
+| next_page_props                     | export default function Page({ ... }: PageProps) { ... }                              |
+| next_page                           | export default function Page() { ... }                                                |
+| next_server_action_function         | async function ...() { 'use server'; ... }                                            |
+| next_client_component               | export default function ...() { ... }                                                 |
+| next_error_component                | export default function Error( ... ) { ... }                                          |
+| next_generate_metadata              | export async function generateMetadata( ... ): Promise\<Metadata> { ... }             |
+| next_generate_static_params_dynamic | export async function generateStaticParams() { ... }                                  |
+| next_loading_function               | export default function Loading() { ... }                                             |
+| next_route_handler_api_delete       | export async function DELETE(req: Request) { ... }                                    |
+| next_route_handler_api_get_search   | export async function GET(request: Request) { ... }                                   |
+| next_route_handler_api_get_dynamic  | export async function GET(request: Request, context: { params: { ... } }) { ... }     |
+| next_route_handler_api_get          | export async function GET() { ... }                                                   |
+| next_route_handler_api_post         | export async function POST(req: Request) { ... }                                      |
+| next_route_handler_api_update       | export async function PUT(req: Request) { ... }                                       |
+| next_generated_metadata             | export function generateMetadata({ params }: GenerateMetadataProps): Metadata { ... } |
+| next_global_error_component         | export default function GlobalError({ error, reset }: GlobalErrorProps) { ... }       |
+| next_layout_component               | export default function Layout({ children }: LayoutProps) { ... }                     |
+| next_layout_root                    | export default function Layout({ children}: { children: React.ReactNode;}) { ... }    |
+| next_loading_component              | export default function Loading() { ... }                                             |
+| next_middleware                     | export function middleware(request: NextRequest) { ... }                              |
+| next_not_found_component            | export default function NotFound() { ... }                                            |
+
+#### NextAuth
+
+| Title                              | Purpose                                                    |
+| ---------------------------------- | ---------------------------------------------------------- |
+| nextauth_auth_options              | export const authOptions = { providers: [ ... ] };         |
+| nextauth_session_provider          | \<SessionProvider session={session}>...\</SessionProvider> |
+| nextauth_use_session               | const { data: sessionData } = useSession();                |
+| nextauth_forty_two_provider        | FortyTwoProvider                                           |
+| nextauth_apple_provider            | AppleProvider                                              |
+| nextauth_atlassian_provider        | AtlassianProvider                                          |
+| nextauth_auth0_provider            | Auth0Provider                                              |
+| nextauth_authentik_provider        | AuthentikProvider                                          |
+| nextauth_azure_ad_b2c_provider     | AzureADB2CProvider                                         |
+| nextauth_azure_ad_provider         | AzureADProvider                                            |
+| nextauth_battle_net_provider       | BattleNetProvider                                          |
+| nextauth_box_provider              | BoxProvider                                                |
+| nextauth_boxy_hq_saml_provider     | BoxyHQSAMLProvider                                         |
+| nextauth_bungie_provider           | BungieProvider                                             |
+| nextauth_cognito_provider          | CognitoProvider                                            |
+| nextauth_coinbase_provider         | CoinbaseProvider                                           |
+| nextauth_discord_provider          | DiscordProvider                                            |
+| nextauth_dropbox_provider          | DropboxProvider                                            |
+| nextauth_duende_ids6_provider      | DuendeIDS6Provider                                         |
+| nextauth_eve_online_provider       | EVEOnlineProvider                                          |
+| nextauth_facebook_provider         | FacebookProvider                                           |
+| nextauth_face_it_provider          | FaceItProvider                                             |
+| nextauth_four_square_provider      | FourSquareProvider                                         |
+| nextauth_freshbooks_provider       | FreshbooksProvider                                         |
+| nextauth_fusion_auth_provider      | FusionAuthProvider                                         |
+| nextauth_git_hub_provider          | GitHubProvider                                             |
+| nextauth_gitlab_provider           | GitlabProvider                                             |
+| nextauth_google_provider           | GoogleProvider                                             |
+| nextauth_hubspot_provider          | HubspotProvider                                            |
+| nextauth_identity_server4_provider | IdentityServer4Provider                                    |
+| nextauth_instagram_provider        | InstagramProvider                                          |
+| nextauth_kakao_provider            | KakaoProvider                                              |
+| nextauth_keycloak_provider         | KeycloakProvider                                           |
+| nextauth_line_provider             | LineProvider                                               |
+| nextauth_linked_in_provider        | LinkedInProvider                                           |
+| nextauth_mailchimp_provider        | MailchimpProvider                                          |
+| nextauth_mail_ru_provider          | MailRuProvider                                             |
+| nextauth_medium_provider           | MediumProvider                                             |
+| nextauth_naver_provider            | NaverProvider                                              |
+| nextauth_netlify_provider          | NetlifyProvider                                            |
+| nextauth_okta_provider             | OktaProvider                                               |
+| nextauth_one_login_provider        | OneLoginProvider                                           |
+| nextauth_osso_provider             | OssoProvider                                               |
+| nextauth_osu_provider              | OsuProvider                                                |
+| nextauth_patreon_provider          | PatreonProvider                                            |
+| nextauth_pinterest_provider        | PinterestProvider                                          |
+| nextauth_pipedrive_provider        | PipedriveProvider                                          |
+| nextauth_reddit_provider           | RedditProvider                                             |
+| nextauth_salesforce_provider       | SalesforceProvider                                         |
+| nextauth_slack_provider            | SlackProvider                                              |
+| nextauth_spotify_provider          | SpotifyProvider                                            |
+| nextauth_strava_provider           | StravaProvider                                             |
+| nextauth_todoist_provider          | TodoistProvider                                            |
+| nextauth_trakt_provider            | TraktProvider                                              |
+| nextauth_twitch_provider           | TwitchProvider                                             |
+| nextauth_twitter_provider          | TwitterProvider                                            |
+| nextauth_united_effects_provider   | UnitedEffectsProvider                                      |
+| nextauth_vk_provider               | VkProvider                                                 |
+| nextauth_wikimedia_provider        | WikimediaProvider                                          |
+| nextauth_wordpress_provider        | WordpressProvider                                          |
+| nextauth_work_os_provider          | WorkOSProvider                                             |
+| nextauth_yandex_provider           | YandexProvider                                             |
+| nextauth_zitadel_provider          | ZitadelProvider                                            |
+| nextauth_zoho_provider             | ZohoProvider                                               |
+| nextauth_zoom_provider             | ZoomProvider                                               |
 
 #### Prisma
 
@@ -466,11 +567,11 @@ Your project is now set up to automatically format code upon saving.
 | prisma_count                 | await prisma.....count({ ... })                  |
 | prisma_groupBy               | await prisma.....groupBy({ ... })                |
 | prisma_findFirst             | await prisma.....findFirst({ ... })              |
-| prisma_orderBy               | orderBy: { ...: ... }                            |
-| prisma_where                 | where: { ...: ... }                              |
+| prisma_orderBy               | orderBy: { ... }                                 |
+| prisma_where                 | where: { ... }                                   |
 | prisma_skip_take             | skip: ..., take: ...                             |
-| prisma_include               | include: { ...: ... }                            |
-| prisma_select                | select: { ...: ... }                             |
+| prisma_include               | include: { ... }                                 |
+| prisma_select                | select: { ... }                                  |
 | prisma_transaction           | prisma.$transaction([ ... ])                     |
 | prisma_queryRaw              | prisma.$queryRaw(...)                            |
 | prisma_executeRaw            | prisma.$executeRaw(...)                          |
@@ -480,6 +581,105 @@ Your project is now set up to automatically format code upon saving.
 | prisma_connect               | prisma.$connect()                                |
 | prisma_queryRawUnsafe        | prisma.$queryRawUnsafe(...)                      |
 | prisma_executeRawUnsafe      | prisma.$executeRawUnsafe(...)                    |
+
+#### Tailwind
+
+| Title                       | Purpose                     |
+| --------------------------- | --------------------------- |
+| tailwind_five_stars         | 5 stars                     |
+| tailwind_button_combination | Button combination          |
+| tailwind_button_ghost       | Button ghost                |
+| tailwind_button_loading     | Button loading              |
+| tailwind_button_outline     | Button outline              |
+| tailwind_button_rounded     | Button rounded              |
+| tailwind_button_icon        | Button with icon            |
+| tailwind_button             | Button                      |
+| tailwind_checkbox           | Checkbox                    |
+| tailwind_featured_list      | Featured list               |
+| tailwind_form_group         | Form group                  |
+| tailwind_grid_scroll_snap   | Grid snap scroll horizontal |
+| tailwind_password_toggle    | Input password toggle       |
+| tailwind_input_search_clear | Input search clear          |
+| tailwind_input_search       | Input search                |
+| tailwind_input_icon         | Input with icon             |
+| tailwind_input              | Input                       |
+| tailwind_grid               | Layout grid equals          |
+| tailwind_link_image         | Link wrap image             |
+| tailwind_loading            | Loading circle              |
+| tailwind_modal_close        | Modal close                 |
+| tailwind_modal              | Modal                       |
+| tailwind_multi_avatar       | Multi avatar                |
+| tailwind_notification       | Notification                |
+| tailwind_overlay            | Overlay                     |
+| tailwind_progress           | Progress bar                |
+| tailwind_radio              | Radio                       |
+| tailwind_rounded_icon       | Rounded icon                |
+| tailwind_signup_form        | Signup form                 |
+| tailwind_counter            | Simple counter              |
+| tailwind_textarea           | Textarea                    |
+| tailwind_toggle             | Toggle                      |
+| tailwind_upload             | Upload file                 |
+
+#### tRPC
+
+| Title                   | Purpose                                          |
+| ----------------------- | ------------------------------------------------ |
+| trpc_server_standalone  | const server = createHTTPServer({ ... })         |
+| trpc_init               | const t = initTRPC.create();                     |
+| trpc_create_trpc_router | export const Router = createTRPCRouter({ ... }); |
+| trpc_public_query       | publicProcedure.input(...).query(...)            |
+| trpc_public_mutation    | publicProcedure.input(...).mutation(...)         |
+| trpc_protected_query    | protectedProcedure.input(...).query(...)         |
+| trpc_protected_mutation | protectedProcedure.input(...).mutation(...)      |
+
+#### i18next
+
+| Title                     | Purpose                                                                    |
+| ------------------------- | -------------------------------------------------------------------------- |
+| i18next_trans             | \<Trans i18nKey="..." values={{...}}>...\</Trans>                          |
+| i18next_use_translation   | const { t } = useTranslation();                                            |
+| i18next_language_detector | i18next.use(LanguageDetector).init({ ... })                                |
+| i18next_middleware        | i18next.use(i18nextMiddleware.LanguageDetector).use(Backend).init({ ... }) |
+
+#### zod
+
+| Title                   | Purpose                              |
+| ----------------------- | ------------------------------------ |
+| zod_array_nonempty      | z.array(z.string()).nonempty()       |
+| zod_bigint_positive     | z.bigint().positive()                |
+| zod_date_max            | z.date().max(new Date())             |
+| zod_deep_partial        | const ... = ....deepPartial();       |
+| zod_enum                | z.enum([...])                        |
+| zod_schema_keyof        | const ... = ....keyof();             |
+| zod_string_nullable     | z.nullable(z.string())               |
+| zod_number_int_positive | z.number().int().positive()          |
+| zod_string_optional     | z.optional(z.string())               |
+| zod_schema_partial      | const ... = ....partial();           |
+| zod_schema_passthrough  | ....passthrough().parse()            |
+| zod_schema_strip        | ....strip().parse()                  |
+| zod_schema_strict       | ....strict().parse()                 |
+| zod_promise             | z.promise(z.string())                |
+| zod_function_parameters | ....parameters()                     |
+| zod_function_returnType | ....returnType()                     |
+| zod_string_max          | z.string().max(...)                  |
+| zod_string_min          | z.string().min(...)                  |
+| zod_string_length       | z.string().length(...)               |
+| zod_string_email        | z.string().email()                   |
+| zod_string_url          | z.string().url().nullish()           |
+| zod_string_emoji        | z.string().emoji()                   |
+| zod_string_uuid         | z.string().uuid()                    |
+| zod_string_cuid         | z.string().cuid()                    |
+| zod_string_cuid2        | z.string().cuid2()                   |
+| zod_string_ulid         | z.string().ulid()                    |
+| zod_string_regex        | z.string().regex(...)                |
+| zod_string_includes     | z.string().includes(...)             |
+| zod_string_startsWith   | z.string().startsWith(...)           |
+| zod_string_endsWith     | z.string().endsWith(...)             |
+| zod_string_datetime     | z.string().datetime()                |
+| zod_string_ip           | z.string().ip({ version: 'v4' })     |
+| zod_string_trim         | z.string().trim()                    |
+| zod_string_toLowerCase  | z.string().toLowerCase()             |
+| zod_string_toUpperCase  | z.string().toUpperCase()             |
 
 </details>
 
@@ -493,7 +693,6 @@ Your project is now set up to automatically format code upon saving.
 - [NestJS File Generator for VSCode](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-generator)
 - [NestJS Snippets for VSCode Editor](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-snippets-extension)
 - [Angular File Generator for VSCode Editor](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-angular-generator)
-- [React / NextJS / T3 Stack File Generator](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
 - [Nx / Angular / Nest / Next Essential Extension Pack](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nx-pack)
 - [CodeIgniter 4 Snippets for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-shield-snippets)
 - [CodeIgniter 4 Spark for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-shield-spark)
@@ -513,4 +712,4 @@ See also the list of [contributors](https://github.com/ManuelGil/vscode-nextjs-g
 
 ## License
 
-Next File Generator for VSCode is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for details.
+T3 Stack / NextJS / ReactJS File Generator for VSCode is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for details.

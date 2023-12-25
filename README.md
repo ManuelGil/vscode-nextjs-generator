@@ -5,6 +5,10 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/ManuelGil/vscode-nextjs-generator?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nextjs-generator)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-nextjs-generator?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nextjs-generator/blob/main/LICENSE)
 
+<p align="center">
+<a href="https://www.producthunt.com/posts/t3-stack-next-and-react-file-generator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-t3&#0045;stack&#0045;next&#0045;and&#0045;react&#0045;file&#0045;generator" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=431311&theme=light" alt="T3&#0032;Stack&#0044;&#0032;Next&#0032;and&#0032;React&#0032;File&#0032;Generator - Next&#0046;js&#0032;with&#0032;T3&#0032;Stack&#0032;in&#0032;VSCode&#0058;&#0032;Effortless&#0032;file&#0032;generation&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+</p>
+
 Elevate your development workflow with our cutting-edge extension tailored for NextJS 14 (compatibility for version 13). Designed as the quintessential development companion, this toolset redefines file generation, optimizing every phase of your project's lifecycle. Seamlessly create pages, components, layouts, and more—all meticulously crafted to align with the esteemed T3 Stack paradigm. Leverage the capabilities of advanced technologies like NextJS, ReactJS, Prisma, TailwindCSS, i18next, and numerous other essential frameworks.
 
 ![demo](https://raw.githubusercontent.com/ManuelGil/vscode-nextjs-generator/main/docs/images/demo.gif)

@@ -7,12 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.1] - 2023-12-21
+## [1.1.0] - 2023-12-26
+
+### Added
+
+- Add settings for the default import alias for `tRPC` files
+
+## [1.0.1] - 2023-12-24
 
 ### Changed
 
 - Update `README.md` file
-## [1.0.0] - 2023-12-21
+
+## [1.0.0] - 2023-12-24
 
 ### Added
 
@@ -85,7 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.0.1...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v0.5.1...v1.0.0
 [0.5.1]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v0.5.0...v0.5.1

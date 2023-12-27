@@ -18,7 +18,7 @@ import {
 \tcreateTRPCRouter,
 \tprotectedProcedure,
 \tpublicProcedure,
-} from '~/server/api/trpc';
+} from '{{alias}}/server/api/trpc';
 
 export const {{entityName}}Router = createTRPCRouter({
 \t// prefix: t.procedure.input(callable).query(async (args) => handler(args)),
@@ -34,6 +34,7 @@ export const {{entityName}}Router = createTRPCRouter({
   const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
   const extension = nextConfig.get('files.extension');
   const showType = nextConfig.get('files.showType');
+  const alias = nextConfig.get('files.alias');
 
   let relativePath = '';
 
@@ -54,7 +55,9 @@ export const {{entityName}}Router = createTRPCRouter({
     'E.g. user, subscription, auth...',
   );
 
-  const body = content.replace('{{entityName}}', entityName);
+  const body = content
+    .replace('{{entityName}}', entityName)
+    .replace('{{alias}}', alias ? alias : '~');
 
   const filename =
     '/' +
@@ -81,7 +84,7 @@ import {
 \tcreateTRPCRouter,
 \tprotectedProcedure,
 \tpublicProcedure,
-} from '~/server/api/trpc';
+} from '{{alias}}/server/api/trpc';
 
 export const getAll = async () => {
 \ttry {
@@ -120,6 +123,7 @@ export const getAll = async () => {
   const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
   const extension = nextConfig.get('files.extension');
   const showType = nextConfig.get('files.showType');
+  const alias = nextConfig.get('files.alias');
 
   let relativePath = '';
 
@@ -140,7 +144,9 @@ export const getAll = async () => {
     'E.g. user, subscription, auth...',
   );
 
-  const body = content.replace('{{entityName}}', entityName);
+  const body = content
+    .replace('{{entityName}}', entityName)
+    .replace('{{alias}}', alias ? alias : '~');
 
   const filename =
     '/' +

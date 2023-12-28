@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2023-12-27
+
+### Added
+
+- Add new documentation for Features, Commands, and Snippets
+
 ## [1.1.0] - 2023-12-26
 
 ### Added
@@ -92,7 +98,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v0.5.1...v1.0.0

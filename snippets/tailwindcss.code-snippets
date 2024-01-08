@@ -393,7 +393,7 @@
     ]
   },
   "Layout grid equals": {
-    "prefix": ["tailwind_grid-equals", "grid-equals"],
+    "prefix": ["tailwind_grid_equals", "grid-equals"],
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "<div",
@@ -541,7 +541,7 @@
     "body": "<div className=\"fixed inset-0 z-40 invisible transition-all bg-black opacity-0 overlay bg-opacity-10\"></div>"
   },
   "Progress bar": {
-    "prefix": ["tailwind_progress-bar", "progress-bar"],
+    "prefix": ["tailwind_progress_bar", "progress-bar"],
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact",
     "body": [
       "<div",

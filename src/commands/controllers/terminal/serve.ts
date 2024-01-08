@@ -9,8 +9,15 @@ const start = (vscode: any) => {
 
   const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
   const turbo = nextConfig.get('server.turbo');
+  const experimentalHttps = nextConfig.get('server.experimentalHttps');
 
-  execute(vscode, 'start', 'npx next dev' + (turbo ? ' --turbo' : ''));
+  execute(
+    vscode,
+    'start',
+    'npx next dev' +
+      (turbo ? ' --turbo' : '') +
+      (experimentalHttps ? ' --experimental-https' : ''),
+  );
 };
 
 export { start };

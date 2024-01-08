@@ -40,8 +40,10 @@ In the `.vscode/settings.json` file, copy and paste the following settings:
 
 ```jsonc
 {
-  "nextjs.server.turbo": true
+  "nextjs.server.turbo": true,
+  "nextjs.server.experimentalHttps": true,
 }
 ```
 
 - `nextjs.server.turbo`: Turbo mode is a new mode that enables incremental compilation and dramatically improves the startup time of Next.js development servers. It's only available in Next.js 14 or newer.
+- `nextjs.server.experimentalHttps`: Enable HTTPS for the NextJS server. This is an experimental feature and it's only available in Next.js 14 or newer. You can read more about it [here](https://nextjs.org/docs/pages/api-reference/next-cli#https-for-local-development).

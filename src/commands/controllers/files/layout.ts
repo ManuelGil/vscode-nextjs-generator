@@ -1,6 +1,22 @@
 import { getFolder, parsePath, save } from '../../utils/functions';
 
-const content = `import type { Metadata } from 'next'
+const newLayout = async (vscode: any, fs: any, path: any, args: any = null) => {
+  let relativePath = '';
+
+  if (args) {
+    relativePath = parsePath(vscode, path, args);
+  }
+
+  const folder = await getFolder(
+    vscode,
+    'Folder name',
+    'Folder name. E.g. src, app...',
+    relativePath,
+  );
+
+  const filename = `/${folder}layout.tsx`;
+
+  const content = `import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -23,22 +39,6 @@ export default function Layout({
 \t)
 }
 `;
-
-const newLayout = async (vscode: any, fs: any, path: any, args: any = null) => {
-  let relativePath = '';
-
-  if (args) {
-    relativePath = parsePath(vscode, path, args);
-  }
-
-  const folder = await getFolder(
-    vscode,
-    'Folder name',
-    'Folder name. E.g. src, app...',
-    relativePath,
-  );
-
-  const filename = '/' + folder + 'layout.tsx';
 
   save(vscode, fs, path, filename, content);
 };

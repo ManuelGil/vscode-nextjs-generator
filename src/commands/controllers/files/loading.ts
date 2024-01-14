@@ -1,10 +1,5 @@
 import { getFolder, parsePath, save } from '../../utils/functions';
 
-const content = `export default function Loading() {
-\treturn <p>Loading...</p>
-}
-`;
-
 const newLoading = async (
   vscode: any,
   fs: any,
@@ -24,7 +19,12 @@ const newLoading = async (
     relativePath,
   );
 
-  const filename = '/' + folder + 'loading.tsx';
+  const filename = `/${folder}loading.tsx`;
+
+  const content = `export default function Loading() {
+\treturn <p>Loading...</p>
+}
+`;
 
   save(vscode, fs, path, filename, content);
 };

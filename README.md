@@ -3,6 +3,7 @@
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-nextjs-generator?style=for-the-badge&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/imgildev.vscode-nextjs-generator?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
 [![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/imgildev.vscode-nextjs-generator?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
+[![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/imgildev.vscode-nextjs-generator?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator&ssr=false#review-details)
 [![GitHub Repo stars](https://img.shields.io/github/stars/ManuelGil/vscode-nextjs-generator?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nextjs-generator)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-nextjs-generator?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-nextjs-generator/blob/main/LICENSE)
 
@@ -29,6 +30,7 @@ Boost your efficiency with this VSCode extension, designed to streamline file ge
     - [Commands to Create Files](#commands-to-create-files)
     - [Terminal Commands](#terminal-commands)
     - [Snippets](#snippets)
+    - [Context Menu](#context-menu)
   - [Connect with me](#connect-with-me)
   - [Other Extensions](#other-extensions)
   - [Changelog](#changelog)
@@ -90,6 +92,10 @@ See the following documentation about [how to use the terminal commands](./docs/
 ### Snippets
 
 See the following documentation about [how to use the snippets](./docs/snippets.md) for more information.
+
+### Context Menu
+
+See the following documentation about [how to use the context menu](./docs/context-menu.md) for more information.
 
 ## Connect with me
 

@@ -8,11 +8,6 @@ import {
   toKebabCase,
 } from '../../utils/functions';
 
-const content = `export default {{type}} {{className}} {
-\t// ... your code goes here
-}
-`;
-
 const newClass = async (vscode: any, fs: any, path: any, args: any = null) => {
   let resource;
 
@@ -21,7 +16,7 @@ const newClass = async (vscode: any, fs: any, path: any, args: any = null) => {
   }
 
   const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
-  const extension = nextConfig.get('files.extension');
+  const extension = nextConfig.get('files.extension') ?? 'ts';
   const showType = nextConfig.get('files.showType');
 
   let relativePath = '';
@@ -37,7 +32,7 @@ const newClass = async (vscode: any, fs: any, path: any, args: any = null) => {
     relativePath,
   );
 
-  const type = await getType(
+  let type = await getType(
     vscode,
     'Type',
     'E.g. class, interface, type, enum...',
@@ -49,19 +44,20 @@ const newClass = async (vscode: any, fs: any, path: any, args: any = null) => {
 
   const className = await getClass(vscode, 'Name', 'E.g. User, Role, Post...');
 
-  const body = content
-    .replace('{{type}}', type)
-    .replace('{{className}}', className + toCapitalize(type));
+  const content = `export default ${type} ${className}${toCapitalize(type)} {
+\t// ... your code goes here
+}
+`;
 
-  const filename =
-    '/' +
-    folder +
-    toKebabCase(className) +
-    '.' +
-    (showType ? `${type}.` : '') +
-    (extension || 'ts');
+  if (showType) {
+    type += '.';
+  } else {
+    type = '';
+  }
 
-  save(vscode, fs, path, filename, body);
+  const filename = `/${folder}${toKebabCase(className)}.${type}${extension}`;
+
+  save(vscode, fs, path, filename, content);
 };
 
 export { newClass };

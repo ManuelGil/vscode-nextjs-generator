@@ -2,7 +2,7 @@
   "name": "vscode-nextjs-generator",
   "displayName": "T3 Stack / NextJS / ReactJS File Generator",
   "description": "⚛ VSCode extension to generate files for T3 Stack project. It includes NextJS, ReactJS, Prisma, TailwindCSS, i18next, and more.",
-  "version": "1.1.1",
+  "version": "1.3.0",
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#52137b",
@@ -202,7 +202,9 @@
     "onCommand:nextjs.terminal.prisma.migrate.status",
     "onCommand:nextjs.terminal.prisma.studio",
     "onCommand:nextjs.terminal.prisma.validate",
-    "onCommand:nextjs.terminal.start"
+    "onCommand:nextjs.terminal.start",
+    "onCommand:nextjs.editor.json.ts",
+    "onCommand:nextjs.editor.json.zod"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -394,6 +396,16 @@
         "command": "nextjs.terminal.start",
         "title": "Start Server",
         "category": "T3"
+      },
+      {
+        "command": "nextjs.editor.json.ts",
+        "title": "Convert JSON to TypeScript",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.editor.json.zod",
+        "title": "Convert JSON to Zod",
+        "category": "T3"
       }
     ],
     "submenus": [
@@ -407,6 +419,10 @@
       },
       {
         "id": "prisma.submenu",
+        "label": "T3 Stack File Generator"
+      },
+      {
+        "id": "transform.submenu",
         "label": "T3 Stack File Generator"
       }
     ],
@@ -426,6 +442,13 @@
           "submenu": "prisma.submenu",
           "group": "2_workspace",
           "when": "explorerViewletFocus && !explorerResourceIsFolder && resourceFilename =~ /schema.prisma$/"
+        }
+      ],
+      "editor/context": [
+        {
+          "submenu": "transform.submenu",
+          "group": "1_modification",
+          "when": "editorHasSelection"
         }
       ],
       "root.submenu": [
@@ -585,6 +608,16 @@
           "command": "nextjs.terminal.prisma.validate",
           "group": "1_prisma"
         }
+      ],
+      "transform.submenu": [
+        {
+          "command": "nextjs.editor.json.ts",
+          "group": "1_transform"
+        },
+        {
+          "command": "nextjs.editor.json.zod",
+          "group": "1_transform"
+        }
       ]
     },
     "jsonValidation": [
@@ -624,5 +657,9 @@
     "prettier": "3.0.3",
     "typescript": "^4.9.5",
     "vscode-test": "^1.5.0"
+  },
+  "dependencies": {
+    "json-schema-to-zod": "^2.0.13",
+    "json-to-ts": "^1.7.0"
   }
 }

@@ -10,6 +10,8 @@ import {
   format,
   generate,
   init,
+  json2ts,
+  json2zod,
   migrateDeploy,
   migrateDev,
   migrateReset,
@@ -31,141 +33,103 @@ import {
 export function activate(context: vscode.ExtensionContext) {
   const nextjsFileClass = vscode.commands.registerCommand(
     'nextjs.file.class',
-    (args) => {
-      newClass(vscode, fs, path, args);
-    },
+    (args) => newClass(vscode, fs, path, args),
   );
   const nextjsFileComponent = vscode.commands.registerCommand(
     'nextjs.file.component',
-    (args) => {
-      newComponent(vscode, fs, path, args);
-    },
+    (args) => newComponent(vscode, fs, path, args),
   );
   const nextjsFileLayout = vscode.commands.registerCommand(
     'nextjs.file.layout',
-    (args) => {
-      newLayout(vscode, fs, path, args);
-    },
+    (args) => newLayout(vscode, fs, path, args),
   );
   const nextjsFileLoading = vscode.commands.registerCommand(
     'nextjs.file.loading',
-    (args) => {
-      newLoading(vscode, fs, path, args);
-    },
+    (args) => newLoading(vscode, fs, path, args),
   );
   const nextjsFilePage = vscode.commands.registerCommand(
     'nextjs.file.page',
-    (args) => {
-      newPage(vscode, fs, path, args);
-    },
+    (args) => newPage(vscode, fs, path, args),
   );
   const nextjsFileNextAuth = vscode.commands.registerCommand(
     'nextjs.file.nextauth',
-    (args) => {
-      newNextAuth(vscode, fs, path, args);
-    },
+    (args) => newNextAuth(vscode, fs, path, args),
   );
   const nextjsFileTRPCRouter = vscode.commands.registerCommand(
     'nextjs.file.trpc.router',
-    (args) => {
-      newTRPCRouter(vscode, fs, path, args);
-    },
+    (args) => newTRPCRouter(vscode, fs, path, args),
   );
   const nextjsFileTRPCController = vscode.commands.registerCommand(
     'nextjs.file.trpc.controller',
-    (args) => {
-      newTRPCController(vscode, fs, path, args);
-    },
+    (args) => newTRPCController(vscode, fs, path, args),
   );
   const nextjsTerminalNewProject = vscode.commands.registerCommand(
     'nextjs.terminal.project',
-    () => {
-      newProject(vscode);
-    },
+    () => newProject(vscode),
   );
   const nextTerminalPrismaDbExecute = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.db.execute',
-    () => {
-      dbExecute(vscode);
-    },
+    () => dbExecute(vscode),
   );
   const nextTerminalPrismaDbPull = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.db.pull',
-    () => {
-      dbPull(vscode);
-    },
+    () => dbPull(vscode),
   );
   const nextTerminalPrismaDbPush = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.db.push',
-    () => {
-      dbPush(vscode);
-    },
+    () => dbPush(vscode),
   );
   const nextTerminalPrismaDbSeed = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.db.seed',
-    () => {
-      dbSeed(vscode);
-    },
+    () => dbSeed(vscode),
   );
   const nextTerminalPrismaFormat = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.format',
-    () => {
-      format(vscode);
-    },
+    () => format(vscode),
   );
   const nextTerminalPrismaGenerate = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.generate',
-    () => {
-      generate(vscode);
-    },
+    () => generate(vscode),
   );
   const nextTerminalPrismaInit = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.init',
-    () => {
-      init(vscode);
-    },
+    () => init(vscode),
   );
   const nextTerminalPrismaMigrateDeploy = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.migrate.deploy',
-    () => {
-      migrateDeploy(vscode);
-    },
+    () => migrateDeploy(vscode),
   );
   const nextTerminalPrismaMigrateDev = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.migrate.dev',
-    () => {
-      migrateDev(vscode);
-    },
+    () => migrateDev(vscode),
   );
   const nextTerminalPrismaMigrateReset = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.migrate.reset',
-    () => {
-      migrateReset(vscode);
-    },
+    () => migrateReset(vscode),
   );
   const nextTerminalPrismaMigrateStatus = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.migrate.status',
-    () => {
-      migrateStatus(vscode);
-    },
+    () => migrateStatus(vscode),
   );
   const nextTerminalPrismaStudio = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.studio',
-    () => {
-      studio(vscode);
-    },
+    () => studio(vscode),
   );
   const nextTerminalPrismaValidate = vscode.commands.registerCommand(
     'nextjs.terminal.prisma.validate',
-    () => {
-      validate(vscode);
-    },
+    () => validate(vscode),
   );
   const nextjsTerminalStart = vscode.commands.registerCommand(
     'nextjs.terminal.start',
-    () => {
-      start(vscode);
-    },
+    () => start(vscode),
+  );
+  const nextjsEditorJson2Ts = vscode.commands.registerCommand(
+    'nextjs.editor.json.ts',
+    () => json2ts(vscode),
+  );
+  const nextjsEditorJson2Zod = vscode.commands.registerCommand(
+    'nextjs.editor.json.zod',
+    () => json2zod(vscode),
   );
 
   context.subscriptions.push(nextjsFileClass);
@@ -191,6 +155,8 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(nextTerminalPrismaStudio);
   context.subscriptions.push(nextTerminalPrismaValidate);
   context.subscriptions.push(nextjsTerminalStart);
+  context.subscriptions.push(nextjsEditorJson2Ts);
+  context.subscriptions.push(nextjsEditorJson2Zod);
 }
 
 export function deactivate() {}

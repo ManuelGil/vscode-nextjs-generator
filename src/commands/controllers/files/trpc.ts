@@ -12,19 +12,6 @@ const newTRPCRouter = async (
   path: any,
   args: any = null,
 ) => {
-  const content = `import { z } from 'zod';
-
-import {
-\tcreateTRPCRouter,
-\tprotectedProcedure,
-\tpublicProcedure,
-} from '{{alias}}/server/api/trpc';
-
-export const {{entityName}}Router = createTRPCRouter({
-\t// prefix: t.procedure.input(callable).query(async (args) => handler(args)),
-});
-`;
-
   let resource;
 
   if (vscode.workspace.workspaceFolders) {
@@ -32,9 +19,9 @@ export const {{entityName}}Router = createTRPCRouter({
   }
 
   const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
-  const extension = nextConfig.get('files.extension');
-  const showType = nextConfig.get('files.showType');
-  const alias = nextConfig.get('files.alias');
+  const extension = nextConfig.get('files.extension') ?? 'ts';
+  const showType = nextConfig.get('files.showType') ?? true;
+  const alias = nextConfig.get('files.alias') ?? '~';
 
   let relativePath = '';
 
@@ -55,19 +42,28 @@ export const {{entityName}}Router = createTRPCRouter({
     'E.g. user, subscription, auth...',
   );
 
-  const body = content
-    .replace('{{entityName}}', entityName)
-    .replace('{{alias}}', alias ? alias : '~');
+  const content = `import { z } from 'zod';
 
-  const filename =
-    '/' +
-    folder +
-    toKebabCase(entityName) +
-    '.' +
-    (showType ? 'router.' : '') +
-    (extension || 'ts');
+import {
+\tcreateTRPCRouter,
+\tprotectedProcedure,
+\tpublicProcedure,
+} from '${alias}/server/api/trpc';
 
-  save(vscode, fs, path, filename, body);
+export const ${entityName}Router = createTRPCRouter({
+\t// prefix: t.procedure.input(callable).query(async (args) => handler(args)),
+});
+`;
+
+  let type = '';
+
+  if (showType) {
+    type = 'router.';
+  }
+
+  const filename = `/${folder}${toKebabCase(entityName)}.${type}${extension}`;
+
+  save(vscode, fs, path, filename, content);
 };
 
 const newTRPCController = async (
@@ -76,6 +72,36 @@ const newTRPCController = async (
   path: any,
   args: any = null,
 ) => {
+  let resource;
+
+  if (vscode.workspace.workspaceFolders) {
+    resource = vscode.workspace.workspaceFolders[0].uri;
+  }
+
+  const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
+  const extension = nextConfig.get('files.extension') ?? 'ts';
+  const showType = nextConfig.get('files.showType') ?? true;
+  const alias = nextConfig.get('files.alias') ?? '~';
+
+  let relativePath = '';
+
+  if (args) {
+    relativePath = parsePath(vscode, path, args);
+  }
+
+  const folder = await getFolder(
+    vscode,
+    'Folder name',
+    'Folder name. E.g. src, app...',
+    relativePath,
+  );
+
+  let entityName = await getEntity(
+    vscode,
+    'Controller name',
+    'E.g. user, subscription, auth...',
+  );
+
   const content = `import { Prisma } from '@prisma/client';
 import { TRPCError } from '@trpc/server';
 import { z, ZodError } from 'zod';
@@ -84,7 +110,7 @@ import {
 \tcreateTRPCRouter,
 \tprotectedProcedure,
 \tpublicProcedure,
-} from '{{alias}}/server/api/trpc';
+} from '${alias}/server/api/trpc';
 
 export const getAll = async () => {
 \ttry {
@@ -114,49 +140,15 @@ export const getAll = async () => {
 };
 `;
 
-  let resource;
+  let type = '';
 
-  if (vscode.workspace.workspaceFolders) {
-    resource = vscode.workspace.workspaceFolders[0].uri;
+  if (showType) {
+    type = 'controller.';
   }
 
-  const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
-  const extension = nextConfig.get('files.extension');
-  const showType = nextConfig.get('files.showType');
-  const alias = nextConfig.get('files.alias');
+  const filename = `/${folder}${toKebabCase(entityName)}.${type}${extension}`;
 
-  let relativePath = '';
-
-  if (args) {
-    relativePath = parsePath(vscode, path, args);
-  }
-
-  const folder = await getFolder(
-    vscode,
-    'Folder name',
-    'Folder name. E.g. src, app...',
-    relativePath,
-  );
-
-  let entityName = await getEntity(
-    vscode,
-    'Controller name',
-    'E.g. user, subscription, auth...',
-  );
-
-  const body = content
-    .replace('{{entityName}}', entityName)
-    .replace('{{alias}}', alias ? alias : '~');
-
-  const filename =
-    '/' +
-    folder +
-    toKebabCase(entityName) +
-    '.' +
-    (showType ? 'controller.' : '') +
-    (extension || 'ts');
-
-  save(vscode, fs, path, filename, body);
+  save(vscode, fs, path, filename, content);
 };
 
 export { newTRPCController, newTRPCRouter };

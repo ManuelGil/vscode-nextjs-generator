@@ -73,7 +73,7 @@ const newProject = async (vscode: any) => {
           execute(
             vscode,
             type.label,
-            'npm create vite@latest . -- --template ' + viteType.label,
+            `npm create vite@latest . -- --template ${viteType.label}`,
           );
           break;
 
@@ -81,7 +81,7 @@ const newProject = async (vscode: any) => {
           execute(
             vscode,
             type.label,
-            'yarn create vite . --template ' + viteType.label,
+            `yarn create vite . --template ${viteType.label}`,
           );
           break;
 
@@ -89,7 +89,7 @@ const newProject = async (vscode: any) => {
           execute(
             vscode,
             type.label,
-            'pnpm create vite . --template ' + viteType.label,
+            `pnpm create vite . --template ${viteType.label}`,
           );
           break;
 
@@ -97,7 +97,7 @@ const newProject = async (vscode: any) => {
           execute(
             vscode,
             type.label,
-            'bunx create-vite . --template ' + viteType.label,
+            `bunx create-vite . --template ${viteType.label}`,
           );
           break;
       }

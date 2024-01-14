@@ -6,20 +6,6 @@ import {
   toKebabCase,
 } from '../../utils/functions';
 
-const content = `interface {{functionName}}Props {
-\tchildren: React.ReactNode;
-}
-
-export function {{functionName}}({ children }: {{functionName}}Props) {
-\treturn (
-\t\t<>
-\t\t\t<h1>{{functionName}}</h1>
-\t\t\t{children}
-\t\t</>
-\t);
-}
-`;
-
 const newComponent = async (
   vscode: any,
   fs: any,
@@ -33,7 +19,7 @@ const newComponent = async (
   }
 
   const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
-  const extension = nextConfig.get('files.extension');
+  const extension = nextConfig.get('files.extension') ?? 'ts';
   const showType = nextConfig.get('files.showType');
 
   let relativePath = '';
@@ -55,17 +41,29 @@ const newComponent = async (
     'E.g. Title, Header, Main, Footer...',
   );
 
-  const body = content.replace(/\{\{functionName\}\}/g, functionName);
+  const content = `interface ${functionName}Props {
+\tchildren: React.ReactNode;
+}
 
-  const filename =
-    '/' +
-    folder +
-    toKebabCase(functionName) +
-    '.' +
-    (showType ? 'component.' : '') +
-    (extension || 'ts');
+export function ${functionName}({ children }: ${functionName}Props) {
+\treturn (
+\t\t<>
+\t\t\t<h1>${functionName}</h1>
+\t\t\t{children}
+\t\t</>
+\t);
+}
+`;
 
-  save(vscode, fs, path, filename, body);
+  let type = '';
+
+  if (showType) {
+    type = 'component.';
+  }
+
+  const filename = `/${folder}${toKebabCase(functionName)}.${type}tsx`;
+
+  save(vscode, fs, path, filename, content);
 };
 
 export { newComponent };

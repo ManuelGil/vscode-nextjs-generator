@@ -51,7 +51,7 @@ const getFolder = async (
     value,
   });
 
-  return folder.endsWith('/') ? folder : folder + '/';
+  return folder.endsWith('/') ? folder : `${folder}/`;
 };
 
 const getType = async (vscode: any, prompt: string, placeHolder: string) => {
@@ -144,7 +144,7 @@ const parsePath = (vscode: any, path: any, args: any) => {
     folder = folder.replace(/\\/g, '/');
   }
 
-  folder = folder.startsWith('/') ? folder : '/' + folder;
+  folder = folder.startsWith('/') ? folder : `/${folder}`;
 
   return path.posix.relative(folder, args.path);
 };
@@ -160,6 +160,20 @@ const toKebabCase = (text: string) => {
     .toLowerCase();
 };
 
+const tryParseJSONObject = (text: string) => {
+  try {
+    var object = JSON.parse(text);
+
+    if (object && typeof object === 'object') {
+      return object;
+    }
+  } catch (e) {
+    return false;
+  }
+
+  return false;
+};
+
 export {
   execute,
   getClass,
@@ -170,4 +184,5 @@ export {
   save,
   toCapitalize,
   toKebabCase,
+  tryParseJSONObject,
 };

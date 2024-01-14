@@ -1,16 +1,5 @@
 import { getFolder, parsePath, save } from '../../utils/functions';
 
-const content = `import NextAuth from 'next-auth';
-
-export const authOptions = {
-\tproviders: [
-\t\t// Providers...
-\t],
-};
-
-export default NextAuth(authOptions);
-`;
-
 const newNextAuth = async (
   vscode: any,
   fs: any,
@@ -24,7 +13,7 @@ const newNextAuth = async (
   }
 
   const nextConfig = vscode.workspace.getConfiguration('nextjs', resource);
-  const extension = nextConfig.get('files.extension');
+  const extension = nextConfig.get('files.extension') ?? 'ts';
 
   let relativePath = '';
 
@@ -39,7 +28,18 @@ const newNextAuth = async (
     relativePath,
   );
 
-  const filename = '/' + folder + '[...nextauth].' + (extension || 'ts');
+  const filename = `/${folder}[...nextauth].${extension}`;
+
+  const content = `import NextAuth from 'next-auth';
+
+export const authOptions = {
+\tproviders: [
+\t\t// Providers...
+\t],
+};
+
+export default NextAuth(authOptions);
+`;
 
   save(vscode, fs, path, filename, content);
 };

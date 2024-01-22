@@ -285,5 +285,262 @@
       "  .having(({ $4 }) => $5);",
       ""
     ]
+  },
+  "$with": {
+    "prefix": ["drizzle__with", "$with"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "ctx.db.\\$with(${1:alias}).as(",
+      "    ctx.db.select({",
+      "      $2,",
+      "    })",
+      "    .from(${3:table})",
+      "    .where(",
+      "      $4,",
+      "    )",
+      "  );",
+      ""
+    ]
+  },
+  "with": {
+    "prefix": ["drizzle_with", "with"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "ctx.db.with(${1:alias})",
+      "  .select({",
+      "    $2,",
+      "  })",
+      "  .from(${1:alias})",
+      "  .where(",
+      "    $3,",
+      "  );",
+      ""
+    ]
+  },
+  "update": {
+    "prefix": ["drizzle_update", "update"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.update(${1:table}).set({",
+      "    $2,",
+      "  }).where(",
+      "    $3,",
+      "  );",
+      ""
+    ]
+  },
+  "insert": {
+    "prefix": ["drizzle_insert", "insert"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await ctx.db.insert(${1:table}).values({", "    $2,", "  });", ""]
+  },
+  "onConflictDoNothing": {
+    "prefix": ["drizzle_on_conflict_do_nothing", "onConflictDoNothing"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.insert(${1:table}).values({",
+      "    $2,",
+      "  }).onConflictDoNothing({",
+      "    target: ${3:column},",
+      "  });",
+      ""
+    ]
+  },
+  "onConflictDoUpdate": {
+    "prefix": ["drizzle_on_conflict_do_update", "onConflictDoUpdate"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.insert(${1:table}).values({",
+      "    $2,",
+      "  }).onConflictDoUpdate({",
+      "    target: ${3:column},",
+      "    set: {",
+      "      $4,",
+      "    },",
+      "  });",
+      ""
+    ]
+  },
+  "onDuplicateKeyUpdate": {
+    "prefix": ["drizzle_on_duplicate_key_update", "onDuplicateKeyUpdate"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.insert(${1:table}).values({",
+      "    $2,",
+      "  }).onDuplicateKeyUpdate({",
+      "    set: {",
+      "      $3,",
+      "    },",
+      "  });",
+      ""
+    ]
+  },
+  "delete": {
+    "prefix": ["drizzle_delete", "delete"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["await ctx.db.delete(${1:table}).where(", "    $2,", "  );", ""]
+  },
+  "leftJoin": {
+    "prefix": ["drizzle_left_join", "leftJoin"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.select({",
+      "    $1,",
+      "  })",
+      "  .from(${2:table})",
+      "  .leftJoin(${3:table}, ${4:condition});",
+      ""
+    ]
+  },
+  "rightJoin": {
+    "prefix": ["drizzle_right_join", "rightJoin"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.select({",
+      "    $1,",
+      "  })",
+      "  .from(${2:table})",
+      "  .rightJoin(${3:table}, ${4:condition});",
+      ""
+    ]
+  },
+  "innerJoin": {
+    "prefix": ["drizzle_inner_join", "innerJoin"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.select({",
+      "    $1,",
+      "  })",
+      "  .from(${2:table})",
+      "  .innerJoin(${3:table}, ${4:condition});",
+      ""
+    ]
+  },
+  "fullJoin": {
+    "prefix": ["drizzle_full_join", "fullJoin"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.select({",
+      "    $1,",
+      "  })",
+      "  .from(${2:table})",
+      "  .fullJoin(${3:table}, ${4:condition});",
+      ""
+    ]
+  },
+  "eq": {
+    "prefix": ["drizzle_eq", "eq"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "eq(${1:column}, ${2:value})"
+  },
+  "ne": {
+    "prefix": ["drizzle_ne", "ne"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "ne(${1:column}, ${2:value})"
+  },
+  "gt": {
+    "prefix": ["drizzle_gt", "gt"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "gt(${1:column}, ${2:value})"
+  },
+  "gte": {
+    "prefix": ["drizzle_gte", "gte"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "gte(${1:column}, ${2:value})"
+  },
+  "lt": {
+    "prefix": ["drizzle_lt", "lt"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "lt(${1:column}, ${2:value})"
+  },
+  "lte": {
+    "prefix": ["drizzle_lte", "lte"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "lte(${1:column}, ${2:value})"
+  },
+  "isNull": {
+    "prefix": ["drizzle_is_null", "isNull"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "isNull(${1:column})"
+  },
+  "isNotNull": {
+    "prefix": ["drizzle_is_not_null", "isNotNull"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "isNotNull(${1:column})"
+  },
+  "inArray": {
+    "prefix": ["drizzle_in_array", "inArray"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "inArray(${1:column}, ${2:array})"
+  },
+  "notInArray": {
+    "prefix": ["drizzle_not_in_array", "notInArray"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "notInArray(${1:column}, ${2:array})"
+  },
+  "exists": {
+    "prefix": ["drizzle_exists", "exists"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "exists(${1:column})"
+  },
+  "notExists": {
+    "prefix": ["drizzle_not_exists", "notExists"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "notExists(${1:column})"
+  },
+  "between": {
+    "prefix": ["drizzle_between", "between"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "between(${1:column}, ${2:from}, ${3:to})"
+  },
+  "notBetween": {
+    "prefix": ["drizzle_not_between", "notBetween"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "notBetween(${1:column}, ${2:from}, ${3:to})"
+  },
+  "like": {
+    "prefix": ["drizzle_like", "like"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "like(${1:column}, ${2:value})"
+  },
+  "ilike": {
+    "prefix": ["drizzle_ilike", "ilike"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "ilike(${1:column}, ${2:value})"
+  },
+  "notIlike": {
+    "prefix": ["drizzle_not_ilike", "notIlike"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "notIlike(${1:column}, ${2:value})"
+  },
+  "not": {
+    "prefix": ["drizzle_not", "not"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "not(${1:condition})"
+  },
+  "and": {
+    "prefix": ["drizzle_and", "and"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "and(${1:condition}, ${2:condition})"
+  },
+  "or": {
+    "prefix": ["drizzle_or", "or"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "or(${1:condition}, ${2:condition})"
+  },
+  "arrayContains": {
+    "prefix": ["drizzle_array_contains", "arrayContains"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "arrayContains(${1:column}, ${2:value})"
+  },
+  "arrayContained": {
+    "prefix": ["drizzle_array_contained", "arrayContained"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "arrayContained(${1:column}, ${2:value})"
+  },
+  "arrayOverlaps": {
+    "prefix": ["drizzle_array_overlaps", "arrayOverlaps"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "arrayOverlaps(${1:column}, ${2:value})"
   }
 }

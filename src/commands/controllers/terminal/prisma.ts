@@ -1,6 +1,6 @@
 import { execute } from '../../utils/functions';
 
-const dbExecute = async (vscode: any) => {
+const prismaExecute = async (vscode: any) => {
   const confirm = await vscode.window.showQuickPick(['Yes', 'No'], {
     placeHolder:
       'Are you sure you want to execute the Prisma schema to the database?',
@@ -13,7 +13,7 @@ const dbExecute = async (vscode: any) => {
   execute(vscode, 'prisma db execute', 'npx prisma db execute');
 };
 
-const dbPull = async (vscode: any) => {
+const prismaPull = async (vscode: any) => {
   const confirm = await vscode.window.showQuickPick(['Yes', 'No'], {
     placeHolder:
       'Are you sure you want to pull the Prisma schema to the database?',
@@ -26,7 +26,7 @@ const dbPull = async (vscode: any) => {
   execute(vscode, 'prisma db pull', 'npx prisma db pull');
 };
 
-const dbPush = async (vscode: any) => {
+const prismaPush = async (vscode: any) => {
   const confirm = await vscode.window.showQuickPick(['Yes', 'No'], {
     placeHolder:
       'Are you sure you want to push the Prisma schema to the database?',
@@ -39,7 +39,7 @@ const dbPush = async (vscode: any) => {
   execute(vscode, 'prisma db push', 'npx prisma db push');
 };
 
-const dbSeed = async (vscode: any) => {
+const prismaSeed = async (vscode: any) => {
   const confirm = await vscode.window.showQuickPick(['Yes', 'No'], {
     placeHolder:
       'Are you sure you want to seed the Prisma schema to the database?',
@@ -52,19 +52,19 @@ const dbSeed = async (vscode: any) => {
   execute(vscode, 'prisma db seed', 'npx prisma db seed');
 };
 
-const format = (vscode: any) => {
+const prismaFormat = (vscode: any) => {
   execute(vscode, 'prisma format', 'npx prisma format');
 };
 
-const generate = (vscode: any) => {
+const prismaGenerate = (vscode: any) => {
   execute(vscode, 'prisma generate', 'npx prisma generate');
 };
 
-const init = (vscode: any) => {
+const prismaInit = (vscode: any) => {
   execute(vscode, 'prisma init', 'npx prisma init');
 };
 
-const migrateDeploy = async (vscode: any) => {
+const prismaMigrateDeploy = async (vscode: any) => {
   const confirm = await vscode.window.showQuickPick(['Yes', 'No'], {
     placeHolder: 'Are you sure you want to deploy the Prisma schema?',
   });
@@ -76,7 +76,7 @@ const migrateDeploy = async (vscode: any) => {
   execute(vscode, 'prisma migrate deploy', 'npx prisma migrate deploy');
 };
 
-const migrateDev = async (vscode: any) => {
+const prismaMigrateDev = async (vscode: any) => {
   const confirm = await vscode.window.showQuickPick(['Yes', 'No'], {
     placeHolder: 'Are you sure you want to migrate the Prisma schema?',
   });
@@ -88,7 +88,7 @@ const migrateDev = async (vscode: any) => {
   execute(vscode, 'prisma migrate dev', 'npx prisma migrate dev');
 };
 
-const migrateReset = async (vscode: any) => {
+const prismaMigrateReset = async (vscode: any) => {
   const confirm = await vscode.window.showQuickPick(['Yes', 'No'], {
     placeHolder: 'Are you sure you want to reset the Prisma schema?',
   });
@@ -100,30 +100,30 @@ const migrateReset = async (vscode: any) => {
   execute(vscode, 'prisma migrate reset', 'npx prisma migrate reset');
 };
 
-const migrateStatus = (vscode: any) => {
+const prismaMigrateStatus = (vscode: any) => {
   execute(vscode, 'prisma migrate status', 'npx prisma migrate status');
 };
 
-const studio = (vscode: any) => {
+const prismaStudio = (vscode: any) => {
   execute(vscode, 'prisma studio', 'npx prisma studio');
 };
 
-const validate = (vscode: any) => {
+const prismaValidate = (vscode: any) => {
   execute(vscode, 'prisma validate', 'npx prisma validate');
 };
 
 export {
-  dbExecute,
-  dbPull,
-  dbPush,
-  dbSeed,
-  format,
-  generate,
-  init,
-  migrateDeploy,
-  migrateDev,
-  migrateReset,
-  migrateStatus,
-  studio,
-  validate,
+  prismaExecute,
+  prismaFormat,
+  prismaGenerate,
+  prismaInit,
+  prismaMigrateDeploy,
+  prismaMigrateDev,
+  prismaMigrateReset,
+  prismaMigrateStatus,
+  prismaPull,
+  prismaPush,
+  prismaSeed,
+  prismaStudio,
+  prismaValidate,
 };

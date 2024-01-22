@@ -11,6 +11,7 @@
     - [NextJS](#nextjs)
     - [NextAuth](#nextauth)
     - [Prisma](#prisma)
+    - [Drizzle](#drizzle)
     - [Tailwind](#tailwind)
     - [tRPC](#trpc)
     - [i18next](#i18next)
@@ -471,6 +472,58 @@
 | prisma_connect               | prisma.$connect()                                |
 | prisma_queryRawUnsafe        | prisma.$queryRawUnsafe(...)                      |
 | prisma_executeRawUnsafe      | prisma.$executeRawUnsafe(...)                    |
+
+### Drizzle
+
+| Title                       | Purpose                     |
+| --------------------------- | --------------------------- |
+| drizzle_id_serial           | id serial                   |
+| drizzle_id_bigint           | id bigint                   |
+| drizzle_binary              | binary                      |
+| drizzle_bigserial           | bigserial                   |
+| drizzle_boolean             | boolean                     |
+| drizzle_blob                | blob                        |
+| drizzle_char                | char                        |
+| drizzle_cidr                | cidr                        |
+| drizzle_date                | date                        |
+| drizzle_datetime            | datetime                    |
+| drizzle_decimal             | decimal                     |
+| drizzle_double              | double                      |
+| drizzle_doublePrecision     | doublePrecision             |
+| drizzle_pgEnum              | pgEnum                      |
+| drizzle_float               | float                       |
+| drizzle_inet                | inet                        |
+| drizzle_int                 | int                         |
+| drizzle_integer             | integer                     |
+| drizzle_interval            | interval                    |
+| drizzle_json                | json                        |
+| drizzle_jsonb               | jsonb                       |
+| drizzle_macaddr             | macaddr                     |
+| drizzle_macaddr8            | macaddr8                    |
+| drizzle_mediumint           | mediumint                   |
+| drizzle_numeric             | numeric                     |
+| drizzle_real                | real                        |
+| drizzle_serial              | serial                      |
+| drizzle_smallint            | smallint                    |
+| drizzle_smallserial         | smallserial                 |
+| drizzle_text                | text                        |
+| drizzle_tinytext            | tinytext                    |
+| drizzle_mediumtext          | mediumtext                  |
+| drizzle_longtext            | longtext                    |
+| drizzle_time                | time                        |
+| drizzle_timestamp           | timestamp                   |
+| drizzle_tinyint             | tinyint                     |
+| drizzle_uuid                | uuid                        |
+| drizzle_varbinary           | varbinary                   |
+| drizzle_varchar             | varchar                     |
+| drizzle_year                | year                        |
+| drizzle_references          | int references              |
+| drizzle_select              | select                      |
+| drizzle_select_distinct     | selectDistinct              |
+| drizzle_select_distinct_on  | selectDistinctOn            |
+| drizzle_limit               | limit                       |
+| drizzle_order_by            | orderBy                     |
+| drizzle_group_by            | groupBy                     |
 
 ### Tailwind
 

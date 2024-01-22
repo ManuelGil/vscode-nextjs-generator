@@ -3,19 +3,15 @@ import * as path from 'path';
 import * as vscode from 'vscode';
 
 import {
-  dbExecute,
-  dbPull,
-  dbPush,
-  dbSeed,
-  format,
-  generate,
-  init,
+  drizzleCkeck,
+  drizzleDrop,
+  drizzleGenerate,
+  drizzlePull,
+  drizzlePush,
+  drizzleStudio,
+  drizzleUp,
   json2ts,
   json2zod,
-  migrateDeploy,
-  migrateDev,
-  migrateReset,
-  migrateStatus,
   newClass,
   newComponent,
   newLayout,
@@ -25,9 +21,20 @@ import {
   newProject,
   newTRPCController,
   newTRPCRouter,
+  prismaExecute,
+  prismaFormat,
+  prismaGenerate,
+  prismaInit,
+  prismaMigrateDeploy,
+  prismaMigrateDev,
+  prismaMigrateReset,
+  prismaMigrateStatus,
+  prismaPull,
+  prismaPush,
+  prismaSeed,
+  prismaStudio,
+  prismaValidate,
   start,
-  studio,
-  validate,
 } from './commands';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -67,61 +74,89 @@ export function activate(context: vscode.ExtensionContext) {
     'nextjs.terminal.project',
     () => newProject(vscode),
   );
-  const nextTerminalPrismaDbExecute = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.db.execute',
-    () => dbExecute(vscode),
-  );
-  const nextTerminalPrismaDbPull = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.db.pull',
-    () => dbPull(vscode),
-  );
-  const nextTerminalPrismaDbPush = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.db.push',
-    () => dbPush(vscode),
-  );
-  const nextTerminalPrismaDbSeed = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.db.seed',
-    () => dbSeed(vscode),
-  );
-  const nextTerminalPrismaFormat = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.format',
-    () => format(vscode),
-  );
-  const nextTerminalPrismaGenerate = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.generate',
-    () => generate(vscode),
-  );
-  const nextTerminalPrismaInit = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.init',
-    () => init(vscode),
-  );
-  const nextTerminalPrismaMigrateDeploy = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.migrate.deploy',
-    () => migrateDeploy(vscode),
-  );
-  const nextTerminalPrismaMigrateDev = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.migrate.dev',
-    () => migrateDev(vscode),
-  );
-  const nextTerminalPrismaMigrateReset = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.migrate.reset',
-    () => migrateReset(vscode),
-  );
-  const nextTerminalPrismaMigrateStatus = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.migrate.status',
-    () => migrateStatus(vscode),
-  );
-  const nextTerminalPrismaStudio = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.studio',
-    () => studio(vscode),
-  );
-  const nextTerminalPrismaValidate = vscode.commands.registerCommand(
-    'nextjs.terminal.prisma.validate',
-    () => validate(vscode),
-  );
   const nextjsTerminalStart = vscode.commands.registerCommand(
     'nextjs.terminal.start',
     () => start(vscode),
+  );
+  const nextTerminalPrismaDbExecute = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.db.execute',
+    () => prismaExecute(vscode),
+  );
+  const nextTerminalPrismaDbPull = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.db.pull',
+    () => prismaPull(vscode),
+  );
+  const nextTerminalPrismaDbPush = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.db.push',
+    () => prismaPush(vscode),
+  );
+  const nextTerminalPrismaDbSeed = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.db.seed',
+    () => prismaSeed(vscode),
+  );
+  const nextTerminalPrismaFormat = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.format',
+    () => prismaFormat(vscode),
+  );
+  const nextTerminalPrismaGenerate = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.generate',
+    () => prismaGenerate(vscode),
+  );
+  const nextTerminalPrismaInit = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.init',
+    () => prismaInit(vscode),
+  );
+  const nextTerminalPrismaMigrateDeploy = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.migrate.deploy',
+    () => prismaMigrateDeploy(vscode),
+  );
+  const nextTerminalPrismaMigrateDev = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.migrate.dev',
+    () => prismaMigrateDev(vscode),
+  );
+  const nextTerminalPrismaMigrateReset = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.migrate.reset',
+    () => prismaMigrateReset(vscode),
+  );
+  const nextTerminalPrismaMigrateStatus = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.migrate.status',
+    () => prismaMigrateStatus(vscode),
+  );
+  const nextTerminalPrismaStudio = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.studio',
+    () => prismaStudio(vscode),
+  );
+  const nextTerminalPrismaValidate = vscode.commands.registerCommand(
+    'nextjs.terminal.prisma.validate',
+    () => prismaValidate(vscode),
+  );
+  const nextTerminalDrizzleGenerate = vscode.commands.registerCommand(
+    'nextjs.terminal.drizzle.generate',
+    () => drizzleGenerate(vscode),
+  );
+  const nextTerminalDrizzlePull = vscode.commands.registerCommand(
+    'nextjs.terminal.drizzle.pull',
+    () => drizzlePull(vscode),
+  );
+  const nextTerminalDrizzlePush = vscode.commands.registerCommand(
+    'nextjs.terminal.drizzle.push',
+    () => drizzlePush(vscode),
+  );
+  const nextTerminalDrizzleDrop = vscode.commands.registerCommand(
+    'nextjs.terminal.drizzle.drop',
+    () => drizzleDrop(vscode),
+  );
+  const nextTerminalDrizzleUp = vscode.commands.registerCommand(
+    'nextjs.terminal.drizzle.up',
+    () => drizzleUp(vscode),
+  );
+  const nextTerminalDrizzleCkeck = vscode.commands.registerCommand(
+    'nextjs.terminal.drizzle.check',
+    () => drizzleCkeck(vscode),
+  );
+  const nextTerminalDrizzleStudio = vscode.commands.registerCommand(
+    'nextjs.terminal.drizzle.studio',
+    () => drizzleStudio(vscode),
   );
   const nextjsEditorJson2Ts = vscode.commands.registerCommand(
     'nextjs.editor.json.ts',
@@ -141,6 +176,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(nextjsFileTRPCRouter);
   context.subscriptions.push(nextjsFileTRPCController);
   context.subscriptions.push(nextjsTerminalNewProject);
+  context.subscriptions.push(nextjsTerminalStart);
   context.subscriptions.push(nextTerminalPrismaDbExecute);
   context.subscriptions.push(nextTerminalPrismaDbPull);
   context.subscriptions.push(nextTerminalPrismaDbPush);
@@ -154,7 +190,13 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(nextTerminalPrismaMigrateStatus);
   context.subscriptions.push(nextTerminalPrismaStudio);
   context.subscriptions.push(nextTerminalPrismaValidate);
-  context.subscriptions.push(nextjsTerminalStart);
+  context.subscriptions.push(nextTerminalDrizzleGenerate);
+  context.subscriptions.push(nextTerminalDrizzlePull);
+  context.subscriptions.push(nextTerminalDrizzlePush);
+  context.subscriptions.push(nextTerminalDrizzleDrop);
+  context.subscriptions.push(nextTerminalDrizzleUp);
+  context.subscriptions.push(nextTerminalDrizzleCkeck);
+  context.subscriptions.push(nextTerminalDrizzleStudio);
   context.subscriptions.push(nextjsEditorJson2Ts);
   context.subscriptions.push(nextjsEditorJson2Zod);
 }

@@ -1,8 +1,8 @@
 {
   "name": "vscode-nextjs-generator",
   "displayName": "T3 Stack / NextJS / ReactJS File Generator",
-  "description": "⚛ VSCode extension to generate files for T3 Stack project. It includes NextJS, ReactJS, Prisma, TailwindCSS, i18next, and more.",
-  "version": "1.3.0",
+  "description": "⚛ VSCode extension to generate files for T3 Stack project. It includes NextJS, ReactJS, Prisma, Drizzle, TailwindCSS, i18next, Zod, and more.",
+  "version": "1.4.0",
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#52137b",
@@ -113,11 +113,18 @@
     "prisma studio",
     "prisma-orm",
     "prisma",
-    "prisma",
     "prismacli",
     "prismadb",
     "prismamigrate",
     "prismastudio",
+    "drizzle cli",
+    "drizzle db",
+    "drizzle-orm",
+    "drizzle",
+    "drizzlecli",
+    "drizzledb",
+    "drizzlemigrate",
+    "drizzlestudio",
     "project",
     "react 16",
     "react 17",
@@ -189,6 +196,7 @@
     "onCommand:nextjs.file.trpc.router",
     "onCommand:nextjs.file.trpc.controller",
     "onCommand:nextjs.terminal.project",
+    "onCommand:nextjs.terminal.start",
     "onCommand:nextjs.terminal.prisma.db.execute",
     "onCommand:nextjs.terminal.prisma.db.pull",
     "onCommand:nextjs.terminal.prisma.db.push",
@@ -202,7 +210,13 @@
     "onCommand:nextjs.terminal.prisma.migrate.status",
     "onCommand:nextjs.terminal.prisma.studio",
     "onCommand:nextjs.terminal.prisma.validate",
-    "onCommand:nextjs.terminal.start",
+    "onCommand:nextjs.terminal.drizzle.generate",
+    "onCommand:nextjs.terminal.drizzle.pull",
+    "onCommand:nextjs.terminal.drizzle.push",
+    "onCommand:nextjs.terminal.drizzle.drop",
+    "onCommand:nextjs.terminal.drizzle.up",
+    "onCommand:nextjs.terminal.drizzle.check",
+    "onCommand:nextjs.terminal.drizzle.studio",
     "onCommand:nextjs.editor.json.ts",
     "onCommand:nextjs.editor.json.zod"
   ],
@@ -250,6 +264,9 @@
       }
     },
     "snippets": [
+      {
+        "path": "./snippets/drizzle.code-snippets"
+      },
       {
         "path": "./snippets/html.code-snippets"
       },
@@ -328,6 +345,11 @@
         "category": "T3"
       },
       {
+        "command": "nextjs.terminal.start",
+        "title": "Start Server",
+        "category": "T3"
+      },
+      {
         "command": "nextjs.terminal.prisma.db.execute",
         "title": "Prisma DB Execute",
         "category": "T3"
@@ -393,8 +415,38 @@
         "category": "T3"
       },
       {
-        "command": "nextjs.terminal.start",
-        "title": "Start Server",
+        "command": "nextjs.terminal.drizzle.generate",
+        "title": "Drizzle Generate",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.terminal.drizzle.pull",
+        "title": "Drizzle Pull",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.terminal.drizzle.push",
+        "title": "Drizzle Push",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.terminal.drizzle.drop",
+        "title": "Drizzle Drop",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.terminal.drizzle.up",
+        "title": "Drizzle Up",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.terminal.drizzle.check",
+        "title": "Drizzle Check",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.terminal.drizzle.studio",
+        "title": "Drizzle Studio",
         "category": "T3"
       },
       {
@@ -422,6 +474,10 @@
         "label": "T3 Stack File Generator"
       },
       {
+        "id": "drizzle.submenu",
+        "label": "T3 Stack File Generator"
+      },
+      {
         "id": "transform.submenu",
         "label": "T3 Stack File Generator"
       }
@@ -442,6 +498,11 @@
           "submenu": "prisma.submenu",
           "group": "2_workspace",
           "when": "explorerViewletFocus && !explorerResourceIsFolder && resourceFilename =~ /schema.prisma$/"
+        },
+        {
+          "submenu": "drizzle.submenu",
+          "group": "2_workspace",
+          "when": "explorerViewletFocus && !explorerResourceIsFolder && resourceFilename =~ /drizzle.config.ts$/"
         }
       ],
       "editor/context": [
@@ -607,6 +668,36 @@
         {
           "command": "nextjs.terminal.prisma.validate",
           "group": "1_prisma"
+        }
+      ],
+      "drizzle.submenu": [
+        {
+          "command": "nextjs.terminal.drizzle.generate",
+          "group": "1_drizzle"
+        },
+        {
+          "command": "nextjs.terminal.drizzle.pull",
+          "group": "1_drizzle"
+        },
+        {
+          "command": "nextjs.terminal.drizzle.push",
+          "group": "1_drizzle"
+        },
+        {
+          "command": "nextjs.terminal.drizzle.drop",
+          "group": "1_drizzle"
+        },
+        {
+          "command": "nextjs.terminal.drizzle.up",
+          "group": "1_drizzle"
+        },
+        {
+          "command": "nextjs.terminal.drizzle.check",
+          "group": "1_drizzle"
+        },
+        {
+          "command": "nextjs.terminal.drizzle.studio",
+          "group": "1_drizzle"
         }
       ],
       "transform.submenu": [

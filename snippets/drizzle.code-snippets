@@ -1,0 +1,289 @@
+{
+  "id serial primary key": {
+    "prefix": ["drizzle_id_serial", "id serial"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "id: serial('id').primaryKey(),"
+  },
+  "id bigint primary key": {
+    "prefix": ["drizzle_id_bigint", "id bigint"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "id: bigint('id', { mode: 'number' }).primaryKey().autoincrement(),"
+  },
+  "binary": {
+    "prefix": ["drizzle_binary", "binary"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: binary('${1:name}', { length: ${2:length} }),"
+  },
+  "bigserial": {
+    "prefix": ["drizzle_bigserial", "bigserial"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: bigserial('${1:name}', { mode: '${2:mode}'}),"
+  },
+  "boolean": {
+    "prefix": ["drizzle_boolean", "boolean"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: boolean('${1:name}'),"
+  },
+  "blob": {
+    "prefix": ["drizzle_blob", "blob"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: blob('${1:name}', { mode: '${2:mode}' }),"
+  },
+  "char": {
+    "prefix": ["drizzle_char", "char"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: char('${1:name}', { length: ${2:length} }),"
+  },
+  "cidr": {
+    "prefix": ["drizzle_cidr", "cidr"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: cidr('${1:name}'),"
+  },
+  "date": {
+    "prefix": ["drizzle_date", "date"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: date('${1:name}', { mode: '${2:mode}' }),"
+  },
+  "datetime": {
+    "prefix": ["drizzle_datetime", "datetime"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: datetime('${1:name}', { mode: '${2:mode}' }),"
+  },
+  "decimal": {
+    "prefix": ["drizzle_decimal", "decimal"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: decimal('${1:name}', { precision: ${2:precision}, scale: ${3:scale} }),"
+  },
+  "double": {
+    "prefix": ["drizzle_double", "double"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: double('${1:name}', { precision: ${2:precision}, scale: ${3:scale} }),"
+  },
+  "doublePrecision": {
+    "prefix": ["drizzle_doublePrecision", "doublePrecision"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: doublePrecision('${1:name}'),"
+  },
+  "pgEnum": {
+    "prefix": ["drizzle_pgEnum", "pgEnum"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: pgEnum(enumName: '${1:name}', values: [${2:values}]),"
+  },
+  "float": {
+    "prefix": ["drizzle_float", "float"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: float('${1:name}'),"
+  },
+  "inet": {
+    "prefix": ["drizzle_inet", "inet"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: inet('${1:name}'),"
+  },
+  "int": {
+    "prefix": ["drizzle_int", "int"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: int('${1:name}', { unsigned: ${2:true} }),"
+  },
+  "integer": {
+    "prefix": ["drizzle_integer", "integer"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: integer('${1:name}'),"
+  },
+  "interval": {
+    "prefix": ["drizzle_interval", "interval"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: interval('${1:name}', { fields: '${2:year}', precision: ${3:10} }),"
+  },
+  "json": {
+    "prefix": ["drizzle_json", "json"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: json('${1:name}'),"
+  },
+  "jsonb": {
+    "prefix": ["drizzle_jsonb", "jsonb"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: jsonb('${1:name}'),"
+  },
+  "macaddr": {
+    "prefix": ["drizzle_macaddr", "macaddr"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: macaddr('${1:name}'),"
+  },
+  "macaddr8": {
+    "prefix": ["drizzle_macaddr8", "macaddr8"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: macaddr8('${1:name}'),"
+  },
+  "mediumint": {
+    "prefix": ["drizzle_mediumint", "mediumint"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: mediumint('${1:name}'),"
+  },
+  "numeric": {
+    "prefix": ["drizzle_numeric", "numeric"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: numeric('${1:name}'),"
+  },
+  "real": {
+    "prefix": ["drizzle_real", "real"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: real('${1:name}', { precision: ${2:precision}, scale: ${3:scale} }),"
+  },
+  "serial": {
+    "prefix": ["drizzle_serial", "serial"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: serial('${1:name}'),"
+  },
+  "smallint": {
+    "prefix": ["drizzle_smallint", "smallint"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: smallint('${1:name}'),"
+  },
+  "smallserial": {
+    "prefix": ["drizzle_smallserial", "smallserial"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: smallserial('${1:name}'),"
+  },
+  "text": {
+    "prefix": ["drizzle_text", "text"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: text('${1:name}'),"
+  },
+  "tinytext": {
+    "prefix": ["drizzle_tinytext", "tinytext"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: tinytext('${1:name}'),"
+  },
+  "mediumtext": {
+    "prefix": ["drizzle_mediumtext", "mediumtext"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: mediumtext('${1:name}'),"
+  },
+  "longtext": {
+    "prefix": ["drizzle_longtext", "longtext"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: longtext('${1:name}'),"
+  },
+  "time": {
+    "prefix": ["drizzle_time", "time"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: time('${1:name}'),"
+  },
+  "timestamp": {
+    "prefix": ["drizzle_timestamp", "timestamp"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: timestamp('${1:name}', { mode: '${2:mode}' }),"
+  },
+  "tinyint": {
+    "prefix": ["drizzle_tinyint", "tinyint"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: tinyint('${1:name}'),"
+  },
+  "uuid": {
+    "prefix": ["drizzle_uuid", "uuid"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: uuid('${1:name}'),"
+  },
+  "varbinary": {
+    "prefix": ["drizzle_varbinary", "varbinary"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: varbinary('${1:name}', { length: ${2:length} }),"
+  },
+  "varchar": {
+    "prefix": ["drizzle_varchar", "varchar"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: varchar('${1:name}', { length: ${2:length} }),"
+  },
+  "year": {
+    "prefix": ["drizzle_year", "year"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}: year('${1:name}'),"
+  },
+  "references": {
+    "prefix": ["drizzle_references", "int references"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": "${1:name}Id: int('${1:name}_id').references(() => ${2:table}.${3:column}),"
+  },
+  "select": {
+    "prefix": ["drizzle_select", "select"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.select({",
+      "    $1,",
+      "  })",
+      "  .from(${2:table})",
+      "  .where(",
+      "    $3,",
+      "  );",
+      ""
+    ]
+  },
+  "selectDistinct": {
+    "prefix": ["drizzle_select_distinct", "selectDistinct"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.selectDistinct({",
+      "    $1,",
+      "  })",
+      "  .from(${2:table})",
+      "  .where(",
+      "    $3,",
+      "  );",
+      ""
+    ]
+  },
+  "selectDistinctOn": {
+    "prefix": ["drizzle_select_distinct_on", "selectDistinctOn"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.selectDistinctOn([",
+      "    $1,",
+      "  ]), {",
+      "    $2,",
+      "  })",
+      "  .from(${3:table})",
+      "  .where(",
+      "    $4,",
+      "  );",
+      ""
+    ]
+  },
+  "limit & offset": {
+    "prefix": ["drizzle_limit", "limit"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.select({",
+      "    $1,",
+      "  })",
+      "  .from(${2:table})",
+      "  .limit(${3:limit})",
+      "  .offset(${4:offset});",
+      ""
+    ]
+  },
+  "orderBy": {
+    "prefix": ["drizzle_order_by", "orderBy"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.select({",
+      "    $1,",
+      "  })",
+      "  .from(${2:table})",
+      "  .orderBy(${3:column});",
+      ""
+    ]
+  },
+  "groupBy": {
+    "prefix": ["drizzle_group_by", "groupBy"],
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "body": [
+      "await ctx.db.select({",
+      "    $1,",
+      "  })",
+      "  .from(${2:table})",
+      "  .groupBy(${3:column})",
+      "  .having(({ $4 }) => $5);",
+      ""
+    ]
+  }
+}

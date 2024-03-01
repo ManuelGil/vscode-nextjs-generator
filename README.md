@@ -70,6 +70,24 @@ Configure your project by creating or updating a settings.json file at the proje
      "nextjs.files.alias": "~", // The import alias for the files to be created. Example: "~", "@", "#", etc
      "nextjs.files.extension": "tsx", // The extension of the files to be created. Example: "tsx"
      "nextjs.files.showType": true, // Show the type of the file in the file name. Example: "home.component.tsx"
+     "nextjs.files.include": [
+         "js",
+         "jsx",
+         "ts",
+         "tsx"
+     ], // The file extensions to watch for changes. Example: "js", "jsx", "ts", "tsx"
+     "nextjs.files.exclude": [
+         "**/node_modules/**",
+         "**/dist/**",
+         "**/out/**",
+         "**/build/**",
+         "**/.*/**"
+     ], // The files to exclude from watching. Example: "**/node_modules/**", "**/dist/**", "**/out/**", "**/build/**", "**/.*/**"
+     "nextjs.files.watch": [
+         "controllers",
+         "components",
+         "routers"
+     ], // The types of files to watch for changes. Example: "controllers", "components", "routers"
      "nextjs.server.turbo": true, // Enable Turbo Mode for NextJS server (Only for NextJS 14 or later)
      "nextjs.server.experimentalHttps": true, // Enable HTTPS for the NextJS server (Only for NextJS 14 or later)
    }

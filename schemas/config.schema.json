@@ -26,6 +26,39 @@
       "scope": "resource",
       "description": "Show the type in the name of the generated files"
     },
+    "nextjs.files.include": {
+      "type": "array",
+      "default": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "scope": "resource",
+      "description": "Glob patterns to include in the package. The default is js, jsx, ts, and tsx."
+    },
+    "nextjs.files.exclude": {
+      "type": "array",
+      "default": [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/out/**",
+        "**/build/**",
+        "**/.*/**"
+      ],
+      "scope": "resource",
+      "description": "Glob patterns to exclude from the package. The default is node_modules, dist, out, build, and any hidden files."
+    },
+    "nextjs.files.watch": {
+      "type": "array",
+      "default": [
+        "controllers",
+        "components",
+        "routers"
+      ],
+      "scope": "resource",
+      "description": "The list of directories to watch for changes"
+    },
     "nextjs.server.turbo": {
       "type": "boolean",
       "default": true,

@@ -1,8 +1,13 @@
 {
   "root": true,
+  "env": {
+    "es2021": true,
+    "node": true
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 6,
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint"],
@@ -14,5 +19,5 @@
     "no-throw-literal": "warn",
     "semi": "off"
   },
-  "ignorePatterns": ["out", "dist", "**/*.d.ts"]
+  "ignorePatterns": ["out", "**/*.d.ts"]
 }

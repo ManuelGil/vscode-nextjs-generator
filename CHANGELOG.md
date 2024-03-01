@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2024-01-28
+
+### Added
+
+- Add List of Files View
+- Add List of Routes View
+- Add Feedback View
+- Add file includes section to the settings
+- Add file excludes section to the settings
+- Add file to watch section to the settings
+- Add compodoc dependencies for the documentation generation
+
+### Changed
+
+- Refactor the folder structure of the extension to improve the codebase
+- Improve the generation of the files to use the new folder structure
+- Upgrade dependencies to the latest versions available
+- Update settings to use the new folder structure
+- Improve the documentation of the extension
+
+### Fixed
+
+- Fix issues related to the new folder structure
+
 ## [1.5.0] - 2024-01-22
 
 ### Added
@@ -126,7 +150,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.5.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.5.0...v2.0.0
 [1.5.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.2.0...v1.3.0

@@ -10,6 +10,7 @@ import {
 } from './app/controllers';
 import {
   FeedbackProvider,
+  ListComponentsProvider,
   ListFilesProvider,
   ListRoutesProvider,
 } from './app/providers';
@@ -195,6 +196,16 @@ export function activate(context: vscode.ExtensionContext) {
   // Create a new ListFilesController
   const listFilesController = new ListFilesController(config);
 
+  const disposableListOpenFile = vscode.commands.registerCommand(
+    `${EXTENSION_ID}.list.openFile`,
+    (uri) => listFilesController.openFile(uri),
+  );
+
+  const disposableListGotoLine = vscode.commands.registerCommand(
+    `${EXTENSION_ID}.list.gotoLine`,
+    (uri, line) => listFilesController.gotoLine(uri, line),
+  );
+
   // -----------------------------------------------------------------
   // Register ListFilesProvider and list commands
   // -----------------------------------------------------------------
@@ -209,11 +220,6 @@ export function activate(context: vscode.ExtensionContext) {
       treeDataProvider: listFilesProvider,
       showCollapseAll: true,
     },
-  );
-
-  const disposableListOpenFile = vscode.commands.registerCommand(
-    `${EXTENSION_ID}.list.openFile`,
-    (uri) => listFilesProvider.controller.openFile(uri),
   );
 
   // -----------------------------------------------------------------
@@ -232,9 +238,22 @@ export function activate(context: vscode.ExtensionContext) {
     },
   );
 
-  const disposableListGotoLine = vscode.commands.registerCommand(
-    `${EXTENSION_ID}.list.gotoLine`,
-    (uri, line) => listRoutesProvider.controller.gotoLine(uri, line),
+  // -----------------------------------------------------------------
+  // Register ListComponentsProvider and list commands
+  // -----------------------------------------------------------------
+
+  // Create a new ListComponentsProvider
+  const listComponentsProvider = new ListComponentsProvider(
+    listFilesController,
+  );
+
+  // Register the list provider
+  const disposableListComponentsTreeView = vscode.window.createTreeView(
+    `${EXTENSION_ID}.listComponentsView`,
+    {
+      treeDataProvider: listComponentsProvider,
+      showCollapseAll: true,
+    },
   );
 
   // -----------------------------------------------------------------
@@ -244,22 +263,27 @@ export function activate(context: vscode.ExtensionContext) {
   vscode.workspace.onDidChangeTextDocument(() => {
     listFilesProvider.refresh();
     listRoutesProvider.refresh();
+    listComponentsProvider.refresh();
   });
   vscode.workspace.onDidCreateFiles(() => {
     listFilesProvider.refresh();
     listRoutesProvider.refresh();
+    listComponentsProvider.refresh();
   });
   vscode.workspace.onDidDeleteFiles(() => {
     listFilesProvider.refresh();
     listRoutesProvider.refresh();
+    listComponentsProvider.refresh();
   });
   vscode.workspace.onDidRenameFiles(() => {
     listFilesProvider.refresh();
     listRoutesProvider.refresh();
+    listComponentsProvider.refresh();
   });
   vscode.workspace.onDidSaveTextDocument(() => {
     listFilesProvider.refresh();
     listRoutesProvider.refresh();
+    listComponentsProvider.refresh();
   });
 
   // -----------------------------------------------------------------
@@ -328,10 +352,11 @@ export function activate(context: vscode.ExtensionContext) {
     disposableTerminalDrizzleStudio,
     disposableEditorJson2Ts,
     disposableEditorJson2Zod,
-    disposableListFilesTreeView,
     disposableListOpenFile,
-    disposableListRoutesTreeView,
     disposableListGotoLine,
+    disposableListFilesTreeView,
+    disposableListRoutesTreeView,
+    disposableListComponentsTreeView,
     disposableFeedbackTreeView,
     disposableFeedbackAboutUs,
     disposableFeedbackReportIssues,

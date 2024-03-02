@@ -471,7 +471,7 @@ export default NextAuth(authOptions);
 
 import {
 \tcreateTRPCRouter,
-\tprotectedProcedure,
+\t// protectedProcedure,
 \tpublicProcedure,
 } from '${this.config.alias}/server/api/trpc';
 
@@ -541,13 +541,12 @@ export const ${entityName}Router = createTRPCRouter({
       return;
     }
 
-    const content = `import { Prisma } from '@prisma/client';
-import { TRPCError } from '@trpc/server';
+    const content = `import { TRPCError } from '@trpc/server';
 import { z, ZodError } from 'zod';
 
 import {
 \tcreateTRPCRouter,
-\tprotectedProcedure,
+\t// protectedProcedure,
 \tpublicProcedure,
 } from '${this.config.alias}/server/api/trpc';
 

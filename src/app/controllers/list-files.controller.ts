@@ -10,7 +10,7 @@ import {
 } from 'vscode';
 
 import { Config, EXTENSION_ID } from '../configs';
-import { directoryMap } from '../helpers';
+import { directoryMap, getRelativePath } from '../helpers';
 import { NodeModel } from '../models';
 
 /**
@@ -74,9 +74,16 @@ export class ListFilesController {
       for (const file of files) {
         const document = await workspace.openTextDocument(file);
 
+        const path = await getRelativePath(document.fileName);
+        let filename = path.split('/').pop();
+
+        if (filename && this.config.showPath) {
+          filename += ' (' + path.split('/').slice(0, -1).join('/') + ')';
+        }
+
         nodes.push(
           new NodeModel(
-            document.fileName.replace(/\\/g, '/').split('/').pop() ?? 'unknown',
+            filename ?? 'Untitled',
             new ThemeIcon('file'),
             {
               command: `${EXTENSION_ID}.list.openFile`,

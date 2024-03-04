@@ -6,6 +6,7 @@ import {
   EXPERIMENTAL_HTTPS,
   EXTENSION,
   INCLUDE,
+  SHOW_PATH,
   SHOW_TYPE,
   TURBO,
   WATCH,
@@ -94,6 +95,16 @@ export class Config {
    */
   watch: string[];
   /**
+   * Whether to show the path or not.
+   * @type {boolean}
+   * @public
+   * @memberof Config
+   * @example
+   * const config = new Config(workspace.getConfiguration());
+   * console.log(config.showPath);
+   */
+  showPath: boolean;
+  /**
    * Whether to use turbo or not.
    * @type {boolean}
    * @public
@@ -133,6 +144,7 @@ export class Config {
     this.include = config.get<string[]>('files.include') ?? INCLUDE;
     this.exclude = config.get<string[]>('files.exclude') ?? EXCLUDE;
     this.watch = config.get<string[]>('files.watch') ?? WATCH;
+    this.showPath = config.get<boolean>('files.showPath') ?? SHOW_PATH;
     this.turbo = config.get<boolean>('server.turbo') ?? TURBO;
     this.experimentalHttps =
       config.get<boolean>('server.experimentalHttps') ?? EXPERIMENTAL_HTTPS;

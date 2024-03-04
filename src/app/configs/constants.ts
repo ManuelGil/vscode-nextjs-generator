@@ -177,6 +177,18 @@ export const EXCLUDE = [
 export const WATCH = ['modules', 'components', 'services'];
 
 /**
+ * SHOW_PATH: Whether to show the path or not.
+ * @type {boolean}
+ * @public
+ * @memberof Constants
+ * @example
+ * console.log(SHOW_PATH);
+ *
+ * @returns {boolean} - Whether to show the path or not
+ */
+export const SHOW_PATH = true;
+
+/**
  * TURBO: Whether to use turbo or not.
  * @type {boolean}
  * @public

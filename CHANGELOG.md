@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.1.0] - 2024-02-02
+## [2.2.0] - 2024-03-04
+
+### Added
+
+- Add `Show Path In File Name` setting to show the path in the file name
+
+## [2.1.0] - 2024-03-02
 
 ### Added
 
@@ -17,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fix issues with the file generation
 
-## [2.0.0] - 2024-02-01
+## [2.0.0] - 2024-03-01
 
 ### Added
 
@@ -160,7 +166,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.1.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.2.0...HEAD
+[2.2.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.5.0...v2.0.0
 [1.5.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.4.0...v1.5.0

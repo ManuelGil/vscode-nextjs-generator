@@ -2,7 +2,7 @@
   "name": "vscode-nextjs-generator",
   "displayName": "T3 Stack / NextJS / ReactJS File Generator",
   "description": "⚛ VSCode extension to generate files for T3 Stack project. It includes NextJS, ReactJS, Prisma, Drizzle, TailwindCSS, i18next, Zod, and more.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#52137b",
@@ -253,6 +253,12 @@
           ],
           "scope": "resource",
           "description": "The list of directories to watch for changes"
+        },
+        "nextjs.files.showPath": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Show the path of the file in the name of the list of generated files"
         },
         "nextjs.server.turbo": {
           "type": "boolean",
@@ -718,16 +724,16 @@
     },
     "viewsWelcome": [
       {
-        "view": "nextjs.listFilesView",
-        "contents": "To effectively capture files, ensure you include the plural form of the file type within the workspace settings.\n[Open Workspace Setting](command:workbench.action.openWorkspaceSettingsFile)\nTo learn more about how to use T3 Stack / NextJS / ReactJS File Generator for VS Code [read our docs](https://github.com/ManuelGil/vscode-nextjs-generator)."
-      },
-      {
         "view": "nextjs.listComponentsView",
         "contents": "Sorry, no components were found. Please ensure that you have a defined component configured.\n[Generate Component](command:nextjs.file.component)\nTo learn more about how to use T3 Stack / NextJS / ReactJS File Generator for VS Code [read our docs](https://github.com/ManuelGil/vscode-nextjs-generator)."
       },
       {
         "view": "nextjs.listRoutesView",
         "contents": "Sorry, no routes were found. Please ensure that you have a defined router configured.\n[Generate tRPC Router](command:nextjs.file.trpc.router)\nTo learn more about how to use T3 Stack / NextJS / ReactJS File Generator for VS Code [read our docs](https://github.com/ManuelGil/vscode-nextjs-generator)."
+      },
+      {
+        "view": "nextjs.listFilesView",
+        "contents": "To effectively capture files, ensure you include the plural form of the file type within the workspace settings.\n[Open Workspace Setting](command:workbench.action.openWorkspaceSettingsFile)\nTo learn more about how to use T3 Stack / NextJS / ReactJS File Generator for VS Code [read our docs](https://github.com/ManuelGil/vscode-nextjs-generator)."
       }
     ],
     "viewsContainers": {

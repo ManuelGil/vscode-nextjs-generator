@@ -54,6 +54,7 @@ In the `.vscode/settings.json` file, copy and paste the following settings:
       "components",
       "routers"
   ], // The types of files to watch for changes. Example: "controllers", "components", "routers"
+  "nextjs.files.showPath": true, // Show the path of the file in the file name. Example: "home.component.tsx (pages/home)"
 }
 ```
 
@@ -63,3 +64,4 @@ In the `.vscode/settings.json` file, copy and paste the following settings:
 - `nextjs.files.include`: The file extensions to watch for changes. For example, if you use `ts` and `tsx` as extensions, the extension will watch for changes in `.ts` and `.tsx` files
 - `nextjs.files.exclude`: The files to exclude from watching. For example, if you use `**/node_modules/**` and `**/dist/**` as exclusions, the extension will not watch for changes in the `node_modules` and `dist` folders
 - `nextjs.files.watch`: The types of files to watch for changes. For example, if you use `components` and `routers` as types, the extension will watch for changes with the `component` and `router` type in the file name. For example, `home.component.tsx` and `home.router.tsx`
+- `nextjs.files.showPath`: Whether to show the path of the file in the file name. For example, if you use `true` as a value, the file will be created as `home.component.tsx (pages/home)` and if you use `false` as a value, the file will be created as `home.component.tsx`

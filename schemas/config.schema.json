@@ -59,6 +59,12 @@
       "scope": "resource",
       "description": "The list of directories to watch for changes"
     },
+    "nextjs.files.showPath": {
+      "type": "boolean",
+      "default": true,
+      "scope": "resource",
+      "description": "Show the path of the file in the name of the list of generated files"
+    },
     "nextjs.server.turbo": {
       "type": "boolean",
       "default": true,

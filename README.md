@@ -39,7 +39,7 @@ Boost your efficiency with this VSCode extension, designed to streamline file ge
 
 ## Requirements
 
-- VSCode 1.46.0 or later
+- VSCode 1.76.0 or later
 
 ## Create a New Project
 
@@ -88,6 +88,7 @@ Configure your project by creating or updating a settings.json file at the proje
          "components",
          "routers"
      ], // The types of files to watch for changes. Example: "controllers", "components", "routers"
+     "nextjs.files.showPath": true, // Show the path of the file in the file name. Example: "home.component.tsx (pages/home)"
      "nextjs.server.turbo": true, // Enable Turbo Mode for NextJS server (Only for NextJS 14 or later)
      "nextjs.server.experimentalHttps": true, // Enable HTTPS for the NextJS server (Only for NextJS 14 or later)
    }

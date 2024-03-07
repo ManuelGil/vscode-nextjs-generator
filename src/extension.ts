@@ -12,6 +12,7 @@ import {
   FeedbackProvider,
   ListComponentsProvider,
   ListFilesProvider,
+  ListHooksProvider,
   ListRoutesProvider,
 } from './app/providers';
 
@@ -222,6 +223,11 @@ export function activate(context: vscode.ExtensionContext) {
     },
   );
 
+  const disposableRefreshListFiles = vscode.commands.registerCommand(
+    `${EXTENSION_ID}.listFiles.refresh`,
+    () => listFilesProvider.refresh(),
+  );
+
   // -----------------------------------------------------------------
   // Register ListRoutesProvider and list commands
   // -----------------------------------------------------------------
@@ -236,6 +242,11 @@ export function activate(context: vscode.ExtensionContext) {
       treeDataProvider: listRoutesProvider,
       showCollapseAll: true,
     },
+  );
+
+  const disposableRefreshListRoutes = vscode.commands.registerCommand(
+    `${EXTENSION_ID}.listRoutes.refresh`,
+    () => listRoutesProvider.refresh(),
   );
 
   // -----------------------------------------------------------------
@@ -256,34 +267,47 @@ export function activate(context: vscode.ExtensionContext) {
     },
   );
 
+  const disposableRefreshListComponents = vscode.commands.registerCommand(
+    `${EXTENSION_ID}.listComponents.refresh`,
+    () => listComponentsProvider.refresh(),
+  );
+
+  // -----------------------------------------------------------------
+  // Register ListHooksProvider and list commands
+  // -----------------------------------------------------------------
+
+  // Create a new ListHooksProvider
+  const listHooksProvider = new ListHooksProvider(listFilesController);
+
+  // Register the list provider
+  const disposableListHooksTreeView = vscode.window.createTreeView(
+    `${EXTENSION_ID}.listHooksView`,
+    {
+      treeDataProvider: listHooksProvider,
+      showCollapseAll: true,
+    },
+  );
+
+  const disposableRefreshListHooks = vscode.commands.registerCommand(
+    `${EXTENSION_ID}.listHooks.refresh`,
+    () => listHooksProvider.refresh(),
+  );
+
   // -----------------------------------------------------------------
   // Register ListFilesProvider and ListMethodsProvider events
   // -----------------------------------------------------------------
 
-  vscode.workspace.onDidChangeTextDocument(() => {
-    listFilesProvider.refresh();
-    listRoutesProvider.refresh();
-    listComponentsProvider.refresh();
-  });
   vscode.workspace.onDidCreateFiles(() => {
     listFilesProvider.refresh();
     listRoutesProvider.refresh();
     listComponentsProvider.refresh();
-  });
-  vscode.workspace.onDidDeleteFiles(() => {
-    listFilesProvider.refresh();
-    listRoutesProvider.refresh();
-    listComponentsProvider.refresh();
-  });
-  vscode.workspace.onDidRenameFiles(() => {
-    listFilesProvider.refresh();
-    listRoutesProvider.refresh();
-    listComponentsProvider.refresh();
+    listHooksProvider.refresh();
   });
   vscode.workspace.onDidSaveTextDocument(() => {
     listFilesProvider.refresh();
     listRoutesProvider.refresh();
     listComponentsProvider.refresh();
+    listHooksProvider.refresh();
   });
 
   // -----------------------------------------------------------------
@@ -355,8 +379,13 @@ export function activate(context: vscode.ExtensionContext) {
     disposableListOpenFile,
     disposableListGotoLine,
     disposableListFilesTreeView,
+    disposableRefreshListFiles,
     disposableListRoutesTreeView,
+    disposableRefreshListRoutes,
     disposableListComponentsTreeView,
+    disposableRefreshListComponents,
+    disposableListHooksTreeView,
+    disposableRefreshListHooks,
     disposableFeedbackTreeView,
     disposableFeedbackAboutUs,
     disposableFeedbackReportIssues,

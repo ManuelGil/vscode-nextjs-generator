@@ -8,7 +8,7 @@
  *
  * @returns {string} - The unique identifier of the extension
  */
-export const EXTENSION_ID = 'nextjs';
+export const EXTENSION_ID: string = 'nextjs';
 
 /**
  * EXTENSION_NAME: The name of the extension.
@@ -20,7 +20,8 @@ export const EXTENSION_ID = 'nextjs';
  *
  * @returns {string} - The name of the extension
  */
-export const EXTENSION_NAME = 'T3 Stack / NextJS / ReactJS File Generator';
+export const EXTENSION_NAME: string =
+  'T3 Stack / NextJS / ReactJS File Generator';
 
 /**
  * EXTENSION_HOMEPAGE_URL: The homepage URL of the extension.
@@ -32,7 +33,7 @@ export const EXTENSION_NAME = 'T3 Stack / NextJS / ReactJS File Generator';
  *
  * @returns {string} - The homepage URL of the extension
  */
-export const EXTENSION_HOMEPAGE_URL =
+export const EXTENSION_HOMEPAGE_URL: string =
   'https://github.com/ManuelGil/vscode-nextjs-generator#readme';
 
 /**
@@ -45,7 +46,7 @@ export const EXTENSION_HOMEPAGE_URL =
  *
  * @returns {string} - The repository URL of the extension
  */
-export const EXTENSION_REPOSITORY_URL =
+export const EXTENSION_REPOSITORY_URL: string =
   'https://github.com/ManuelGil/vscode-nextjs-generator';
 
 /**
@@ -58,7 +59,7 @@ export const EXTENSION_REPOSITORY_URL =
  *
  * @returns {string} - The marketplace URL of the extension
  */
-export const EXTENSION_MARKETPLACE_URL =
+export const EXTENSION_MARKETPLACE_URL: string =
   'https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator';
 
 /**
@@ -71,7 +72,7 @@ export const EXTENSION_MARKETPLACE_URL =
  *
  * @returns {string} - The bugs URL of the extension
  */
-export const EXTENSION_BUGS_URL =
+export const EXTENSION_BUGS_URL: string =
   'https://github.com/ManuelGil/vscode-nextjs-generator/issues';
 
 /**
@@ -84,7 +85,8 @@ export const EXTENSION_BUGS_URL =
  *
  * @returns {string} - The sponsor URL of the extension
  */
-export const EXTENSION_SPONSOR_URL = 'https://github.com/sponsors/ManuelGil';
+export const EXTENSION_SPONSOR_URL: string =
+  'https://github.com/sponsors/ManuelGil';
 
 /**
  * EXTENSION_PAYPAL_URL: The PayPal URL of the extension.
@@ -96,7 +98,7 @@ export const EXTENSION_SPONSOR_URL = 'https://github.com/sponsors/ManuelGil';
  *
  * @returns {string} - The PayPal URL of the extension
  */
-export const EXTENSION_PAYPAL_URL =
+export const EXTENSION_PAYPAL_URL: string =
   'https://www.paypal.com/paypalme/ManuelFGil';
 
 /**
@@ -109,7 +111,7 @@ export const EXTENSION_PAYPAL_URL =
  *
  * @returns {string} - The default import alias
  */
-export const ALIAS = '~';
+export const ALIAS: string = '~';
 
 /**
  * EXTENSION: The file extension.
@@ -121,7 +123,7 @@ export const ALIAS = '~';
  *
  * @returns {string} - The file extension
  */
-export const EXTENSION = 'tsx';
+export const EXTENSION: string = 'tsx';
 
 /**
  * SHOW_TYPE: Whether to show the type or not.
@@ -133,7 +135,7 @@ export const EXTENSION = 'tsx';
  *
  * @returns {boolean} - Whether to show the type or not
  */
-export const SHOW_TYPE = true;
+export const SHOW_TYPE: boolean = true;
 
 /**
  * INCLUDE: The files to include.
@@ -145,7 +147,7 @@ export const SHOW_TYPE = true;
  *
  * @returns {string[]} - The files to include
  */
-export const INCLUDE = ['js', 'jsx', 'ts', 'tsx'];
+export const INCLUDE: string[] = ['js', 'jsx', 'ts', 'tsx'];
 /**
  * EXCLUDE: The files to exclude.
  * @type {string[]}
@@ -156,7 +158,7 @@ export const INCLUDE = ['js', 'jsx', 'ts', 'tsx'];
  *
  * @returns {string[]} - The files to exclude
  */
-export const EXCLUDE = [
+export const EXCLUDE: string[] = [
   '**/node_modules/**',
   '**/dist/**',
   '**/out/**',
@@ -174,7 +176,7 @@ export const EXCLUDE = [
  *
  * @returns {string[]} - The files to watch
  */
-export const WATCH = ['modules', 'components', 'services'];
+export const WATCH: string[] = ['modules', 'components', 'services'];
 
 /**
  * SHOW_PATH: Whether to show the path or not.
@@ -186,7 +188,7 @@ export const WATCH = ['modules', 'components', 'services'];
  *
  * @returns {boolean} - Whether to show the path or not
  */
-export const SHOW_PATH = true;
+export const SHOW_PATH: boolean = true;
 
 /**
  * TURBO: Whether to use turbo or not.
@@ -198,7 +200,7 @@ export const SHOW_PATH = true;
  *
  * @returns {boolean} - Whether to use turbo or not
  */
-export const TURBO = true;
+export const TURBO: boolean = true;
 
 /**
  * EXPERIMENTAL_HTTPS: Whether to use experimental HTTPS or not.
@@ -210,4 +212,4 @@ export const TURBO = true;
  *
  * @returns {boolean} - Whether to use experimental HTTPS or not
  */
-export const EXPERIMENTAL_HTTPS = false;
+export const EXPERIMENTAL_HTTPS: boolean = false;

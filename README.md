@@ -19,6 +19,8 @@ Ready to transcend your development experience?
 
 Boost your efficiency with this VSCode extension, designed to streamline file generation for your T3 Stack project. Whether crafting individual components or kickstarting a new venture, the extension simplifies tasks through intuitive commands. Additionally, initiate your NextJS server effortlessly, enabling swift previews of your application.
 
+![preview](https://raw.githubusercontent.com/ManuelGil/vscode-nextjs-generator/main/docs/images/preview.png)
+
 ## Index
 
 - [T3 Stack / NextJS / ReactJS File Generator](#t3-stack--nextjs--reactjs-file-generator)

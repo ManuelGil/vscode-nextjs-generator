@@ -13,7 +13,7 @@ import { ListFilesController } from '../controllers';
 import { NodeModel } from '../models';
 
 /**
- * The ListRoutesProvider class
+ * The ListHooksProvider class
  *
  * @class
  * @classdesc The class that represents the list of files provider.
@@ -24,11 +24,11 @@ import { NodeModel } from '../models';
  * @property {Event<NodeModel | undefined | null | void>} onDidChangeTreeData - The onDidChangeTreeData event
  * @property {ListFilesController} controller - The list of files controller
  * @example
- * const provider = new ListRoutesProvider();
+ * const provider = new ListHooksProvider();
  *
  * @see https://code.visualstudio.com/api/references/vscode-api#TreeDataProvider
  */
-export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
+export class ListHooksProvider implements TreeDataProvider<NodeModel> {
   // -----------------------------------------------------------------
   // Properties
   // -----------------------------------------------------------------
@@ -38,7 +38,7 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
    * The onDidChangeTreeData event emitter.
    * @type {EventEmitter<NodeModel | undefined | null | void>}
    * @private
-   * @memberof ListRoutesProvider
+   * @memberof ListHooksProvider
    * @example
    * this._onDidChangeTreeData = new EventEmitter<Node | undefined | null | void>();
    * this.onDidChangeTreeData = this._onDidChangeTreeData.event;
@@ -54,7 +54,7 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
    * The onDidChangeTreeData event.
    * @type {Event<NodeModel | undefined | null | void>}
    * @public
-   * @memberof ListRoutesProvider
+   * @memberof ListHooksProvider
    * @example
    * readonly onDidChangeTreeData: Event<Node | undefined | null | void>;
    * this.onDidChangeTreeData = this._onDidChangeTreeData.event;
@@ -68,11 +68,11 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
   // -----------------------------------------------------------------
 
   /**
-   * Constructor for the ListRoutesProvider class
+   * Constructor for the ListHooksProvider class
    *
    * @constructor
    * @public
-   * @memberof ListRoutesProvider
+   * @memberof ListHooksProvider
    */
   constructor(readonly controller: ListFilesController) {
     this._onDidChangeTreeData = new EventEmitter<
@@ -92,7 +92,7 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
    * @function getTreeItem
    * @param {NodeModel} element - The element
    * @public
-   * @memberof ListRoutesProvider
+   * @memberof ListHooksProvider
    * @example
    * const treeItem = provider.getTreeItem(element);
    *
@@ -110,7 +110,7 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
    * @function getChildren
    * @param {NodeModel} [element] - The element
    * @public
-   * @memberof ListRoutesProvider
+   * @memberof ListHooksProvider
    * @example
    * const children = provider.getChildren(element);
    *
@@ -123,7 +123,7 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
       return element.children;
     }
 
-    return this.getListRoutes();
+    return this.getListHooks();
   }
 
   /**
@@ -145,15 +145,15 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
   /**
    * Returns the list of files.
    *
-   * @function getListRoutes
+   * @function getListHooks
    * @private
-   * @memberof ListRoutesProvider
+   * @memberof ListHooksProvider
    * @example
-   * const files = provider.getListRoutes();
+   * const files = provider.getListHooks();
    *
    * @returns {Promise<NodeModel[] | undefined>} - The list of files
    */
-  private async getListRoutes(): Promise<NodeModel[] | undefined> {
+  private async getListHooks(): Promise<NodeModel[] | undefined> {
     const files = await this.controller.getFiles();
 
     if (!files) {
@@ -172,7 +172,11 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
 
           let node: NodeModel | undefined;
 
-          if (line.text.match(/:[\w\s]+procedure/gi)) {
+          if (
+            line.text.match(
+              /(useCallback|useContext|useDebugValue|useDeferredValue|useEffect|useId|useImperativeHandle|useInsertionEffect|useLayoutEffect|useMemo|useReducer|useRef|useState|useSyncExternalStore|useTransition)/gi,
+            )
+          ) {
             node = new NodeModel(
               line.text.trim(),
               new ThemeIcon('symbol-method'),

@@ -2,7 +2,7 @@
   "name": "vscode-nextjs-generator",
   "displayName": "T3 Stack / NextJS / ReactJS File Generator",
   "description": "⚛ VSCode extension to generate files for T3 Stack project. It includes NextJS, ReactJS, Prisma, Drizzle, TailwindCSS, i18next, Zod, and more.",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#52137b",
@@ -318,6 +318,7 @@
       {
         "command": "nextjs.file.component",
         "title": "Generate Component",
+        "icon": "$(add)",
         "category": "T3"
       },
       {
@@ -343,6 +344,7 @@
       {
         "command": "nextjs.file.trpc.router",
         "title": "Generate tRPC Router",
+        "icon": "$(add)",
         "category": "T3"
       },
       {
@@ -469,6 +471,30 @@
         "command": "nextjs.editor.json.zod",
         "title": "Convert JSON to Zod",
         "category": "T3"
+      },
+      {
+        "command": "nextjs.listHooks.refresh",
+        "title": "Refresh List of Hooks",
+        "icon": "$(refresh)",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.listComponents.refresh",
+        "title": "Refresh List of Components",
+        "icon": "$(refresh)",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.listRoutes.refresh",
+        "title": "Refresh List of Routes",
+        "icon": "$(refresh)",
+        "category": "T3"
+      },
+      {
+        "command": "nextjs.listFiles.refresh",
+        "title": "Refresh List of Files",
+        "icon": "$(refresh)",
+        "category": "T3"
       }
     ],
     "submenus": [
@@ -494,6 +520,43 @@
       }
     ],
     "menus": {
+      "view/title": [
+        {
+          "command": "nextjs.file.component",
+          "when": "view == nextjs.listHooksView",
+          "group": "navigation"
+        },
+        {
+          "command": "nextjs.listHooks.refresh",
+          "when": "view == nextjs.listHooksView",
+          "group": "navigation"
+        },
+        {
+          "command": "nextjs.file.component",
+          "when": "view == nextjs.listComponentsView",
+          "group": "navigation"
+        },
+        {
+          "command": "nextjs.listComponents.refresh",
+          "when": "view == nextjs.listComponentsView",
+          "group": "navigation"
+        },
+        {
+          "command": "nextjs.file.trpc.router",
+          "when": "view == nextjs.listRoutesView",
+          "group": "navigation"
+        },
+        {
+          "command": "nextjs.listRoutes.refresh",
+          "when": "view == nextjs.listRoutesView",
+          "group": "navigation"
+        },
+        {
+          "command": "nextjs.listFiles.refresh",
+          "when": "view == nextjs.listFilesView",
+          "group": "navigation"
+        }
+      ],
       "explorer/context": [
         {
           "submenu": "root.submenu",
@@ -724,6 +787,10 @@
     },
     "viewsWelcome": [
       {
+        "view": "nextjs.listHooksView",
+        "contents": "Sorry, no hooks were found. Please ensure that you have a defined component configured.\n[Generate Component](command:nextjs.file.component)\nTo learn more about how to use T3 Stack / NextJS / ReactJS File Generator for VS Code [read our docs](https://github.com/ManuelGil/vscode-nextjs-generator)."
+      },
+      {
         "view": "nextjs.listComponentsView",
         "contents": "Sorry, no components were found. Please ensure that you have a defined component configured.\n[Generate Component](command:nextjs.file.component)\nTo learn more about how to use T3 Stack / NextJS / ReactJS File Generator for VS Code [read our docs](https://github.com/ManuelGil/vscode-nextjs-generator)."
       },
@@ -748,9 +815,9 @@
     "views": {
       "nextjs-explorer": [
         {
-          "id": "nextjs.listFilesView",
-          "name": "List of Files",
-          "visibility": "visible"
+          "id": "nextjs.listHooksView",
+          "name": "List of Hooks",
+          "visibility": "hidden"
         },
         {
           "id": "nextjs.listComponentsView",
@@ -761,6 +828,11 @@
           "id": "nextjs.listRoutesView",
           "name": "List of Routes",
           "visibility": "visible"
+        },
+        {
+          "id": "nextjs.listFilesView",
+          "name": "List of Files",
+          "visibility": "collapsed"
         },
         {
           "id": "nextjs.feedbackView",

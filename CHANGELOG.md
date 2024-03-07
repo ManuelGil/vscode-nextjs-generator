@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.0] - 2024-03-07
+
+### Added
+
+- Add List of Hooks View
+
+### Changed
+
+- Improve the route regex to match the routes in the file
+
 ## [2.2.0] - 2024-03-04
 
 ### Added
@@ -166,7 +176,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.2.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.3.0...HEAD
+[2.3.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.2.0...v2.3.0
 [2.2.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v1.5.0...v2.0.0

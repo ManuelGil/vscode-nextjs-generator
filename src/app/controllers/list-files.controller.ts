@@ -25,6 +25,22 @@ import { NodeModel } from '../models';
  */
 export class ListFilesController {
   // -----------------------------------------------------------------
+  // Properties
+  // -----------------------------------------------------------------
+
+  // Public properties
+  /**
+   * The static config property.
+   *
+   * @static
+   * @property
+   * @public
+   * @type {Config}
+   * @memberof ListFilesController
+   */
+  static config: Config;
+
+  // -----------------------------------------------------------------
   // Constructor
   // -----------------------------------------------------------------
 
@@ -36,7 +52,9 @@ export class ListFilesController {
    * @public
    * @memberof ListFilesController
    */
-  constructor(public readonly config: Config) {}
+  constructor(config: Config) {
+    ListFilesController.config = config;
+  }
 
   // -----------------------------------------------------------------
   // Methods
@@ -56,7 +74,7 @@ export class ListFilesController {
    *
    * @returns {Promise<NodeModel[] | void>} - The list of files
    */
-  async getFiles(
+  static async getFiles(
     maxResults: number = Number.MAX_SAFE_INTEGER,
   ): Promise<NodeModel[] | void> {
     // Get the files in the folder
@@ -78,7 +96,9 @@ export class ListFilesController {
         let filename = path.split('/').pop();
 
         if (filename && this.config.showPath) {
-          filename += ' (' + path.split('/').slice(0, -1).join('/') + ')';
+          const folder = path.split('/').slice(0, -1).join('/');
+
+          filename += folder ? ` (${folder})` : ' (root)';
         }
 
         nodes.push(

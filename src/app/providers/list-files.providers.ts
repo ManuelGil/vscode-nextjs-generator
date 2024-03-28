@@ -153,7 +153,7 @@ export class ListFilesProvider implements TreeDataProvider<NodeModel> {
    * @returns {Promise<NodeModel[] | undefined>} - The list of files
    */
   private async getListFiles(): Promise<NodeModel[] | undefined> {
-    const files = await this.controller.getFiles();
+    const files = await ListFilesController.getFiles();
 
     if (!files) {
       return;
@@ -161,7 +161,7 @@ export class ListFilesProvider implements TreeDataProvider<NodeModel> {
 
     const nodes: NodeModel[] = [];
 
-    const fileTypes = this.controller.config.watch;
+    const fileTypes = ListFilesController.config.watch;
 
     for (const fileType of fileTypes) {
       const children = files.filter((file) =>

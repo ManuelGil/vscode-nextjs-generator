@@ -74,7 +74,7 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
    * @public
    * @memberof ListRoutesProvider
    */
-  constructor(readonly controller: ListFilesController) {
+  constructor() {
     this._onDidChangeTreeData = new EventEmitter<
       NodeModel | undefined | null | void
     >();
@@ -154,7 +154,7 @@ export class ListRoutesProvider implements TreeDataProvider<NodeModel> {
    * @returns {Promise<NodeModel[] | undefined>} - The list of files
    */
   private async getListRoutes(): Promise<NodeModel[] | undefined> {
-    const files = await this.controller.getFiles();
+    const files = await ListFilesController.getFiles();
 
     if (!files) {
       return;

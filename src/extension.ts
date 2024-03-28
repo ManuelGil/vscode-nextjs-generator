@@ -233,7 +233,7 @@ export function activate(context: vscode.ExtensionContext) {
   // -----------------------------------------------------------------
 
   // Create a new ListRoutesProvider
-  const listRoutesProvider = new ListRoutesProvider(listFilesController);
+  const listRoutesProvider = new ListRoutesProvider();
 
   // Register the list provider
   const disposableListRoutesTreeView = vscode.window.createTreeView(
@@ -254,9 +254,7 @@ export function activate(context: vscode.ExtensionContext) {
   // -----------------------------------------------------------------
 
   // Create a new ListComponentsProvider
-  const listComponentsProvider = new ListComponentsProvider(
-    listFilesController,
-  );
+  const listComponentsProvider = new ListComponentsProvider();
 
   // Register the list provider
   const disposableListComponentsTreeView = vscode.window.createTreeView(
@@ -277,7 +275,7 @@ export function activate(context: vscode.ExtensionContext) {
   // -----------------------------------------------------------------
 
   // Create a new ListHooksProvider
-  const listHooksProvider = new ListHooksProvider(listFilesController);
+  const listHooksProvider = new ListHooksProvider();
 
   // Register the list provider
   const disposableListHooksTreeView = vscode.window.createTreeView(

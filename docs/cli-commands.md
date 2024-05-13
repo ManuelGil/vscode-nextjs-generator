@@ -26,6 +26,13 @@
 | T3: Prisma Migrate Status | Check the status of your database migrations                                 |
 | T3: Prisma Studio         | Browse your data with Prisma Studio                                          |
 | T3: Prisma Validate       | Validate a Prisma schema                                                     |
+| T3: Drizzle Generate      | Generate migrations based on you Drizzle schema                              |
+| T3: Drizzle Pull          | Pull DDL from existing database                                              |
+| T3: Drizzle Push          | Push your schema changes directly to the database                            |
+| T3: Drizzle Drop          | Delete previously generated migrations from migrations folder                |
+| T3: Drizzle Up            | Utility command to keep all metadata up to date                              |
+| T3: Drizzle Check         | It's a very powerful tool for you to check consistency of your migrations    |
+| T3: Drizzle Studio        | Launch Drizzle Studio database browser locally from you config file          |
 | T3: Start Server          | Builds and serves your application, rebuilding on file changes               |
 
 ## Usage

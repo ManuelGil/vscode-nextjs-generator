@@ -33,8 +33,11 @@ Boost your efficiency with this VSCode extension, designed to streamline file ge
     - [Terminal Commands](#terminal-commands)
     - [Snippets](#snippets)
     - [Context Menu](#context-menu)
-  - [Connect with me](#connect-with-me)
+  - [Follow Me](#follow-me)
+  - [VSXpert Template](#vsxpert-template)
   - [Other Extensions](#other-extensions)
+  - [Contributing](#contributing)
+  - [Code of Conduct](#code-of-conduct)
   - [Changelog](#changelog)
   - [Authors](#authors)
   - [License](#license)
@@ -118,26 +121,38 @@ See the following documentation about [how to use the snippets](./docs/snippets.
 
 See the following documentation about [how to use the context menu](./docs/context-menu.md) for more information.
 
-## Connect with me
+## Follow Me
+
+If you enjoy using this extension, consider following me for updates on this and future projects:
 
 [![GitHub followers](https://img.shields.io/github/followers/ManuelGil?style=for-the-badge&logo=github)](https://github.com/ManuelGil)
 [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/imgildev?style=for-the-badge&logo=x)](https://twitter.com/imgildev)
 
+## VSXpert Template
+
+This extension was created using [VSXpert](https://vsxpert.com), a template that helps you create Visual Studio Code extensions with ease. VSXpert provides a simple and easy-to-use structure to get you started quickly.
+
 ## Other Extensions
 
-- [NestJS File Generator](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-generator)
-- [NestJS Snippets](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-snippets-extension)
 - [Angular File Generator](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-angular-generator)
+- [NestJS File Generator](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-generator)
 - [T3 Stack / NextJS / ReactJS File Generator](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator)
-- [CodeIgniter 4 Snippets](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-snippets)
-- [CodeIgniter 4 Shield Snippets](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-shield-snippets)
+- [Auto Barrel](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-auto-barrel)
 - [CodeIgniter 4 Spark](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-spark)
-- [Moodle Pack](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-moodle-snippets)
-- [Mustache Template Engine - Snippets & Autocomplete](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
+
+## Contributing
+
+T3 Stack / NextJS / ReactJS File Generator for VSCode is open-source software, and we welcome contributions from the community. If you'd like to contribute, please fork the [GitHub repository](https://github.com/ManuelGil/vscode-nextjs-generator) and submit a pull request with your changes.
+
+Before contributing, please read our [Contribution Guidelines](./CONTRIBUTING.md) for instructions on coding standards, testing, and more.
+
+## Code of Conduct
+
+We are committed to providing a friendly, safe, and welcoming environment for all, regardless of gender, sexual orientation, disability, ethnicity, religion, or similar personal characteristic. Please review our [Code of Conduct](./CODE_OF_CONDUCT.md) before participating in our community.
 
 ## Changelog
 
-See [CHANGELOG.md](./CHANGELOG.md)
+For a complete list of changes, see the [CHANGELOG.md](./CHANGELOG.md)
 
 ## Authors
 

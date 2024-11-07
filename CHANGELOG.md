@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.5.1] - 2024-11-07
+
+### Fixed
+
+- Fix the `json2ts` and `json2zod` issues when the selection does not have a JSON strict format
+
 ## [2.5.0] - 2024-04-01
 
 ### Changed
@@ -194,6 +200,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release
 
 [unreleased]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.5.0...HEAD
+[2.5.1]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.5.0...v2.5.1
 [2.5.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.4.0...v2.5.0
 [2.4.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.3.0...v2.4.0
 [2.3.0]: https://github.com/ManuelGil/vscode-nextjs-generator/compare/v2.2.0...v2.3.0

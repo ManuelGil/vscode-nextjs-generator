@@ -98,7 +98,7 @@ export class FileController {
       'E.g. User, Role, Post...',
       (name: string) => {
         if (!/^[A-Z][A-Za-z]{2,}$/.test(name)) {
-          return 'Invalid format! Entity names MUST be declared in camelCase.';
+          return 'Invalid format! Entity names MUST be declared in PascalCase.';
         }
         return;
       },
@@ -118,8 +118,6 @@ export class FileController {
     } else {
       type = '';
     }
-
-    type = type.length !== 0 ? `.${type}` : '';
 
     const filename = `${dasherize(className)}.${type}${this.config.extension}`;
 
@@ -166,7 +164,7 @@ export class FileController {
       'E.g. Title, Header, Main, Footer...',
       (name: string) => {
         if (!/^[A-Z][A-Za-z]{2,}$/.test(name)) {
-          return 'Invalid format! Entity names MUST be declared in camelCase.';
+          return 'Invalid format! Entity names MUST be declared in PascalCase.';
         }
         return;
       },

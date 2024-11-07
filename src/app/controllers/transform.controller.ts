@@ -1,5 +1,6 @@
 import jsonSchemaToZod from 'json-schema-to-zod';
 import JsonToTS from 'json-to-ts';
+import * as json5 from 'json5';
 import { Range, TextEditor, window, workspace } from 'vscode';
 
 // Import the helper functions
@@ -13,22 +14,9 @@ import { showError } from '../helpers';
  * @export
  * @public
  * @example
- * const controller = new TransformController(config);
+ * const controller = new TransformController();
  */
 export class TransformController {
-  // -----------------------------------------------------------------
-  // Constructor
-  // -----------------------------------------------------------------
-
-  /**
-   * Constructor for the TransformController class.
-   *
-   * @constructor
-   * @public
-   * @memberof TransformController
-   */
-  constructor() {}
-
   // -----------------------------------------------------------------
   // Methods
   // -----------------------------------------------------------------
@@ -66,7 +54,25 @@ export class TransformController {
         selection.end.character,
       );
 
-      const text = editor?.document.getText(selectionRange) || '';
+      let text = editor?.document.getText(selectionRange) || '';
+
+      const languageId = editor?.document.languageId || '';
+
+      if (
+        [
+          'javascript',
+          'javascriptreact',
+          'typescript',
+          'typescriptreact',
+        ].includes(languageId)
+      ) {
+        text = text
+          .replace(/'([^']+)'/g, '"$1"')
+          .replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2":')
+          .replace(/,*\s*\n*\]/g, ']')
+          .replace(/{\s*\n*/g, '{')
+          .replace(/,*\s*\n*}/g, '}');
+      }
 
       const jsonSchema = this.tryParseJSONObject(text);
 
@@ -123,7 +129,25 @@ export class TransformController {
         selection.end.character,
       );
 
-      const text = editor?.document.getText(selectionRange) || '';
+      let text = editor?.document.getText(selectionRange) || '';
+
+      const languageId = editor?.document.languageId || '';
+
+      if (
+        [
+          'javascript',
+          'javascriptreact',
+          'typescript',
+          'typescriptreact',
+        ].includes(languageId)
+      ) {
+        text = text
+          .replace(/'([^']+)'/g, '"$1"')
+          .replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2":')
+          .replace(/,*\s*\n*\]/g, ']')
+          .replace(/{\s*\n*/g, '{')
+          .replace(/,*\s*\n*}/g, '}');
+      }
 
       const jsonSchema = this.tryParseJSONObject(text);
 
@@ -166,7 +190,7 @@ export default ${zodSchema};
    */
   private tryParseJSONObject(str: string): boolean | object {
     try {
-      var object = JSON.parse(str);
+      var object = json5.parse(str);
 
       if (object && typeof object === 'object') {
         return object;

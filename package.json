@@ -2,7 +2,7 @@
   "name": "vscode-nextjs-generator",
   "displayName": "T3 Stack / NextJS / ReactJS File Generator",
   "description": "⚛ VSCode extension to generate files for T3 Stack project. It includes NextJS, ReactJS, Prisma, Drizzle, TailwindCSS, i18next, Zod, and more.",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#52137b",
@@ -891,6 +891,7 @@
   },
   "dependencies": {
     "json-schema-to-zod": "^2.1.0",
-    "json-to-ts": "^2.1.0"
+    "json-to-ts": "^2.1.0",
+    "json5": "^2.2.3"
   }
 }

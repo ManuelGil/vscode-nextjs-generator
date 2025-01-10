@@ -2,7 +2,7 @@
   "name": "vscode-nextjs-generator",
   "displayName": "T3 Stack / NextJS / ReactJS File Generator",
   "description": "⚛ VSCode extension to generate files for T3 Stack project. It includes NextJS, ReactJS, Prisma, Drizzle, TailwindCSS, i18next, Zod, and more.",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#52137b",
@@ -18,7 +18,7 @@
     "url": "https://github.com/sponsors/manuelgil"
   },
   "engines": {
-    "vscode": "^1.76.0"
+    "vscode": "^1.90.0"
   },
   "categories": [
     "Snippets",
@@ -856,41 +856,35 @@
     "compile": "rimraf out && tsc -p ./ && cpy src/assets/* out/assets",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "format": "prettier --write 'src/**/*.ts'",
-    "lint": "eslint src --ext .ts",
-    "lint:fix": "eslint src --ext .ts --fix",
-    "test": "node ./out/test/runTest.js",
+    "format": "biome format --write",
+    "lint": "biome lint --write",
+    "lint:check": "biome check --write",
+    "test": "vscode-test",
     "compodoc": "npx compodoc -p tsconfig.doc.json -d compodoc --theme readthedocs -s",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@compodoc/compodoc": "^1.1.24",
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@compodoc/compodoc": "^1.1.26",
     "@types/glob": "^8.1.0",
     "@types/minimatch": "^3.0.5",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "^20.12.11",
-    "@types/vscode": "^1.76.0",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.5",
+    "@types/vscode": "^1.90.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
     "cpy-cli": "^5.0.0",
-    "eslint": "^8.57.0",
-    "eslint-config-standard-with-typescript": "^43.0.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "glob": "^10.3.13",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "mocha": "^10.4.0",
-    "prettier": "3.2.5",
-    "rimraf": "^5.0.5",
-    "typescript": "^5.4.5",
-    "vscode-test": "^1.5.0"
+    "glob": "^11.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3",
+    "vscode-test": "^1.6.1"
   },
   "dependencies": {
-    "json-schema-to-zod": "^2.1.0",
+    "json-schema-to-zod": "^2.6.0",
     "json-to-ts": "^2.1.0",
     "json5": "^2.2.3"
   }

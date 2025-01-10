@@ -44,7 +44,7 @@ Boost your efficiency with this VSCode extension, designed to streamline file ge
 
 ## Requirements
 
-- VSCode 1.76.0 or later
+- VSCode 1.90.0 or later
 
 ## Create a New Project
 

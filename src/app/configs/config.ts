@@ -138,15 +138,48 @@ export class Config {
    * @memberof Config
    */
   constructor(readonly config: WorkspaceConfiguration) {
-    this.alias = config.get<string>('files.alias') ?? ALIAS;
-    this.extension = config.get<string>('files.extension') ?? EXTENSION;
-    this.showType = config.get<boolean>('files.showType') ?? SHOW_TYPE;
-    this.include = config.get<string[]>('files.include') ?? INCLUDE;
-    this.exclude = config.get<string[]>('files.exclude') ?? EXCLUDE;
-    this.watch = config.get<string[]>('files.watch') ?? WATCH;
-    this.showPath = config.get<boolean>('files.showPath') ?? SHOW_PATH;
-    this.turbo = config.get<boolean>('server.turbo') ?? TURBO;
-    this.experimentalHttps =
-      config.get<boolean>('server.experimentalHttps') ?? EXPERIMENTAL_HTTPS;
+    this.alias = config.get<string>('files.alias', ALIAS);
+    this.extension = config.get<string>('files.extension', EXTENSION);
+    this.showType = config.get<boolean>('files.showType', SHOW_TYPE);
+    this.include = config.get<string[]>('files.include', INCLUDE);
+    this.exclude = config.get<string[]>('files.exclude', EXCLUDE);
+    this.watch = config.get<string[]>('files.watch', WATCH);
+    this.showPath = config.get<boolean>('files.showPath', SHOW_PATH);
+    this.turbo = config.get<boolean>('server.turbo', TURBO);
+    this.experimentalHttps = config.get<boolean>(
+      'server.experimentalHttps',
+      EXPERIMENTAL_HTTPS,
+    );
+  }
+
+  // -----------------------------------------------------------------
+  // Methods
+  // -----------------------------------------------------------------
+
+  // Public methods
+  /**
+   * The update method.
+   *
+   * @function update
+   * @param {WorkspaceConfiguration} config - The workspace configuration
+   * @public
+   * @memberof Config
+   * @example
+   * const config = new Config(workspace.getConfiguration());
+   * config.update(workspace.getConfiguration());
+   */
+  update(config: WorkspaceConfiguration): void {
+    this.alias = config.get<string>('files.alias', ALIAS);
+    this.extension = config.get<string>('files.extension', EXTENSION);
+    this.showType = config.get<boolean>('files.showType', SHOW_TYPE);
+    this.include = config.get<string[]>('files.include', INCLUDE);
+    this.exclude = config.get<string[]>('files.exclude', EXCLUDE);
+    this.watch = config.get<string[]>('files.watch', WATCH);
+    this.showPath = config.get<boolean>('files.showPath', SHOW_PATH);
+    this.turbo = config.get<boolean>('server.turbo', TURBO);
+    this.experimentalHttps = config.get<boolean>(
+      'server.experimentalHttps',
+      EXPERIMENTAL_HTTPS,
+    );
   }
 }

@@ -13,6 +13,7 @@ src/**
 .prettierignore
 .prettierrc
 .yarnrc
+biome.json
 commitlint.config.js
 yarn.lock
 vsc-extension-quickstart.md

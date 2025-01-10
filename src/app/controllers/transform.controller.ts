@@ -71,7 +71,7 @@ export class TransformController {
           .replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2":')
           .replace(/,*\s*\n*\]/g, ']')
           .replace(/{\s*\n*/g, '{')
-          .replace(/,*\s*\n*}/g, '}');
+          .replace(/,*\s*\n*};*/g, '}');
       }
 
       const jsonSchema = this.tryParseJSONObject(text);
@@ -146,7 +146,7 @@ export class TransformController {
           .replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2":')
           .replace(/,*\s*\n*\]/g, ']')
           .replace(/{\s*\n*/g, '{')
-          .replace(/,*\s*\n*}/g, '}');
+          .replace(/,*\s*\n*};*/g, '}');
       }
 
       const jsonSchema = this.tryParseJSONObject(text);
